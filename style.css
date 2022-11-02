@@ -1,0 +1,623 @@
+* {
+    transition: all .5s;
+}
+
+/* header */
+header {
+    color: black;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+.nav-tabs {
+    --bs-nav-tabs-border-width: none;
+    font-size: 12px;
+    position: relative;
+}
+
+.nav-tabs .nav-delivery {
+    font-size: 14px;
+}
+
+.nav-link {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+body {
+    background-color: #271E17;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.line {
+    width: .5px;
+    height: 80%;
+    top: 10%;
+    position: relative;
+    display: inline-block;
+    background-color: grey;
+    color: grey;
+}
+
+#select-address {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    padding-left: 20px;
+    text-align: center;
+}
+/* ::-webkit-input-placeholder {
+    text-align: center;
+  }
+  :-moz-placeholder {
+    text-align: center;
+  } */
+
+#select-address:focus {
+    border: none;
+}
+
+#select-address::placeholder {
+    color: black;
+    text-align: center;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.nav-a:hover {
+    background-color: #c7c7c7;
+}
+
+.pizza-set {
+    height: 100%;
+    line-height: 3;
+    padding-top: 15px;
+}
+
+.pizza-set:hover {
+    background-color: hsl(0, 1%, 95%);
+}
+
+.deli-take {
+    height: 30px;
+    width: 50%;
+    justify-content: center;
+}
+
+.deliver {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 100%;
+}
+
+#logo {
+    width: calc(94.1px/.9);
+    height: calc(85px/.9);
+}
+
+#logo-img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-delivery {
+    width: 350px;
+    margin-right: 30px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 28px;
+    bottom: 0;
+    right: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 35px;
+    z-index: 5;
+}
+
+.toggle-button .bar {
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    border-radius: 500px;
+}
+
+@media (max-width: 850px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .pizza-set {
+        height: 50%;
+        padding-top: 0;
+    }
+
+    .navbar-links {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-delivery {
+        width: 300px;
+    }
+}
+
+@media (max-width: 550px) {
+    .nav-delivery {
+        width: 250px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-delivery {
+        width: 200px;
+    }
+}
+
+@media (max-width: 450px) {
+    .nav-delivery {
+        width: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    #logo {
+        display: none;
+    }
+}
+
+/* header navbar css จบแค่นี้ */
+
+/* section1 */
+#sec1 {
+    height: calc(605px / 1.5);
+}
+
+#ad-container {
+    width: calc(958px / 1.2);
+    height: calc(605px / 1.5);
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 850px) {
+    #ad-container {
+        width: calc(958px / 1.5);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #ad-container {
+        width: calc(958px / 1.9);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #ad-container {
+        width: calc(958px / 2.2);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #ad-container {
+        width: calc(958px / 2.7);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #ad-container {
+        width: calc(958px / 3.4);
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #ad-container {
+        width: calc(958px / 4.5);
+    }
+}
+
+.advertising {
+    position: absolute;
+    width: calc(1437px / 2);
+    height: calc(908px / 2);
+    overflow: hidden;
+    border-radius: 10px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+@media only screen and (max-width: 850px) {
+    .advertising {
+        width: calc(958px / 2.5);
+        height: calc(605px / 2.5);
+    }
+
+    #sec1 {
+        height: calc(605px / 2);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .advertising {
+        width: calc(958px / 3);
+        height: calc(605px / 3);
+    }
+
+    #sec1 {
+        height: calc(605px / 2.5);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .advertising {
+        width: calc(958px / 3.5);
+        height: calc(605px / 3.5);
+    }
+
+    #sec1 {
+        height: calc(605px / 3);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .advertising {
+        width: calc(958px / 4);
+        height: calc(605px / 4);
+    }
+
+    #sec1 {
+        height: calc(605px / 3.5);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .advertising {
+        width: calc(958px / 4.5);
+        height: calc(605px / 4.5);
+    }
+
+    #sec1 {
+        height: calc(605px / 4);
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .advertising {
+        width: calc(958px / 5);
+        height: calc(605px / 5);
+    }
+
+    #sec1 {
+        height: calc(605px / 4.5);
+    }
+}
+
+.card-hov:hover {
+    transform: scale(1.15, 1.15);
+}
+
+#card1 {
+    left: -50%;
+    z-index: 0;
+}
+
+#card1,
+#card3,
+#card4 {
+    transform: scale(.8, .8);
+    opacity: .5;
+}
+
+#card2 {
+    z-index: 1;
+}
+
+#card3 {
+    right: -50%;
+    z-index: 0;
+}
+
+#card4 {
+    z-index: -1;
+}
+
+.arrow {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    width: 10%;
+    height: 14%;
+}
+
+.arrow-right {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.arrow-left {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#btleft2,
+#btright2 {
+    display: block;
+}
+
+#btleft1,
+#btleft3,
+#btleft4,
+#btright1,
+#btright3,
+#btright4 {
+    display: none;
+}
+
+/* section ad จบที่นี่ */
+
+/* section 2 */
+#sec2 {
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+
+
+
+
+
+
+body {
+    font-size: clamp(14px, 2.5vw, 20px);
+    background-color: #271E17;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    --red: hsla(0, 100%, 66%, 0.4);
+    --brown: hsl(26, 26%, 12%);
+    --grey: hsl(0, 0%, 78%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --white1: hsla(0, 0%, 100%,.7);
+    --blue: hsl(240, 100%, 50%);
+}
+
+/* ปุ่ม-------------------------------------------------------------START*/
+#bar-flex {
+    padding: auto;
+}
+
+/* ปุ่มแปลง TH-EN */
+#language {
+    background-color: var(--grey);
+    height: 15%;
+}
+
+/* ปุ่ม deli-take */
+#deli-take {
+    background-color: var(--grey);
+    width: 350px;
+}
+
+/*ปุ่ม selectadd*/
+#selectAdd {
+    background: var(--grey);
+    border-color: var(--grey);
+    color: var(--black);
+    width: 350px;
+}
+
+#bg-select-drop {
+    background: var(--grey);
+    width: 350px;
+}
+
+/* ใช้กับ TH-EN , deli-take */
+#nav {
+    font-size: 20px;
+    color: var(--black);
+}
+
+#nav:hover {
+    color: var(--blue);
+}
+
+/* ปุ่ม-------------------------------------------------------------END*/
+
+
+/*       Value set       */
+
+#pic-bg {
+    background: var(--red);
+}
+
+#text-bg {
+    background: var(--red);
+}
+
+#back {
+    font-size: 50px;
+    color: var(--white);
+    margin-left: 10px;
+}
+
+#back:hover {
+    color: var(--grey);
+}
+
+#plus {
+    font-size: 20px;
+    background: var(--brown);
+    color: var(--white);
+}
+
+#plus:hover {
+    background: var(--grey);
+}
+
+#name_value_set {
+    margin-left: 10%;
+}
+
+#text_value_set {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* #next,
+#price, */
+#pizza1,
+#pizza2,
+#pizza3,
+#pizza4,
+#pizza5,
+#pizza6 
+{
+    background: var(--red);
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3%;
+}
+
+
+#choose_dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button_choose_pasta,
+#button_choose_size,
+#button_choose_face,
+#button_choose_part{
+    background: hsla(0, 0%, 100%, 0.5);
+    color: hsl(0, 0%, 100%);
+    margin-right: 15px;
+    padding: 10px;
+}
+
+#topping {
+    text-align: center;
+}
+
+#name-topping {
+    color: #000000;
+    text-align: center;
+}
+
+#icon-plus-circle,
+#icon-dash-circle {
+    color: #000000;
+    font-size: 30px;
+}
+
+#icon-dash-circle {
+    float: left;
+}
+
+#icon-plus-circle {
+    float: right;
+}
+
+/* ปุ่มเลือก พิซซ่า | ไก่ */
+#pom_select_1,
+#pom_select_2,
+#pom_select_3,
+#pom_select_4,
+#pom_select_5,
+#pom_select_6  {
+    background: var(--red);
+    color: #ffffff;
+}
+
+#pom_select_1:hover,
+#pom_select_2:hover,
+#pom_select_3:hover,
+#pom_select_4:hover {
+    color: var(--grey);
+    background-color: #000000;
+}
+
+#pom_select {
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#button_choose_part{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+#total_set_value{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--grey);
+}
+
+#footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--grey);
+}
+
+/* @media screen and (max-width:680px) {
+    #card-topping{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+} */
+
