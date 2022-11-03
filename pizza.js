@@ -221,6 +221,9 @@ function getPrice(piz, crust, set) {
         console.log(set)
         let price = 179;
         return price;
+    }else if(set == 2){
+        let price = 499;
+        return price;
     }
 
 
@@ -345,7 +348,7 @@ function changePizza(pic, set) {
     else if (crust.value == 5) {
         picpiz.src = ("./img/cheese/" + (menu.value).split(" ").join("_") + "_l.png");
     }
-    // console.log(picpiz.src)
+    console.log(picpiz.src)
     // console.log(menu.value);
 }
 

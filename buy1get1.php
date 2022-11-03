@@ -111,7 +111,7 @@
 
     <div>
         <!-- ปุ่ม back -->
-        <a href="value_set.php"><i class="bi bi-arrow-left" id="back"></i></a>
+        <a href="index.php"><i class="bi bi-arrow-left" id="back"></i></a>
         <br>
         <!-- ชื่อ เมนู -->
         <h3 id="name_value_set">Special DealBuy 1 Get 1</h3><br>
