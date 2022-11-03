@@ -18,7 +18,95 @@
 <body>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
-    <?php include 'nav.php'; ?>
+    <header>
+        <ul class="nav-tabs " style="background-color: white;" >
+            <div class="container-fluid nav">
+                <!-- logo -->
+                <a id="logo" class="navbar-brand" class="nav-a" href="index.php">
+                    <img id="logo-img" src="img/home/Logo.png" alt="Logo" class="d-inline-block">
+                </a>
+
+                <div class="nav-item nav-delivery">
+                    <!-- delivery takaway -->
+                    <li class="deliver nav-item text-center d-flex fw-semibold">
+                        <a id="switch-deli" class="nav-link text-dark d-inline m-auto nav-a deli-take " href="#" style="border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;" onclick="take_deli(0)">Delivery</a>
+                        <div class="line"></div>
+                        <a id="switch-take" class="nav-link  d-inline m-auto nav-a deli-take bg-secondary text-light" href="#" style="border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;" onclick="take_deli(1)">Takeaway</a>
+                    </li>
+                    <!-- select address -->
+                    <li class="deliver nav-item text-center" id="take" style="height: 30px; width: 100%;">
+
+                        <input class="fw-semibold" id="select-address" list="datalistOptions" type="search" class="search-data " placeholder="Select Address" required style="width:100%; height: 37px;">
+                        <datalist id="datalistOptions">
+                            <?php
+                            $url = "pizza.json";
+                            $response = file_get_contents($url);
+                            $result = json_decode($response);
+                            for ($i = 0; $i < count($result->branch->eng_branch); $i++) {
+                                echo '<option value="' . $result->branch->eng_branch[$i] . '">';
+                            }
+                            ?>
+                        </datalist>
+                    </li>
+                    <li>
+                        <div class="d-none" id="deli">
+                            <div class="dropdown w-100 ">
+                                <button class="btn  dropdown-toggle align-text-center " style=" width:106%; background-color:#D9D9D9; border-radius:10px;" id="drop-text" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Your Address
+                                </button>
+                                <ul class="dropdown-menu" id="drop" style=" width:350px;">
+                                    <li><a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">New Address</a></li>
+                                    <li><a class="dropdown-item " href="#">Current Address</a></li>
+                                </ul>
+                            </div>
+                            <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header d-block">
+                                            <button type="button" class="btn-close d-flex p-2 float-right" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Add new address</h1>
+
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" id="name" placeholder="ชื่อ-นามสกุลของคุณ">
+                                            </div>
+                                            <div class="mb-3">
+                                                <textarea class="form-control" id="address" placeholder="ที่อยู่ของคุณ" rows="3"></textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="number" class="form-control" id="phone" placeholder="เบอร์โทรของคุณ">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer d-flex justify-content-center align-item-center">
+                                            <button  onclick="valid()" data-bs-dismiss="modal"  type="submit"  class="btn btn-primary" >Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </li>
+                </div>
+
+                <div class="nav navbar-links" style="margin-left: 10px;">
+                    <ul class="nav" style="font-size: 16px;">
+                        <!-- buy 1 get 1 -->
+                        <li class="nav-item pizza-set" id="b1g1">
+                            <a   class="nav-link  fw-bold m-auto h-100 see-nav see-nav-b1g1" href="buy1get1.php">Buy 1 get 1 free</a>
+                        </li>
+                        <!-- value set -->
+                        <li class="nav-item pizza-set">
+                            <a   class="nav-link  fw-bold m-auto h-100 see-nav" href="value_set.php">Value Set</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+            </div>
+        </ul>
+    </header>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
 
     <div>
@@ -29,8 +117,8 @@
         <h3 id="name_value_set">Special DealBuy 1 Get 1</h3><br>
         <!-- เลือกพิซซ่า-->
         <br><br>
-        <div class="btn-group " role="group" id="pom_select">
-            <a class="btn bg-warning text-light" id="pom_select_1" role="button" onclick="hidNshopizza(2,2)">เลือกพิซซ่าถาด1</a>
+        <div class="btn-group" role="group" id="pom_select">
+            <a class="btn" id="pom_select_1" role="button" onclick="hidNshopizza(2,2)" >เลือกพิซซ่าถาด1</a>
             <a class="btn" id="pom_select_2" role="button" onclick="hidNshopizza(1,2)">เลือกพิซซ่าถาด2</a>
         </div>
     </div>
@@ -43,12 +131,12 @@
         <div class="btn-group" id="choose_dropdown">
             <div class="row ">
                 <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center ">
-                    <select id="selectpizza1" class="text-center form-select form-select-md mb-3 ms-3 me-3" style="width: 100%;" aria-label=".form-select-md " onchange="changePizza(1)">
+                    <select id="selectpizza1" class="text-center form-select form-select-md mb-3 ms-3 me-3" style="width: 100%;" aria-label=".form-select-md " onchange="reset(1); changePizza(1);">
                         <?php
                         $url = "pizza.json";
                         $response = file_get_contents($url);
                         $result = json_decode($response);
-                        for ($i = 0; $i < count($result->menu) - 1; $i++) {
+                        for ($i = 0; $i < count($result->menu) - 1; $i++){
                             echo '<option value="' . $result->menu[$i]->eng_name . '">' . $result->menu[$i]->eng_name . '</option>';
                         }
                         ?>
@@ -185,7 +273,7 @@
         <div class="btn-group" id="choose_dropdown">
             <div class="row">
                 <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center ">
-                    <select id="selectpizza2" class="text-center form-select form-select-md mb-3 me-3 ms-3" style="width: 100%;" aria-label=".form-select-md " onchange="changePizza(2)">
+                    <select id="selectpizza2" class="text-center form-select form-select-md mb-3 me-3 ms-3" style="width: 100%;" aria-label=".form-select-md " onchange="reset(1); changePizza(2);">
                         <?php
                         $url = "pizza.json";
                         $response = file_get_contents($url);
@@ -197,7 +285,7 @@
                     </select>
                 </div>
                 <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center ">
-                    <select style="width: 100%;" id="selectcrust2" class="text-center form-select form-select-md mb-3 me-3 ms-3" onchange="changePizza(2)" style="width: 250px;" aria-label=".form-select-md ">
+                    <select style="width: 100%;" id="selectcrust2" class="text-center form-select form-select-md mb-3 me-3 ms-3" onchange="changePizza(2)" style="width: 100%;" aria-label=".form-select-md ">
                         <option selected value="0">Pan Medium</option>
                         <option value="1">Crispy Thin Medium</option>
                         <option value="2">Extreme Cheese Medium</option>
@@ -261,7 +349,6 @@
                             <a href="#+" class="col-2"onclick="num_topping(1,5)"><i class="bi bi-plus-circle"
                                     id="icon-plus-circle"></i></a>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -327,8 +414,7 @@
         <a href="#pizza1" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i> </a>
     </div>
     <!-- footer -->
-    <div id="footer">
-    </div>
+    <?php include 'footer.php'; ?>
 </body>
 <script src="pizza.js"></script>
 
