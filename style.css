@@ -58,12 +58,7 @@ body {
     padding-left: 20px;
     text-align: center;
 }
-/* ::-webkit-input-placeholder {
-    text-align: center;
-  }
-  :-moz-placeholder {
-    text-align: center;
-  } */
+
 
 #select-address:focus {
     border: none;
@@ -89,7 +84,26 @@ input:focus::-webkit-input-placeholder {
 }
 
 .pizza-set:hover {
-    background-color: hsl(0, 1%, 95%);
+    background-color: hsl(26, 26%, 12%);
+
+}
+.see-nav{
+    color: black;
+}
+.see-nav:hover{
+    color: white;
+}
+#b1g1{
+    background-color: hsl(26, 26%, 12%) ;
+}
+.see-nav-b1g1{
+    color: white;
+}
+#va-set{
+    background-color: hsl(26, 26%, 12%) ;
+}
+.see-nav-va-set{
+    color: white;
 }
 
 .deli-take {
@@ -423,7 +437,7 @@ body {
     --grey: hsl(0, 0%, 78%);
     --black: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
-    --white1: hsla(0, 0%, 100%,.7);
+    --white1: hsla(0, 0%, 100%, .7);
     --blue: hsl(240, 100%, 50%);
 }
 
@@ -516,8 +530,7 @@ body {
 #pizza3,
 #pizza4,
 #pizza5,
-#pizza6 
-{
+#pizza6 {
     background: var(--red);
     margin-left: 20%;
     margin-right: 20%;
@@ -534,7 +547,7 @@ body {
 #button_choose_pasta,
 #button_choose_size,
 #button_choose_face,
-#button_choose_part{
+#button_choose_part {
     background: hsla(0, 0%, 100%, 0.5);
     color: hsl(0, 0%, 100%);
     margin-right: 15px;
@@ -565,22 +578,29 @@ body {
 }
 
 /* ปุ่มเลือก พิซซ่า | ไก่ */
-#pom_select_1,
+
+
+#pom_select_1{
+    background-color: var(--red);
+    color: #ffffff;
+}
 #pom_select_2,
 #pom_select_3,
 #pom_select_4,
 #pom_select_5,
-#pom_select_6  {
-    background: var(--red);
+#pom_select_6 {
+    background: #CBB09C;
     color: #ffffff;
 }
 
 #pom_select_1:hover,
 #pom_select_2:hover,
 #pom_select_3:hover,
-#pom_select_4:hover {
-    color: var(--grey);
-    background-color: #000000;
+#pom_select_4:hover,
+#pom_select_5:hover,
+#pom_select_6:hover {
+    color: #ffffff;
+    background-color: var(--brown)  !important;
 }
 
 #pom_select {
@@ -590,19 +610,20 @@ body {
     margin-right: auto;
 }
 
-#button_choose_part{
+#button_choose_part {
     display: flex;
     margin-left: auto;
     margin-right: auto;
 }
-#total_set_value{
+
+#total_set_value {
     width: 100px;
     margin-left: auto;
     margin-right: auto;
     background: var(--grey);
 }
 
-#footer{
+#footer {
     width: 100%;
     height: 100px;
     display: flex;
@@ -621,3 +642,30 @@ body {
     }
 } */
 
+footer{
+    width: 100%;
+    text-align: center;
+    overflow-y: hidden;
+}
+
+#name_footer{
+    font-size: 30px;
+    color: rgb(218, 218, 218);
+}
+
+#add_footer,#contact_footer,#f_footer,#e_footer,#i_footer{
+    color: #fff;
+}
+
+#add_footer:hover,#contact_footer:hover,#f_footer:hover,#e_footer:hover,#i_footer:hover,#order_footer:hover{
+    color:var(--grey);
+}
+#order_footer{
+    color: #fff;
+}
+
+#time_footer{
+    background: rgba(255, 255, 255, 0);
+    border: rgba(255, 255, 255, 0);
+    font-size: 16px;
+}

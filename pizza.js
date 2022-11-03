@@ -174,8 +174,8 @@ let pprice2 = document.getElementById("pprice2")
 let picpiz;
 let menu;
 let crust;
+let price = 0
 let pprice;
-let price = 0;
 let desc;
 let requestURL = 'pizza.json';
 let request = new XMLHttpRequest();
@@ -201,12 +201,13 @@ function ExtractData(data) {
 }
 let arr_price = [];
 price = 379;
-function setPrice(set){
+function setPrice(set) {
     console.log("1")
-    if (set == 1){
+    if (set == 1) {
         console.log("2")
-        price = 379;}
-    else{
+        price = 379;
+    }
+    else {
         console.log("3")
         price = 179
     }
@@ -224,7 +225,7 @@ function getPrice(piz, crust, set) {
 
 
 
-    price = price+topPrice;
+    price = price + topPrice;
     console.log(price)
     if (crust == 1) {
         price -= 40;
@@ -248,7 +249,7 @@ function changeDesc(piz) {
 }
 
 
-let numAdd = [0,0,0,0,0,0,0,0];
+let numAdd = [0, 0, 0, 0, 0, 0, 0, 0];
 let topp = "top";
 let topPrice = 0;
 function num_topping(add, num) {
@@ -256,9 +257,9 @@ function num_topping(add, num) {
     let topid = topp + num;
     let getid = document.getElementById(topid);
     let pic = 0;
-    if (num > 4){
+    if (num > 4) {
         pic = 2;
-    }else{
+    } else {
         pic = 1
     }
     if (add == 1) {
@@ -280,26 +281,23 @@ function keepprice() {
     arr_price.push(price)
     console.log(arr_price)
 }
-function reset(num){
+function reset(num) {
     console.log(price)
-    if (num == 0){
+    if (num == 0) {
         price -= topPrice;
     }
-    else if (num){
-        for (let i=0; i<8; i++){
+    else if (num) {
+        for (let i = 0; i < 8; i++) {
             numAdd[i] = 0;
-            
             let topid = topp + i;
             let getid = document.getElementById(topid);
-            console.log(topid, getid)
-            if (getid == null){
+            if (getid == null) {
                 break;
             }
-            
-            getid.innerHTML = 0;
-            
+
+            getid.innerHTML = numAdd[i];
+
         }
-        console.log(numAdd)
     }
     console.log(numAdd)
     topPrice = 0;
@@ -307,7 +305,7 @@ function reset(num){
 console.log("on");
 
 function changePizza(pic, set) {
-    console.log(menu1);
+
     if (pic == 1) {
         picpiz = pic1;
         menu = menu1;
@@ -352,14 +350,13 @@ function changePizza(pic, set) {
 }
 
 function changePrice(price, pic) {
-    if (pic == 1) { 
+    if (pic == 1) {
         pprice = pprice1;
     } if (pic == 2) {
         pprice = pprice2;
     }
     pprice.innerHTML = price + " ฿";
 }
-
 
 let pizza1 = document.getElementById("pizza1");
 let pizza2 = document.getElementById("pizza2");
@@ -381,6 +378,8 @@ let pum4 = document.getElementById("pom_select_4");
 let pum5 = document.getElementById("pom_select_5");
 let pum6 = document.getElementById("pom_select_6");
 
+let sel_color = "hsla(0, 100%, 66%, 0.4)";
+let back_color = "#CBB09C";
 function hidNshopizza(num, check) {
 
     if (check == 2) {
@@ -389,18 +388,16 @@ function hidNshopizza(num, check) {
             last.classList.remove("d-none");
             pizza1.classList.add("d-none");
             pizza2.classList.remove("d-none");
-            pum1.classList.remove("bg-warning", "text-light");
-            pum2.classList.add("bg-warning", "text-light");
-
-
+            pum1.style.backgroundColor = back_color;
+            pum2.style.backgroundColor = sel_color;
         }
         else {
             but1.classList.remove("d-none");
             last.classList.add("d-none");
             pizza1.classList.remove("d-none");
             pizza2.classList.add("d-none");
-            pum1.classList.add("bg-warning", "text-light");
-            pum2.classList.remove("bg-warning", "text-light");
+            pum1.style.backgroundColor = sel_color;
+            pum2.style.backgroundColor = back_color;
         }
     }
 
@@ -410,16 +407,16 @@ function hidNshopizza(num, check) {
             but2.classList.remove("d-none");
             pizza1.classList.add("d-none");
             pizza2.classList.remove("d-none");
-            pum1.classList.remove("bg-warning", "text-light");
-            pum2.classList.add("bg-warning", "text-light");
+            pum1.style.backgroundColor = sel_color;
+            pum2.style.backgroundColor = back_color;
         }
         else if (num == 2) {
             but2.classList.add("d-none");
             but3.classList.remove("d-none");
             pizza2.classList.add("d-none");
             pizza3.classList.remove("d-none");
-            pum2.classList.remove("bg-warning", "text-light");
-            pum3.classList.add("bg-warning", "text-light");
+            pum2.style.backgroundColor = back_color;
+            pum3.style.backgroundColor = sel_color;
 
         }
         else if (num == 3) {
@@ -427,8 +424,8 @@ function hidNshopizza(num, check) {
             last.classList.remove("d-none");
             pizza3.classList.add("d-none");
             pizza4.classList.remove("d-none");
-            pum3.classList.remove("bg-warning", "text-light");
-            pum4.classList.add("bg-warning", "text-light");
+            pum3.style.backgroundColor = back_color;
+            pum4.style.backgroundColor = sel_color;
 
         }
     }
@@ -439,16 +436,16 @@ function hidNshopizza(num, check) {
             but2.classList.remove("d-none");
             pizza1.classList.add("d-none");
             pizza2.classList.remove("d-none");
-            pum1.classList.remove("bg-warning", "text-light");
-            pum2.classList.add("bg-warning", "text-light");
+            pum1.style.backgroundColor = back_color;
+            pum2.style.backgroundColor = sel_color;
         }
         else if (num == 2) {
             but2.classList.add("d-none");
             but3.classList.remove("d-none");
             pizza2.classList.add("d-none");
             pizza3.classList.remove("d-none");
-            pum2.classList.remove("bg-warning", "text-light");
-            pum3.classList.add("bg-warning", "text-light");
+            pum2.style.backgroundColor = back_color;
+            pum3.style.backgroundColor = sel_color;
 
         }
         else if (num == 3) {
@@ -456,8 +453,8 @@ function hidNshopizza(num, check) {
             but4.classList.remove("d-none");
             pizza3.classList.add("d-none");
             pizza4.classList.remove("d-none");
-            pum3.classList.remove("bg-warning", "text-light");
-            pum4.classList.add("bg-warning", "text-light");
+            pum3.style.backgroundColor = back_color;
+            pum4.style.backgroundColor = sel_color;
 
         }
         else if (num == 4) {
@@ -465,16 +462,16 @@ function hidNshopizza(num, check) {
             but5.classList.remove("d-none");
             pizza4.classList.add("d-none");
             pizza5.classList.remove("d-none");
-            pum4.classList.remove("bg-warning", "text-light");
-            pum5.classList.add("bg-warning", "text-light");
+            pum4.style.backgroundColor = back_color;
+            pum5.style.backgroundColor = sel_color;
         }
         else if (num == 5) {
             but5.classList.add("d-none");
             last.classList.remove("d-none");
             pizza5.classList.add("d-none");
             pizza6.classList.remove("d-none");
-            pum5.classList.remove("bg-warning", "text-light");
-            pum6.classList.add("bg-warning", "text-light");
+            pum5.style.backgroundColor = back_color;
+            pum6.style.backgroundColor = sel_color;
         }
     }
 }
@@ -494,12 +491,13 @@ function hidNshopizza46(num, check) {
             pizza4.classList.add("d-none");
             pizza5.classList.add("d-none");
             pizza6.classList.add("d-none");
-            pum1.classList.add("bg-warning", "text-light");
-            pum2.classList.remove("bg-warning", "text-light");
-            pum3.classList.remove("bg-warning", "text-light");
-            pum4.classList.remove("bg-warning", "text-light");
-            pum5.classList.remove("bg-warning", "text-light");
-            pum6.classList.remove("bg-warning", "text-light");
+            pum1.style.backgroundColor = sel_color;
+            pum2.style.backgroundColor = back_color;
+            pum3.style.backgroundColor = back_color;
+            pum4.style.backgroundColor = back_color;
+            pum5.style.backgroundColor = back_color;
+            pum6.style.backgroundColor = back_color;
+
         }
         else if (num == 2) {
             but1.classList.add("d-none");
@@ -514,12 +512,12 @@ function hidNshopizza46(num, check) {
             pizza4.classList.add("d-none");
             pizza5.classList.add("d-none");
             pizza6.classList.add("d-none");
-            pum1.classList.remove("bg-warning", "text-light");
-            pum2.classList.add("bg-warning", "text-light");
-            pum3.classList.remove("bg-warning", "text-light");
-            pum4.classList.remove("bg-warning", "text-light");
-            pum5.classList.remove("bg-warning", "text-light");
-            pum6.classList.remove("bg-warning", "text-light");
+            pum1.style.backgroundColor = back_color;
+            pum2.style.backgroundColor = sel_color;
+            pum3.style.backgroundColor = back_color;
+            pum4.style.backgroundColor = back_color;
+            pum5.style.backgroundColor = back_color;
+            pum6.style.backgroundColor = back_color;
         }
         else if (num == 3) {
             but1.classList.add("d-none");
@@ -534,12 +532,12 @@ function hidNshopizza46(num, check) {
             pizza4.classList.add("d-none");
             pizza5.classList.add("d-none");
             pizza6.classList.add("d-none");
-            pum1.classList.remove("bg-warning", "text-light");
-            pum2.classList.remove("bg-warning", "text-light");
-            pum3.classList.add("bg-warning", "text-light");
-            pum4.classList.remove("bg-warning", "text-light");
-            pum5.classList.remove("bg-warning", "text-light");
-            pum6.classList.remove("bg-warning", "text-light");
+            pum1.style.backgroundColor = back_color;
+            pum2.style.backgroundColor = back_color;
+            pum3.style.backgroundColor = sel_color;
+            pum4.style.backgroundColor = back_color;
+            pum5.style.backgroundColor = back_color;
+            pum6.style.backgroundColor = back_color;
         }
         else if (num == 4) {
             but1.classList.add("d-none");
@@ -554,12 +552,12 @@ function hidNshopizza46(num, check) {
             pizza4.classList.remove("d-none");
             pizza5.classList.add("d-none");
             pizza6.classList.add("d-none");
-            pum1.classList.remove("bg-warning", "text-light");
-            pum2.classList.remove("bg-warning", "text-light");
-            pum3.classList.remove("bg-warning", "text-light");
-            pum4.classList.add("bg-warning", "text-light");
-            pum5.classList.remove("bg-warning", "text-light");
-            pum6.classList.remove("bg-warning", "text-light");
+            pum1.style.backgroundColor = back_color;
+            pum2.style.backgroundColor = back_color;
+            pum3.style.backgroundColor = back_color;
+            pum4.style.backgroundColor = sel_color;
+            pum5.style.backgroundColor = back_color;
+            pum6.style.backgroundColor = back_color;
         }
         else if (num == 5) {
             but1.classList.add("d-none");
@@ -574,12 +572,12 @@ function hidNshopizza46(num, check) {
             pizza4.classList.add("d-none");
             pizza5.classList.remove("d-none");
             pizza6.classList.add("d-none");
-            pum1.classList.remove("bg-warning", "text-light");
-            pum2.classList.remove("bg-warning", "text-light");
-            pum3.classList.remove("bg-warning", "text-light");
-            pum4.classList.remove("bg-warning", "text-light");
-            pum5.classList.add("bg-warning", "text-light");
-            pum6.classList.remove("bg-warning", "text-light");
+            pum1.style.backgroundColor = back_color;
+            pum2.style.backgroundColor = back_color;
+            pum3.style.backgroundColor = back_color;
+            pum4.style.backgroundColor = back_color;
+            pum5.style.backgroundColor = sel_color;
+            pum6.style.backgroundColor = back_color;
         }
         else if (num == 6) {
             but1.classList.add("d-none");
@@ -594,12 +592,12 @@ function hidNshopizza46(num, check) {
             pizza4.classList.add("d-none");
             pizza5.classList.add("d-none");
             pizza6.classList.remove("d-none");
-            pum1.classList.remove("bg-warning", "text-light");
-            pum2.classList.remove("bg-warning", "text-light");
-            pum3.classList.remove("bg-warning", "text-light");
-            pum4.classList.remove("bg-warning", "text-light");
-            pum5.classList.remove("bg-warning", "text-light");
-            pum6.classList.add("bg-warning", "text-light");
+            pum1.style.backgroundColor = back_color;
+            pum2.style.backgroundColor = back_color;
+            pum3.style.backgroundColor = back_color;
+            pum4.style.backgroundColor = back_color;
+            pum5.style.backgroundColor = back_color;
+            pum6.style.backgroundColor = sel_color;
         }
 
     }
@@ -613,10 +611,10 @@ function hidNshopizza46(num, check) {
             pizza2.classList.add("d-none");
             pizza3.classList.add("d-none");
             pizza4.classList.add("d-none");
-            pum1.classList.add("bg-warning", "text-light");
-            pum2.classList.remove("bg-warning", "text-light");
-            pum3.classList.remove("bg-warning", "text-light");
-            pum4.classList.remove("bg-warning", "text-light");
+            pum1.style.backgroundColor = sel_color;
+            pum2.style.backgroundColor = back_color;
+            pum3.style.backgroundColor = back_color;
+            pum4.style.backgroundColor = back_color;
         }
         else if (num == 2) {
             but1.classList.add("d-none");
@@ -627,10 +625,10 @@ function hidNshopizza46(num, check) {
             pizza2.classList.remove("d-none");
             pizza3.classList.add("d-none");
             pizza4.classList.add("d-none");
-            pum1.classList.remove("bg-warning", "text-light");
-            pum2.classList.add("bg-warning", "text-light");
-            pum3.classList.remove("bg-warning", "text-light");
-            pum4.classList.remove("bg-warning", "text-light");
+            pum1.style.backgroundColor = back_color;
+            pum2.style.backgroundColor = sel_color;
+            pum3.style.backgroundColor = back_color;
+            pum4.style.backgroundColor = back_color;
         }
         else if (num == 3) {
             but1.classList.add("d-none");
@@ -641,10 +639,10 @@ function hidNshopizza46(num, check) {
             pizza2.classList.add("d-none");
             pizza3.classList.remove("d-none");
             pizza4.classList.add("d-none");
-            pum1.classList.remove("bg-warning", "text-light");
-            pum2.classList.remove("bg-warning", "text-light");
-            pum3.classList.add("bg-warning", "text-light");
-            pum4.classList.remove("bg-warning", "text-light");
+            pum1.style.backgroundColor = back_color;
+            pum2.style.backgroundColor = back_color;
+            pum3.style.backgroundColor = sel_color;
+            pum4.style.backgroundColor = back_color;
         }
         else if (num == 4) {
             but1.classList.add("d-none");
@@ -655,10 +653,10 @@ function hidNshopizza46(num, check) {
             pizza2.classList.add("d-none");
             pizza3.classList.add("d-none");
             pizza4.classList.remove("d-none");
-            pum1.classList.remove("bg-warning", "text-light");
-            pum2.classList.remove("bg-warning", "text-light");
-            pum3.classList.remove("bg-warning", "text-light");
-            pum4.classList.add("bg-warning", "text-light");
+            pum1.style.backgroundColor = back_color;
+            pum2.style.backgroundColor = back_color;
+            pum3.style.backgroundColor = back_color;
+            pum4.style.backgroundColor = sel_color;
         }
     }
 }
@@ -667,28 +665,7 @@ function hidNshopizza46(num, check) {
 function changeSpa() {
     spa.src = ("./img/pasta/pasta_" + sespa.value + ".png")
 }
-// let requestURL = 'pizza.json';
-// let request = new XMLHttpRequest();
-// let data1;
-// request.onreadystatechange = function () {
-//     if (request.readyState == 4 && request.status == 200) {
-//         ExtractData(JSON.parse(request.responseText));
-//     }
-// };
-// request.open("GET", requestURL, true);
-// request.send();
-// let arr_price = '{pizza:[],price:[]}';
-// var obj = JSON.parse(arr_price)
-// function ExtractData(data) {
-//     // let arr_test = [];
 
-//     for (let i = 0; i < data.menu.length; i++) {
-//         obj['pizza'].push(data.menu[i].eng_name)
-//         obj['price'].push(data.menu[i].price)
-//     }
-// }
-// arr_price = JSON.stringify(obj)
-// console.log(arr_price)
 function take_deli(num) {
     let deli = document.getElementById("deli");
     let take = document.getElementById("take");
@@ -714,69 +691,58 @@ function take_deli(num) {
 
     }
 }
-// // let isSend = false;
-// let namee = document.getElementById("name");
-// let address = document.getElementById("address");
-// let phone = document.getElementById("phone");
-// let dropt = document.getElementById("drop-text")
-// let drop = document.getElementById("drop");
-// let list = document.createElement("li");
-// let taga = document.createElement("a");
-// let tag_phone = document.createElement("a");
-// let tag_addr = document.createElement("a");
-
-// let position ;
-// let check_valid = document.getElementById("check_valid");
-// if((namee.value.length < 2) || (namee.value.length > 30)){
-//     check_valid.addEventListener("mouseover", function(){
-        
-//     })
-// }
+let isSend = false;
+let namee = document.getElementById("name");
+let address = document.getElementById("address");
+let phone = document.getElementById("phone");
+let dropt = document.getElementById("drop-text")
+let drop = document.getElementById("drop");
+let list = document.createElement("li");
+let taga = document.createElement("a");
+let tag_phone = document.createElement("a");
+let tag_addr = document.createElement("a");
 
 
+function valid() {
+    if (namee.value == "" || address.value == "" || phone.value == "") {
+        alert("dfesff");
+        return false;
+    }
+    else if (!isNaN(namee.value)) {
+        alert("Name must be alphabet");
+        return false;
 
+    }
 
-// function valid(){
-//     if (namee.value == "" || address.value == "" || phone.value == "") {
-//         alert("Please fill all the information");
-//         return false;
-//     }
-//     else if (!isNaN(namee.value)) {
-//         console.log(namee.value)
-//         console.log(address.value)
-//         console.log(phone.value)
-//         alert("Name must be alphabet");
-//         return false;
+    else if ((namee.value.length < 2) || (namee.value.length > 30)) {
+        alert("Name must not be less than 2 or more than 20 alphabets");
+        return false;
+    }
+    else if ((phone.value.length != 10)) {
+        alert("Phone must be 10 digit");
+        return false;
+    }
+    else if (!isSend) {
+        // btn_ch.addAttribute("data-bs-dismiss='modal'");
+        taga.classList.add('dropdown-item', 'fs-4');
+        taga.setAttribute("data-bs-toggle", "modal");
+        taga.innerText = namee.value;
+        tag_addr.classList.add('dropdown-item');
+        tag_addr.setAttribute("data-bs-toggle", "modal");
+        tag_addr.innerText = address.value;
+        tag_phone.classList.add('dropdown-item');
+        tag_phone.setAttribute("data-bs-toggle", "modal");
+        tag_phone.innerText = phone.value;
+        drop.removeChild(drop.lastElementChild);
+        list.appendChild(taga);
+        list.appendChild(tag_addr);
+        list.appendChild(tag_phone);
+        drop.appendChild(list);
+        dropt.innerText = namee.value;
+        dropt.classList.remove("dropdown-toggle");
+        isSend = true;
 
-//     }
+    }
+}
 
-//     else if ((namee.value.length < 2) || (namee.value.length > 30)) {
-//         alert("Name must not be less than 2 or more than 20 alphabets");
-//         return false;
-//     }
-//     else if ((phone.value.length != 10)) {
-//         alert("Phone must be 10 digit");
-//         return false;
-//     }
-//     else if (!isSend) {
-//         taga.classList.add('dropdown-item', 'fs-4');
-//         taga.setAttribute("data-bs-toggle", "modal");
-//         taga.innerText = namee.value;
-//         tag_addr.classList.add('dropdown-item');
-//         tag_addr.setAttribute("data-bs-toggle", "modal");
-//         tag_addr.innerText = address.value;
-//         tag_phone.classList.add('dropdown-item');
-//         tag_phone.setAttribute("data-bs-toggle", "modal");
-//         tag_phone.innerText = phone.value;
-//         drop.removeChild(drop.lastElementChild);
-//         list.appendChild(taga);
-//         list.appendChild(tag_addr);
-//         list.appendChild(tag_phone);
-//         drop.appendChild(list);
-//         dropt.innerText = namee.value;
-//         dropt.classList.remove("dropdown-toggle");
-//         isSend = True;
-
-//     }
-// }
 
