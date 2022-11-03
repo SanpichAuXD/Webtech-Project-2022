@@ -18,7 +18,7 @@
 <body>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
-    <?php include 'nav.php';?>
+    <?php include 'nav.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
 
     <!-- โฆษณา -->
@@ -26,7 +26,7 @@
         <div id="ad-container">
             <!-- อันซ้าย -->
             <div class="advertising" id="card1">
-               <a href="value_set_1.php"><img  id="img1" class="ad-img" style="width: 100%; height: 100%;" src="img/home/value_set_1.png" alt=""></a> 
+                <a href="value_set_1.php"><img id="img1" class="ad-img" style="width: 100%; height: 100%;" src="img/home/value_set_1.png" alt=""></a>
                 <a onclick="left('1')" class="arrow arrow-left" id="btleft1">
                     <img style="width: 100%; height: 100%;" src="img/home/left.png" alt="">
                 </a>
@@ -71,6 +71,8 @@
             <h1>Recommend</h1>
         </div>
     </section>
+    <!-- footer -->
+    <?php include 'footer.php'; ?>
     <script src="pizza.js"></script>
 </body>
 
