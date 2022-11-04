@@ -56,7 +56,7 @@
             </div>
             <!-- อันข้างหลัง -->
             <div class="advertising" id="card4">
-                <a href="value_set_4.php"><img id="img4" class="ad-img" style="width: 100%; height: 100%;" src="img/home/value_set_4.png" alt=""></a>
+                <a href="value_set_4.php"><img id="img4" class="ad-img" style="width: 100%; height: 100%;" src="img/home/value_set_4.jpg" alt=""></a>
                 <a onclick="left('4')" class="arrow arrow-left" id="btleft4">
                     <img style="width: 100%; height: 100%;" src="img/home/left.png" alt="">
                 </a>
