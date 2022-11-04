@@ -242,7 +242,7 @@ function getPrice(piz, crust, set) {
 }
 
 function changeDesc(piz) {
-    console.log(desc)
+    console.log(pizprice[piz][1]);
     desc.innerHTML = pizprice[piz][1];
 
 
@@ -305,7 +305,7 @@ function reset(num) {
 console.log("on");
 
 function changePizza(pic, set) {
-
+    
     if (pic == 1) {
         picpiz = pic1;
         menu = menu1;
@@ -477,131 +477,7 @@ function hidNshopizza(num, check) {
 }
 
 function hidNshopizza46(num, check) {
-    if (check == 6) {
-        if (num == 1) {
-            but1.classList.remove("d-none");
-            but2.classList.add("d-none");
-            but3.classList.add("d-none");
-            but4.classList.add("d-none");
-            but5.classList.add("d-none");
-            last.classList.add("d-none");
-            pizza1.classList.remove("d-none");
-            pizza2.classList.add("d-none");
-            pizza3.classList.add("d-none");
-            pizza4.classList.add("d-none");
-            pizza5.classList.add("d-none");
-            pizza6.classList.add("d-none");
-            pum1.style.backgroundColor = sel_color;
-            pum2.style.backgroundColor = back_color;
-            pum3.style.backgroundColor = back_color;
-            pum4.style.backgroundColor = back_color;
-            pum5.style.backgroundColor = back_color;
-            pum6.style.backgroundColor = back_color;
-
-        }
-        else if (num == 2) {
-            but1.classList.add("d-none");
-            but2.classList.remove("d-none");
-            but3.classList.add("d-none");
-            but4.classList.add("d-none");
-            but5.classList.add("d-none");
-            last.classList.add("d-none");
-            pizza1.classList.add("d-none");
-            pizza2.classList.remove("d-none");
-            pizza3.classList.add("d-none");
-            pizza4.classList.add("d-none");
-            pizza5.classList.add("d-none");
-            pizza6.classList.add("d-none");
-            pum1.style.backgroundColor = back_color;
-            pum2.style.backgroundColor = sel_color;
-            pum3.style.backgroundColor = back_color;
-            pum4.style.backgroundColor = back_color;
-            pum5.style.backgroundColor = back_color;
-            pum6.style.backgroundColor = back_color;
-        }
-        else if (num == 3) {
-            but1.classList.add("d-none");
-            but2.classList.add("d-none");
-            but3.classList.remove("d-none");
-            but4.classList.add("d-none");
-            but5.classList.add("d-none");
-            last.classList.add("d-none");
-            pizza1.classList.add("d-none");
-            pizza2.classList.add("d-none");
-            pizza3.classList.remove("d-none");
-            pizza4.classList.add("d-none");
-            pizza5.classList.add("d-none");
-            pizza6.classList.add("d-none");
-            pum1.style.backgroundColor = back_color;
-            pum2.style.backgroundColor = back_color;
-            pum3.style.backgroundColor = sel_color;
-            pum4.style.backgroundColor = back_color;
-            pum5.style.backgroundColor = back_color;
-            pum6.style.backgroundColor = back_color;
-        }
-        else if (num == 4) {
-            but1.classList.add("d-none");
-            but2.classList.add("d-none");
-            but3.classList.add("d-none");
-            but4.classList.remove("d-none");
-            but5.classList.add("d-none");
-            last.classList.add("d-none");
-            pizza1.classList.add("d-none");
-            pizza2.classList.add("d-none");
-            pizza3.classList.add("d-none");
-            pizza4.classList.remove("d-none");
-            pizza5.classList.add("d-none");
-            pizza6.classList.add("d-none");
-            pum1.style.backgroundColor = back_color;
-            pum2.style.backgroundColor = back_color;
-            pum3.style.backgroundColor = back_color;
-            pum4.style.backgroundColor = sel_color;
-            pum5.style.backgroundColor = back_color;
-            pum6.style.backgroundColor = back_color;
-        }
-        else if (num == 5) {
-            but1.classList.add("d-none");
-            but2.classList.add("d-none");
-            but3.classList.add("d-none");
-            but4.classList.add("d-none");
-            but5.classList.remove("d-none");
-            last.classList.add("d-none");
-            pizza1.classList.add("d-none");
-            pizza2.classList.add("d-none");
-            pizza3.classList.add("d-none");
-            pizza4.classList.add("d-none");
-            pizza5.classList.remove("d-none");
-            pizza6.classList.add("d-none");
-            pum1.style.backgroundColor = back_color;
-            pum2.style.backgroundColor = back_color;
-            pum3.style.backgroundColor = back_color;
-            pum4.style.backgroundColor = back_color;
-            pum5.style.backgroundColor = sel_color;
-            pum6.style.backgroundColor = back_color;
-        }
-        else if (num == 6) {
-            but1.classList.add("d-none");
-            but2.classList.add("d-none");
-            but3.classList.add("d-none");
-            but4.classList.add("d-none");
-            but5.classList.add("d-none");
-            last.classList.remove("d-none");
-            pizza1.classList.add("d-none");
-            pizza2.classList.add("d-none");
-            pizza3.classList.add("d-none");
-            pizza4.classList.add("d-none");
-            pizza5.classList.add("d-none");
-            pizza6.classList.remove("d-none");
-            pum1.style.backgroundColor = back_color;
-            pum2.style.backgroundColor = back_color;
-            pum3.style.backgroundColor = back_color;
-            pum4.style.backgroundColor = back_color;
-            pum5.style.backgroundColor = back_color;
-            pum6.style.backgroundColor = sel_color;
-        }
-
-    }
-    else if (check == 4) {
+    if (check == 4) {
         if (num == 1) {
             but1.classList.remove("d-none");
             but2.classList.add("d-none");
@@ -744,5 +620,13 @@ function valid() {
 
     }
 }
+// !function rec_select(num){
+//     let opt = "op"+num;
+//     let opt0 = document.getElementById(opt);
+//     if (opt0.innerHTML == "Double Cheese") {
+//         opt0.setAttribute("selected","selected");
+//         changePizza(1);
+//     }
+// }();
 
 
