@@ -407,8 +407,8 @@ function hidNshopizza(num, check) {
             but2.classList.remove("d-none");
             pizza1.classList.add("d-none");
             pizza2.classList.remove("d-none");
-            pum1.style.backgroundColor = sel_color;
-            pum2.style.backgroundColor = back_color;
+            pum1.style.backgroundColor = back_color;
+            pum2.style.backgroundColor = sel_color;
         }
         else if (num == 2) {
             but2.classList.add("d-none");
@@ -417,7 +417,6 @@ function hidNshopizza(num, check) {
             pizza3.classList.remove("d-none");
             pum2.style.backgroundColor = back_color;
             pum3.style.backgroundColor = sel_color;
-
         }
         else if (num == 3) {
             but3.classList.add("d-none");
