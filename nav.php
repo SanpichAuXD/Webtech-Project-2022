@@ -9,7 +9,7 @@
 
 <body>
     <header>
-        <ul class="nav-tabs " style="background-color: white;" >
+        <ul class="nav-tabs " style="background-color: white;">
             <div class="container-fluid nav">
                 <!-- logo -->
                 <a id="logo" class="navbar-brand" class="nav-a" href="index.php">

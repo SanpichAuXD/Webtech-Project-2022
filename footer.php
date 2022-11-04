@@ -10,7 +10,7 @@
 <body>
     <footer>
         <hr>
-        <a href="index.php" class="btn"><b id="name_footer">pizzahuh</b></a><br>
+        <a href="index.php" class="btn"><b id="name_footer">Pizza huh</b></a><br>
         <a href="https://goo.gl/maps/UqntHua9BMhux86w6" id="add_footer" class="btn text-center">
             <i class="bi bi-geo-alt-fill">1 Chalong Krung, 1 Alley, Lat Krabang, Bangkok 10520</i>
         </a>
