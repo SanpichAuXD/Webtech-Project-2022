@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body >
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <header>
@@ -151,7 +151,22 @@
         </div>
     </div>
     <!---menu 3--->
-
+    <div class="container">
+        <div class="row m-5">
+            <div class="col-4 rounded-start" id="pic-bg">
+                <img src="img/home/value_set_4.jpg" width="100%" class="mt-2 mb-2 rounded">
+            </div>
+            <div class="col-8 rounded-end" id="text-bg">
+                <!--แก้ไข---ชื่อเมนู---->
+                <br>
+                <h3>KOOM IMM FIN SET</h3><br>
+                <!--แก้ไข---บรรยาย---->
+                <span>Enjoy with group with medium pan pizza with classic topping, BBQ chicken wing 4 pcs., spaghetti 129.- and chicken nuggets.</span><br>
+                <div class="float-end p-4 mt-3"><a href="value_set_4.php" id="plus" class="btn rounded pt-1 pb-1 ps-4 pe-4">399 ฿<i class="bi bi-cart-plus"></i></a></div>
+            </div>
+        </div>
+    </div>
+     <!---menu 4--->
     <div class="container ">
         <div class="row m-5">
             <div class="col-4 rounded-start" id="pic-bg">
@@ -164,23 +179,6 @@
                 <!--แก้ไข---บรรยาย---->
                 <span>Enjoy with group with medium extreme crust pizza with classic topping, spaghetti 129.-, chicken stick and waffle fries.</span><br>
                 <div class="float-end p-4 mt-3"><a href="value_set_3.php" id="plus" class="btn rounded pt-1 pb-1 ps-4 pe-4">499 ฿<i class="bi bi-cart-plus"></i></a></div>
-            </div>
-        </div>
-    </div>
-    <!---menu 4--->
-
-    <div class="container">
-        <div class="row m-5">
-            <div class="col-4 rounded-start" id="pic-bg">
-                <img src="img/home/value_set_4.png" width="100%" class="mt-2 mb-2 rounded">
-            </div>
-            <div class="col-8 rounded-end" id="text-bg">
-                <!--แก้ไข---ชื่อเมนู---->
-                <br>
-                <h3>Koom Ju Jai Set</h3><br>
-                <!--แก้ไข---บรรยาย---->
-                <span>Super Deal! Enjoy medium extreme curst pizza with classic topping, medium pan pizza with classic topping, BBQ chicken wing 4 pcs., spaghetti 129.-, fish finger and waffle fries.</span><br>
-                <div class="float-end p-4 mt-3"><a href="value_set_4.php" id="plus" class="btn rounded pt-1 pb-1 ps-4 pe-4">699 ฿<i class="bi bi-cart-plus"></i></a></div>
             </div>
         </div>
     </div>
