@@ -13,7 +13,7 @@
     <style>
         <?php include 'style.css'; ?>
     </style>
-</head>
+</head>                
 
 <body>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
@@ -71,6 +71,11 @@
             <a href="buy1get1.php" onclick="rec_select(5)" role="button" class='btn btn-light text-white mx-2'>Buy now</a>
         </div> -->
 
+    </section>
+    <section id="sec2">
+        <div class="d-flex justify-content-center align-items-center">
+            <a href='buy1get1.php' class='btn btn-light text-white mx-2'>Buy now</a>
+        </div>
     </section>
     <!-- footer -->
     <?php include 'footer.php'; ?>

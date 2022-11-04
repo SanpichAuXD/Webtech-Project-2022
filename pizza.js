@@ -207,9 +207,12 @@ function setPrice(set) {
         console.log("2")
         price = 379;
     }
-    else {
+    else if (set == 2) {
         console.log("3")
         price = 179
+    }
+    else {
+        price = set
     }
     console.log(price)
 }
@@ -217,16 +220,36 @@ function setPrice(set) {
 // get price from object and add price by condition
 function getPrice(piz, crust, set) {
     let price = parseInt(pizprice[piz]);
+    if (set == 4){
+        price = v4price;    
+        price = 0;
+    }
+    console.log(price)
     if (set == 1) {
         console.log(set)
-        let price = 179;
+        price = 179;
         return price;
     }
+    
+    else if(set == 2){
+        
+        // console.log(price)
+        ptopping = price - 279;
+        price = 499 + ptopping;
+        if (crust == 5){
+            price += 150;
+        }
+        return price;
+    }else if (set == 3){
+        ptopping = price - 279;
+        price = 399 + ptopping;
+    }
+    console.log(price);
 
 
 
     price = price + topPrice;
-    console.log(price)
+    
     if (crust == 1) {
         price -= 40;
     } else if (crust == 2) {
@@ -242,7 +265,6 @@ function getPrice(piz, crust, set) {
 }
 
 function changeDesc(piz) {
-    console.log(pizprice[piz][1]);
     desc.innerHTML = pizprice[piz][1];
 
 
@@ -256,8 +278,9 @@ function num_topping(add, num) {
     console.log(price)
     let topid = topp + num;
     let getid = document.getElementById(topid);
+    console.log(topid)
     let pic = 0;
-    if (num > 4) {
+    if (num > 3) {
         pic = 2;
     } else {
         pic = 1
@@ -274,12 +297,20 @@ function num_topping(add, num) {
         numAdd[num]--;
         getid.innerHTML = numAdd[num];
     }
-    console.log(price)
+   
     changePrice(price, pic);
+    console.log(price,pic)
 }
-function keepprice() {
-    arr_price.push(price)
-    console.log(arr_price)
+function keepprice(i) {
+    arr_price[i] = price;
+    console.log(arr_price);
+}
+let v4price = 0;
+function keeppricev4() {
+    
+        v4price += price;
+       price = 0;
+       console.log(v4price)
 }
 function reset(num) {
     console.log(price)
@@ -299,13 +330,16 @@ function reset(num) {
 
         }
     }
+    else{
+        v4price = 0;
+    }
     console.log(numAdd)
     topPrice = 0;
 }
 console.log("on");
 
 function changePizza(pic, set) {
-    
+
     if (pic == 1) {
         picpiz = pic1;
         menu = menu1;
@@ -322,9 +356,15 @@ function changePizza(pic, set) {
         desc = desc2;
 
     }
-    price = getPrice(menu.value, crust.value, set);
+    
+        price = getPrice(menu.value, crust.value, set);
+    
+    
     changeDesc(menu.value);
-    changePrice(price);
+    
+    changePrice(price, pic, set);
+   
+    
     console.log(price)
     if (crust.value == 0) {
         picpiz.src = ("./img/pan/" + (menu.value).split(" ").join("_") + "_m.png");
@@ -345,17 +385,33 @@ function changePizza(pic, set) {
     else if (crust.value == 5) {
         picpiz.src = ("./img/cheese/" + (menu.value).split(" ").join("_") + "_l.png");
     }
-    // console.log(picpiz.src)
+    console.log(picpiz.src)
     // console.log(menu.value);
 }
 
-function changePrice(price, pic) {
+function changePrice(price, pic, set) {
+    console.log(price)
     if (pic == 1) {
         pprice = pprice1;
     } if (pic == 2) {
         pprice = pprice2;
     }
+    if (set == 4){
+        price = v4price + price;
+    }
+    console.log(pprice)
     pprice.innerHTML = price + " ฿";
+    console.log(price)
+}
+function addToCart(){
+    if (price == 0){
+        console.log(v4price)
+    }
+    // if (arr_price[0] > arr_price[1]){
+    //     console.log(arr_price[0],0);
+    // }
+    console.log(price)
+
 }
 
 let pizza1 = document.getElementById("pizza1");
@@ -400,13 +456,13 @@ function hidNshopizza(num, check) {
             pum2.style.backgroundColor = back_color;
         }
     }
-
     if (check == 4) {
         if (num == 1) {
             but1.classList.add("d-none");
             but2.classList.remove("d-none");
             pizza1.classList.add("d-none");
             pizza2.classList.remove("d-none");
+
             pum1.style.backgroundColor = back_color;
             pum2.style.backgroundColor = sel_color;
         }
@@ -429,50 +485,7 @@ function hidNshopizza(num, check) {
         }
     }
 
-    if (check == 6) {
-        if (num == 1) {
-            but1.classList.add("d-none");
-            but2.classList.remove("d-none");
-            pizza1.classList.add("d-none");
-            pizza2.classList.remove("d-none");
-            pum1.style.backgroundColor = back_color;
-            pum2.style.backgroundColor = sel_color;
-        }
-        else if (num == 2) {
-            but2.classList.add("d-none");
-            but3.classList.remove("d-none");
-            pizza2.classList.add("d-none");
-            pizza3.classList.remove("d-none");
-            pum2.style.backgroundColor = back_color;
-            pum3.style.backgroundColor = sel_color;
-
-        }
-        else if (num == 3) {
-            but3.classList.add("d-none");
-            but4.classList.remove("d-none");
-            pizza3.classList.add("d-none");
-            pizza4.classList.remove("d-none");
-            pum3.style.backgroundColor = back_color;
-            pum4.style.backgroundColor = sel_color;
-
-        }
-        else if (num == 4) {
-            but4.classList.add("d-none");
-            but5.classList.remove("d-none");
-            pizza4.classList.add("d-none");
-            pizza5.classList.remove("d-none");
-            pum4.style.backgroundColor = back_color;
-            pum5.style.backgroundColor = sel_color;
-        }
-        else if (num == 5) {
-            but5.classList.add("d-none");
-            last.classList.remove("d-none");
-            pizza5.classList.add("d-none");
-            pizza6.classList.remove("d-none");
-            pum5.style.backgroundColor = back_color;
-            pum6.style.backgroundColor = sel_color;
-        }
-    }
+    
 }
 
 function hidNshopizza46(num, check) {

@@ -15,7 +15,7 @@
 
 </head>
 
-<body >
+<body>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <header>
@@ -111,7 +111,7 @@
 
     <div>
         <!-- ปุ่ม back -->
-        <a href="value_set.php"><i class="bi bi-arrow-left" id="back"></i></a>
+        <a href="index.php"><i class="bi bi-arrow-left" id="back"></i></a>
         <br>
         <!-- ชื่อ เมนู -->
         <h3 id="name_value_set">Special DealBuy 1 Get 1</h3><br>
@@ -125,8 +125,10 @@
     <!-- ถาด1 -->
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
     <div class="rounded " id="pizza1">
+
         <p class="text-center pt-5" style="font-size: 20px;">เลือกพิซซ่าถาดที่1</p>
         <img src="./img/pan/Seafood_Cocktail_m.png" id="pizzapic1" width="50%" class="mx-auto d-block">
+
         <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
         <div class="btn-group" id="choose_dropdown">
             <div class="row ">
@@ -146,9 +148,11 @@
                         $url = "pizza.json";
                         $response = file_get_contents($url);
                         $result = json_decode($response);
+
                         for ($i = 0; $i < count($result->menu) - 1; $i++) {
                             echo '<option value="' . $result->menu[$i]->eng_name . '">' . $result->menu[$i]->eng_name . '</option>';
                         }
+
                         ?>
                     </select>
                 </div>
@@ -403,10 +407,10 @@
     </div>
     <!-- ปุ่ม ใส่ตะกร้า -->
     <div class="text-center mt-2   ">
-        <a href="#pizza2" class="btn btn-info w-25  mt-5 mb-5 " onclick="hidNshopizza(1,2)" id="next1"> Next </a>
+        <a href="#pizza2" class="btn btn-info w-25  mt-5 mb-5 " onclick="hidNshopizza(1,2); keepprice(0);" id="next1"> Next </a>
     </div>
     <div class="text-center mt-2 ">
-        <a href="#pizza1" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i> </a>
+        <a href="#pizza1" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick=" keepprice(1); addToCart();"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i> </a>
     </div>
     <!-- footer -->
     <?php include 'footer.php'; ?>

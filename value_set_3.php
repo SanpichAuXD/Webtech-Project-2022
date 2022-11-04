@@ -14,7 +14,7 @@
     </style>
 </head>
 
-<body>
+<body onload="changePizza(1,2)">
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <?php include 'nav.php'; ?>
@@ -41,12 +41,12 @@
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
     <div class="rounded  " id="pizza1">
         <p class="text-center pt-5" style="font-size: 20px;">Select Pizza</p>
-        <img id="pizzapic1" src="https://cdn.discordapp.com/attachments/1012625488482680942/1034103058067636224/unknown.png" width="50%" class="mx-auto d-block">
+        <img id="pizzapic1" src="https://cdn.discordapp.com/attachments/1012625488482680942/1034103058067636224/unknown.png" width="50%" class="mx-auto d-block" >
         <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
         <div class="btn-group" id="choose_dropdown">
             <div class="row ">
                 <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center ">
-                    <select id="selectpizza1" class="text-center form-select form-select-md mb-3 me-3 ms-3" style="width: 100%;" aria-label=".form-select-md " onchange="reset(1); changePizza(1,1);">
+                    <select id="selectpizza1" class="text-center form-select form-select-md mb-3 me-3 ms-3" style="width: 100%;" aria-label=".form-select-md " onchange="reset(1); changePizza(1,2);">
                         <?php
                         $url = "pizza.json";
                         $response = file_get_contents($url);
@@ -58,12 +58,8 @@
                     </select>
                 </div>
                 <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center">
-                    <select style="width: 100%;" id="selectcrust1" class="text-center form-select form-select-md mb-3 me-3 ms-3" onchange="changePizza(1)" style="width: 250px;" aria-label=".form-select-md ">
-                        <option selected value="0">Pan Medium</option>
-                        <option value="1">Crispy Thin Medium</option>
-                        <option value="2">Extreme Cheese Medium</option>
-                        <option value="3">Pan Large</option>
-                        <option value="4">Crispy Thin Large</option>
+                    <select style="width: 100%;" id="selectcrust1" class="text-center form-select form-select-md mb-3 me-3 ms-3" onchange="changePizza(1,2)" style="width: 250px;" aria-label=".form-select-md ">
+                        <option value="2" selected>Extreme Cheese Medium</option>
                         <option value="5">Extreme Cheese Large</option>
                     </select>
                 </div>
@@ -225,7 +221,7 @@
         <a href="#pizza4" class="btn btn-info w-25  mt-5 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
     </div>
     <div class="text-center mt-2 ">
-        <a class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last"><i class="bi bi-cart">&nbsp&nbspXXX ฿ </i> </a>
+        <a class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick=" addToCart()"><i class="bi bi-cart">&nbsp&nbspXXX ฿ </i> </a>
     </div>
     <!-- footer -->
     <?php include 'footer.php'; ?>
