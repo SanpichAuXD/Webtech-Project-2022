@@ -67,9 +67,10 @@
         </div>
     </section><br><br>
     <section id="sec2">
-        <div class="recommend">
-            <h1>Recommend</h1>
-        </div>
+        <!-- <div class="d-flex justify-content-center align-items-center">
+            <a href="buy1get1.php" onclick="rec_select(5)" role="button" class='btn btn-light text-white mx-2'>Buy now</a>
+        </div> -->
+
     </section>
     <section id="sec2">
         <div class="d-flex justify-content-center align-items-center">

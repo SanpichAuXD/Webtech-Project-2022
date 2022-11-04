@@ -265,7 +265,6 @@ function getPrice(piz, crust, set) {
 }
 
 function changeDesc(piz) {
-    
     desc.innerHTML = pizprice[piz][1];
 
 
@@ -340,7 +339,7 @@ function reset(num) {
 console.log("on");
 
 function changePizza(pic, set) {
-    console.log("on")
+
     if (pic == 1) {
         picpiz = pic1;
         menu = menu1;
@@ -463,6 +462,7 @@ function hidNshopizza(num, check) {
             but2.classList.remove("d-none");
             pizza1.classList.add("d-none");
             pizza2.classList.remove("d-none");
+
             pum1.style.backgroundColor = back_color;
             pum2.style.backgroundColor = sel_color;
         }
@@ -473,7 +473,6 @@ function hidNshopizza(num, check) {
             pizza3.classList.remove("d-none");
             pum2.style.backgroundColor = back_color;
             pum3.style.backgroundColor = sel_color;
-
         }
         else if (num == 3) {
             but3.classList.add("d-none");
@@ -485,6 +484,8 @@ function hidNshopizza(num, check) {
 
         }
     }
+
+    
 }
 
 function hidNshopizza46(num, check) {
@@ -631,5 +632,13 @@ function valid() {
 
     }
 }
+// !function rec_select(num){
+//     let opt = "op"+num;
+//     let opt0 = document.getElementById(opt);
+//     if (opt0.innerHTML == "Double Cheese") {
+//         opt0.setAttribute("selected","selected");
+//         changePizza(1);
+//     }
+// }();
 
 
