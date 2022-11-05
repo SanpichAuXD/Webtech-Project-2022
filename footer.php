@@ -38,13 +38,13 @@
                 </div>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-12 mb-3">
                 <a style="font-size: 35px ;" href="https://www.facebook.com/manop.phan" id="f_footer"><i class="bi bi-facebook m-1"></i></a>
                 <a style="font-size: 35px ;" href="https://github.com/zeraph-christ/Webtech-Project-2022" id="e_footer"><i class="bi bi-github m-1"></i></a>
                 <a style="font-size: 35px ;" href="https://www.instagram.com/natthawut_s_k/" id="i_footer"><i class="bi bi-instagram m-1"></i></a>
             </div>
 
-            <div class="col-sm-12 border-radius-5">
+            <div class="col-sm-12">
                 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1C5lzXGMSx0M8cLg7swRPDA51JQKiu5k&ehbc=2E312F" zoom="15" width="70%" height="360"></iframe><br>
             </div>
 

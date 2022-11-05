@@ -463,11 +463,22 @@ function createTextCartp(num) {
 let parento = document.getElementById("order");
 let cost = document.getElementById("cost");
 let total = 0;
-function addPizza(pizzaname, detail, pprice, imgsrc) {
 
-    
+function total_price(pprice){
     total = parseInt(localStorage.getItem("price")) + parseInt(pprice);
     localStorage.setItem("price", total)
+}
+
+function count(){
+    let c_cart = document.getElementById("count_cart");
+    c_cart.innerHTML = parento.childElementCount;
+}
+
+function addPizza(pizzaname, detail, pprice, imgsrc) {
+
+    total_price(pprice);
+    // total = parseInt(localStorage.getItem("price")) + parseInt(pprice);
+    // localStorage.setItem("price", total)
     
 
     cost.innerHTML = total;
@@ -516,23 +527,26 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     dbox.appendChild(drov);
     dbox.appendChild(btn)
     parento.appendChild(dbox);
-    localStorage.setItem("price", total)
     // alert(localStorage.getItem("price"))
     localStorage.setItem("keepOrder", parento.innerHTML);
    
 }
+
+
+
 function del(){
-    
-    localStorage.setItem("price", 0)
-    localStorage.setItem("keepOrder", "");
+    // console.log(parento.childElementCount);
+    localStorage.clear();
+    window.location.reload();
 }
 
 function retrieve() {
- 
-    // alert(localStorage.getItem("price"))
+    if (localStorage.getItem("price") === null) {
+        
+        localStorage.setItem("price", 0);
+    } 
     console.log(localStorage.getItem("price"))
     cost.innerHTML = localStorage.getItem("price")
-    alert(localStorage.getItem("keepOrder"))
     
     if (localStorage.getItem("keepOrder") === null) {
         console.log("Nothing in Folder1");
@@ -562,6 +576,7 @@ function retrieve() {
             }
         }
     }
+    // console.log(parento.childElementCount);
 }
 
 let pizza1 = document.getElementById("pizza1");
@@ -781,13 +796,3 @@ function valid() {
 
     }
 }
-// !function rec_select(num){
-//     let opt = "op"+num;
-//     let opt0 = document.getElementById(opt);
-//     if (opt0.innerHTML == "Double Cheese") {
-//         opt0.setAttribute("selected","selected");
-//         changePizza(1);
-//     }
-// }();
-
-

@@ -15,11 +15,12 @@
 
 </head>
 
-<body>
+<body onload="retrieve(); count();">
 <?php include 'cart.php'; ?>
+<?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
-    <header>
+    <header style="position: sticky ; top:0; z-index:100;">
         <ul class="nav-tabs " style="background-color: white;">
             <div class="container-fluid nav">
                 <!-- logo -->
@@ -135,16 +136,6 @@
             <div class="row ">
                 <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center ">
                     <select id="selectpizza1" class="text-center form-select form-select-md mb-3 ms-3 me-3" style="width: 100%;" aria-label=".form-select-md " onchange="reset(1); changePizza(1);">
-                        <!-- <option id="op1" value="Seafood Cocktail">Seafood Cocktail</option>
-                        <option id="op2" value="Hawaiian">Hawaiian</option>
-                        <option id="op3" value="Double Pepperoni">Double Pepperoni</option>
-                        <option id="op4" value="Chicken Trio">Chicken Trio</option>
-                        <option id="op5" value="Double Cheese">Double Cheese</option>
-                        <option id="op6" value="4 Cheese & Bacon">4 Cheese & Bacon</option>
-                        <option id="op7" value="Tom Yum Kung">Tom Yum Kung</option>
-                        <option id="op8" value="Meat Deluxe">Meat Deluxe</option>
-                        <option id="op9" value="Super Deluxe">Super Deluxe</option>
-                        <option id="op10" value="Ham&Crab Sticks">Ham&Crab Sticks</option> -->
                         <?php
                         $url = "pizza.json";
                         $response = file_get_contents($url);
@@ -412,7 +403,7 @@
         <a href="#pizza2" class="btn btn-info w-25  mt-5 mb-5 " onclick="hidNshopizza(1,2); keepprice(0); reset(0); changePizza(2)" id="next1"> Next </a>
     </div>
     <div class="text-center mt-2 ">
-        <a href="#pizza1" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick=" keepprice(1); addToCart(1);"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i> </a>
+        <a href="index.php" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick=" keepprice(1); addToCart(1);"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i> </a>
     </div>
     <!-- footer -->
     <?php include 'footer.php'; ?>

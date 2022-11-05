@@ -15,8 +15,9 @@
     </style>
 </head>                
 
-<body>
+<body onload="retrieve(); count();">
 <?php include 'cart.php'; ?>
+<?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <?php include 'nav.php'; ?>
@@ -75,9 +76,9 @@
 
     </section>
     <section id="sec2">
-        <div class="d-flex justify-content-center align-items-center">
+        <!-- <div class="d-flex justify-content-center align-items-center">
             <a href='buy1get1.php' class='btn btn-light text-white mx-2'>Buy now</a>
-        </div>
+        </div> -->
     </section>
     <!-- footer -->
    

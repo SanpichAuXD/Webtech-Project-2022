@@ -14,8 +14,9 @@
     </style>
 </head>
 
-<body onload="changePizza(1,2); retrieve();">
+<body onload="changePizza(1,2); retrieve(); count();">
 <?php include 'cart.php'; ?>
+<?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <?php include 'nav.php'; ?>
@@ -222,7 +223,7 @@
         <a href="#pizza4" class="btn btn-info w-25  mt-5 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
     </div>
     <div class="text-center mt-2 ">
-        <a class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick="keepprice(0); addToCart(4);"><i class="bi bi-cart">&nbsp&nbspXXX ฿ </i> </a>
+        <a href="value_set.php" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick="count(); keepprice(0); addToCart(4);"><i class="bi bi-cart">&nbsp&nbspXXX ฿ </i> </a>
     </div>
     <!-- footer -->
     <?php include 'footer.php'; ?>

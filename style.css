@@ -806,3 +806,14 @@ footer{
 .popup-cart .bott button {
     font-size: 1.4em;
 }
+
+#background{
+    width: 100%;
+    position: absolute;
+    z-index: -9999;
+}
+.background-img{
+    width: 40vh;
+    position: fixed;
+    z-index: -9999;
+}

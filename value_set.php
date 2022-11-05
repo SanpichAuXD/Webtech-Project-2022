@@ -17,11 +17,12 @@
 
 </head>
 
-<body >
+<body onload="retrieve(); count();">
 <?php include 'cart.php'; ?>
+<?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
-    <header>
+    <header style="position: sticky ; top:0; z-index:100;">
         <ul class="nav-tabs " style="background-color: white;" >
             <div class="container-fluid nav">
                 <!-- logo -->

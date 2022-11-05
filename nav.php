@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header>
+<body onload="count()">
+    <header style="position: sticky ; top:0; z-index:100;">
         <ul class="nav-tabs " style="background-color: white;" >
             <div class="container-fluid nav">
                 <!-- logo -->
