@@ -15,7 +15,7 @@
     </style>
 </head>                
 
-<body >
+<body onload="retrieve()">
 <?php include 'cart.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->

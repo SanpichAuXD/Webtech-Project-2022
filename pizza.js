@@ -408,6 +408,8 @@ function addToCart(num) {
             let txt2 = createTextCartH(1);
             let pa1 = createTextCartp(1);
             let pa2 = createTextCartp(0);
+            addPizza(txt1,pa1,pprice1.innerHTML,pic1.src)
+            addPizza(txt2,pa2,pprice2.innerHTML,pic2.src)
             console.log(txt1, pa1);
             console.log(txt2, pa2);
             console.log(arr_price[1])
@@ -417,7 +419,7 @@ function addToCart(num) {
     else if (num == 2){
         let txt1 = "1 × AROI KOOM SET A<br>Small Pizza"
         let pa1 = menu1.value + "<br>Chicken Pop (M)" + createTextCartp(0);
-        console.log(txt1, pa1);
+        addPizza(txt1,pa1,pprice1.innerHTML,"./img/home/value_set_1.png")
     }
 
     console.log(topPrice)

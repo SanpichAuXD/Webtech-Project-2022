@@ -14,7 +14,7 @@
     </style>
 </head>
 
-<body onload="setPrice(2)">
+<body onload="setPrice(2); retrieve();">
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <?php include 'nav.php'; ?>
