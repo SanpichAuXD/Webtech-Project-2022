@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif Thai', serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.open-btn{
+    position: fixed;
+    writing-mode: vertical-rl;
+    bottom: 50%;
+    right: 10px;
+}
+
+.popup-screen {
+    z-index: 999999;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.popup-screen.active{
+    visibility: visible;
+}
+.popup-cart {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    width: 600px;
+    max-height: 1000px;
+    overflow-y: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 20px 30px;
+    box-shadow: 0 5px 25px;
+
+    transform: scale(0);
+    transition: 0.5s ease;
+    transition-property: transform;
+}
+.popup-screen.active .popup-cart{
+    transform: scale(1);
+}
+
+.popup-cart .top {
+    margin-bottom: 0px;
+    font-size: 1.3em;
+}
+
+.popup-cart .top h2 {
+    position: relative;
+    float: left;
+}
+
+.popup-cart .top button {
+    position: fixed;
+    right: 3vh;
+}
+
+.popup-cart .text {
+    width: 95%;
+}
+
+.popup-cart .text h5 {
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.popup-cart .order-wrap {
+    padding: auto;
+    margin-bottom: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.popup-cart .order-wrap .box{
+    background-color: green;
+    color: white;
+    width: 400px;
+    border-radius: 25px;
+    min-height: 90px;
+    max-height: 90px;
+    padding: 8px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-bottom: 10px;
+}
+
+.popup-cart .order-wrap .box img{
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: sticky;
+}
+.popup-cart .order-wrap .box h5{
+    padding-left: 5px;
+    padding-bottom: 0px;
+    font-size: 1em;
+    text-align: justify;
+}
+.popup-cart .order-wrap .box p{
+    margin-top: 0%;
+    font-size: 0.6em;
+    text-align: left;
+}
+.popup-cart .order-wrap .box button{
+    position: absolute;
+    float: right;
+    bottom: 18px;
+    right: 18px;
+    font-size: 0.9em;
+    padding: 3px;
+}
+.popup-cart .bbott {
+    position: relative;
+    margin-bottom: 10px;
+    width: 400px;
+}
+.popup-cart .bbott #text{
+    text-align: justify;
+}
+
+.popup-cart .bbott #value{
+    text-align: right;
+}
+
+.popup-cart .bott {
+    bottom: 2vh;
+}
+
+.popup-cart .bott button {
+    font-size: 1.4em;
+}
+
+/*ล่างนี้ไม่เกี่ยว เอาไว้โชว์เฉย ๆ*/
+

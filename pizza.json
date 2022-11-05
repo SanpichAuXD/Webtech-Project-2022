@@ -90,7 +90,7 @@
         {
             "eng_name": "Double Cheese",
             "eng_describe": "Extra Cheese and Pizza Sauce",
-            "price": "259"
+            "price": "279"
         },
         {
             "eng_name": "4 Cheese & Bacon",
@@ -100,7 +100,7 @@
         {
             "eng_name": "Tom Yum Kung",
             "eng_describe": "Shrimp, Squid, Mushroom and Tom Yum Sauce",
-            "price": "389"
+            "price": "379"
         },
         {
             "eng_name": "Meat Deluxe",
@@ -115,7 +115,7 @@
         {
             "eng_name": "Ham&Crab Sticks",
             "eng_describe": "Ham, Crab Sticks, Pineapple and Thousand Island Sauce",
-            "price": "289"
+            "price": "279"
         }
     ],
     "spaghetti": [

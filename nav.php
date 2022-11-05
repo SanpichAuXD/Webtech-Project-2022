@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header>
+<body onload="count()">
+    <header style="position: sticky ; top:0; z-index:100;">
         <ul class="nav-tabs " style="background-color: white;" >
             <div class="container-fluid nav">
                 <!-- logo -->
@@ -85,7 +85,7 @@
                         </li>
                         <!-- value set -->
                         <li class="nav-item pizza-set" >
-                            <a   class="nav-link  fw-bold m-auto h-100 see-nav" href="value_set.php">Value Set</a>
+                            <a   class="nav-link  fw-bold m-auto h-100 see-nav ms-4 me-4" href="value_set.php">Value Set</a>
                         </li>
                     </ul>
                 </div>
