@@ -5,6 +5,8 @@
 // toggleButton.addEventListener('click', () => {
 //     navbarLinks.classList.toggle('active');
 // })
+
+
 // function left(x) {
 //     let btl1 = document.getElementById("btleft1");
 //     let btl2 = document.getElementById("btleft2");
@@ -159,3 +161,48 @@
 //         i1.classList.add('card-hov');
 //     }
 // }
+
+
+// hide and show value set
+// let menu = document.getElementById("selectpizza1");
+// let crust = document.getElementById("selectcrust1");
+// let picpiz = document.getElementById("pizzapic1");
+// console.log("666");
+// function changePizza() {
+//     console.log("555");
+//     if (crust.value == 0) {
+//         picpiz.src = ("./img/pan/" + (menu.value).split(" ").join("_") + "_m.png");
+//     }
+//     else if (crust.value == 1) {
+//         picpiz.src = ("./img/thin/" + (menu.value).split(" ").join("_") + "_m.png");
+//     }
+//     else if (crust.value == 2) {
+//         picpiz.src = ("./img/cheese/" + (menu.value).split(" ").join("_") + "_m.png");
+//     }
+//     else if (crust.value == 3) {
+//         picpiz.src = ("./img/pan/" + (menu.value).split(" ").join("_") + "_l.png");
+//     }
+//     else if (crust.value == 4) {
+//         picpiz.src = ("./img/thin/" + (menu.value).split(" ").join("_") + "_l.png");
+//     }
+//     else if (crust.value == 5) {
+//         picpiz.src = ("./img/cheese/" + (menu.value).split(" ").join("_") + "_l.png");
+//     }
+//     // console.log(picpiz.src)
+//     // console.log(menu.value);
+// }
+// 
+
+const popScreen = document.querySelector(".popup-screen");
+        const closeBtn = document.querySelector(".close-btn");
+        const openBtn = document.querySelector(".open-btn");
+
+        openBtn.addEventListener("click", () => {
+            popScreen.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            popScreen.classList.remove("active");
+        });
+
+       

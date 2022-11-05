@@ -15,7 +15,8 @@
 
 </head>
 
-<body>
+<body onload="retrieve()">
+<?php include 'cart.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <header>
@@ -405,12 +406,13 @@
             </div>
         </div>
     </div>
+    
     <!-- ปุ่ม ใส่ตะกร้า -->
     <div class="text-center mt-2   ">
-        <a href="#pizza2" class="btn btn-info w-25  mt-5 mb-5 " onclick="hidNshopizza(1,2); keepprice(0);" id="next1"> Next </a>
+        <a href="#pizza2" class="btn btn-info w-25  mt-5 mb-5 " onclick="hidNshopizza(1,2); keepprice(0); reset(0);" id="next1"> Next </a>
     </div>
     <div class="text-center mt-2 ">
-        <a href="#pizza1" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick=" keepprice(1); addToCart();"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i> </a>
+        <a href="#pizza1" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick=" keepprice(1); addToCart(1);"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i> </a>
     </div>
     <!-- footer -->
     <?php include 'footer.php'; ?>

@@ -15,12 +15,13 @@
     </style>
 </head>                
 
-<body>
+<body >
+<?php include 'cart.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <?php include 'nav.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
-
+    
     <!-- โฆษณา -->
     <section id="sec1">
         <div id="ad-container">
@@ -66,6 +67,7 @@
             </div>
         </div>
     </section><br><br>
+   
     <section id="sec2">
         <!-- <div class="d-flex justify-content-center align-items-center">
             <a href="buy1get1.php" onclick="rec_select(5)" role="button" class='btn btn-light text-white mx-2'>Buy now</a>
@@ -78,6 +80,7 @@
         </div>
     </section>
     <!-- footer -->
+   
     <?php include 'footer.php'; ?>
     <script src="pizza.js"></script>
 </body>
