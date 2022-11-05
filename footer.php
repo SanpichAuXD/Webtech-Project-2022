@@ -8,42 +8,50 @@
 </head>
 
 <body>
-    <footer>
+<footer>
         <hr>
-        <a href="index.php" class="btn"><b id="name_footer">pizzahuh</b></a><br>
-        <a href="https://goo.gl/maps/UqntHua9BMhux86w6" id="add_footer" class="btn text-center">
-            <i class="bi bi-geo-alt-fill">1 Chalong Krung, 1 Alley, Lat Krabang, Bangkok 10520</i>
-        </a>
-        <a href="#call1234-5" id="contact_footer" class="btn">
-            <i class="bi bi-telephone-fill">1234-5</i>
-        </a><br>
-        <a href="#Facebook-pizzahuh" id="f_footer"><i class="bi bi-facebook"></i></a>
-        <a href="#Email-pizzahuh" id="e_footer"><i class="bi bi-envelope-fill"></i></a>
-        <a href="#Instagram-pizzahuh" id="i_footer"><i class="bi bi-instagram"></i></a>
-        <br>
-        <table>
-            <!-- col 1  -->
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="row">
-                        <a id="order_footer" href="index.php" class="btn"><i>home</i></a>
-                    </div>
-                    <div class="row">
-                        <a id="order_footer" href="buy1get1.php" class="btn"><i>buy1get1</i></a>
-                    </div>
-                    <div class="row">
-                        <a id="order_footer" href="value_set.php" class="btn"><i>value set</i></a>
-                    </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <a href="index.php" class="btn"><b id="name_footer">pizzahuh</b></a><br>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <a id="order_footer" href="index.php" class="btn"><i>home</i></a>
                 </div>
-                <!-- col 2  -->
-                <div class="col-sm-6">
-                    <div class="card pt-4 pb-4" id="time_footer">
-                        <span><i>business hour</i></span><br>
-                        <span><i>9.00 am - 21.00 pm</i></span>
-                    </div>
+                <div class="row">
+                    <a id="order_footer" href="buy1get1.php" class="btn"><i>buy1get1</i></a>
+                </div>
+                <div class="row">
+                    <a id="order_footer" href="value_set.php" class="btn"><i>value set</i></a>
                 </div>
             </div>
-        </table>
+
+            <div class="col-sm-6">
+                <div class="row">
+                    <a id="order_footer" class="btn"><i>business hour</i></a>
+                </div>
+                <div class="row">
+                    <a id="order_footer" class="btn"><i>9.00 am - 21.00 pm</i></a>
+                </div>
+                <div class="row">
+                    <a id="order_footer" class="btn"><i class="bi bi-telephone-fill">1234-5</i></a>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <a style="font-size: 35px ;" href="https://www.facebook.com/manop.phan" id="f_footer"><i class="bi bi-facebook m-1"></i></a>
+                <a style="font-size: 35px ;" href="https://github.com/zeraph-christ/Webtech-Project-2022" id="e_footer"><i class="bi bi-github m-1"></i></a>
+                <a style="font-size: 35px ;" href="https://www.instagram.com/natthawut_s_k/" id="i_footer"><i class="bi bi-instagram m-1"></i></a>
+            </div>
+
+            <div class="col-sm-12 border-radius-5">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1C5lzXGMSx0M8cLg7swRPDA51JQKiu5k&ehbc=2E312F" zoom="15" width="70%" height="360"></iframe><br>
+            </div>
+
+
+
+
+        </div>
     </footer>
 </body>
 

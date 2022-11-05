@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body >
+<body onload="retrieve()">
 
     <div class="popup-screen">
         <div class="popup-cart">
@@ -36,8 +36,9 @@
                 <div class="bbott">
                     <div class="row">
                         <div class="col-6" id="text"><b>ราคารวม</b></div>
-                        <div class="col-6" id="value"><b>xxx ฿</b></div>
+                        <div class="col-6" id="cost"><b>0 ฿</b></div>
                     </div>
+                    <button type="submit" class="btn btn-danger px-5" onclick="del()">ลบรายการล่าสุด</button>
                 </div>
 
                 <div class="bott">
@@ -45,16 +46,14 @@
                 </div>
             </div>
         </div>
-        <button class="btn btn-primary"
-            onclick='addPizza("Havaiian",319,"./img/cheese/Hawaiian_m.png")'>Havaiian</button>
-        <button class="btn btn-primary">Havaiian</button>
-        <button class="btn btn-primary">Havaiian</button>
+        
 
 
         <button type="submit" class="btn btn-success p-2 open-btn"><i class="fa fa-shopping-cart"
                 style="font-size:24px"></i></button>
-        <script src="script.js">
-        </script>
 </body>
+<script src="script.js">
+    
+</script>
 
 </html>

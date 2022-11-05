@@ -18,6 +18,7 @@
 </head>
 
 <body >
+<?php include 'cart.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <header>
@@ -97,7 +98,7 @@
                         </li>
                         <!-- value set -->
                         <li class="nav-item pizza-set" id="va-set">
-                            <a   class="nav-link  fw-bold m-auto h-100 see-nav see-nav-va-set" href="value_set.php">Value Set</a>
+                            <a   class="nav-link  fw-bold m-auto h-100 see-nav see-nav-va-set ms-4 me-4" href="value_set.php">Value Set</a>
                         </li>
                     </ul>
                 </div>

@@ -15,7 +15,7 @@
 
 </head>
 
-<body onload="retrieve()">
+<body>
 <?php include 'cart.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
@@ -96,7 +96,7 @@
                         </li>
                         <!-- value set -->
                         <li class="nav-item pizza-set">
-                            <a class="nav-link  fw-bold m-auto h-100 see-nav" href="value_set.php">Value Set</a>
+                            <a class="nav-link  fw-bold m-auto h-100 see-nav ms-4 me-4" href="value_set.php">Value Set</a>
                         </li>
                     </ul>
                 </div>

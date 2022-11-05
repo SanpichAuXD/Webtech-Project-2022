@@ -322,7 +322,7 @@ function reset(num) {
 
         }
     }
-    
+
     console.log(numAdd)
     topPrice = 0;
 }
@@ -391,8 +391,10 @@ function changePrice(price, pic, set) {
     pprice.innerHTML = price + " ฿";
     console.log(price)
 }
+let arr_c = ["Pan Medium", "Crispy Thin Medium", "Extreme Cheese Medium", "Pan Large", "Crispy Thin Large", "Extreme Cheese Large"];
+let arr_spa = ["Spicy Sausage Spaghetti", "Ham & Mushroom Spaghetti in Alfredo Sauce", "Pork Bolognese", "Spaghetti Keemao Sausage"]
 function addToCart(num) {
-    
+
     console.log(arr_price[0])
     console.log(arr_price[1])
     if (num == 1) {
@@ -401,32 +403,47 @@ function addToCart(num) {
             let txt2 = createTextCartH(2);
             let pa1 = createTextCartp(0);
             let pa2 = createTextCartp(1);
-            addPizza(txt1,pa1,pprice1.innerHTML,pic1.src)
-            addPizza(txt2,pa2,pprice2.innerHTML,pic2.src)
+            addPizza(txt1, pa1, pprice1.innerHTML, pic1.src)
+            addPizza(txt2, pa2, "0 ฿", pic2.src)
             console.log(menu1.value, crust1.value, pic1.src)
         } else {
             let txt1 = createTextCartH(2);
             let txt2 = createTextCartH(1);
             let pa1 = createTextCartp(1);
             let pa2 = createTextCartp(0);
-            addPizza(txt1,pa1,pprice1.innerHTML,pic1.src)
-            addPizza(txt2,pa2,pprice2.innerHTML,pic2.src)
+            addPizza(txt1, pa1, pprice2.innerHTML, pic1.src)
+            addPizza(txt2, pa2, "0 ฿", pic2.src)
             console.log(txt1, pa1);
             console.log(txt2, pa2);
             console.log(arr_price[1])
             console.log(menu2, crust2, pic2.src)
         }
     }
-    else if (num == 2){
+    else if (num == 2) {
         let txt1 = "1 × AROI KOOM SET A<br>Small Pizza"
         let pa1 = menu1.value + "<br>Chicken Pop (M)" + createTextCartp(0);
-        addPizza(txt1,pa1,pprice1.innerHTML,"./img/home/value_set_1.png")
+        addPizza(txt1, pa1, pprice1.innerHTML, "./img/home/value_set_1.png")
+    }
+    else if (num == 3) {
+        let txt1 = "1 × AROI KOOM SET B<br>Small Pizza"
+        let pa1 = menu1.value + "<br>Garlic Bread" + createTextCartp(0);
+        addPizza(txt1, pa1, pprice1.innerHTML, "./img/home/value_set_1.png")
+    }
+    else if (num == 4) {
+        let txt1 = "1 × Koom Yok Gang Set<br>" + arr_c[crust1.value] + "<br>"
+        let pa1 = menu1.value + "<br>" + arr_spa[sespa.value-1] + "Chicken Sticks<br>Waffle Fries<br>Chicken Nuggets 6 pcs" + createTextCartp(0);
+        addPizza(txt1, pa1, pprice1.innerHTML, "./img/home/value_set_1.png")
+    }
+    else if (num == 5) {
+        let txt1 = "1 × KOOM IMM FIN SET<br>" + arr_c[crust1.value] + "<br>"
+        let pa1 = menu1.value + "<br>BBQ Chicken Wings 4 pcs<br>" + arr_spa[sespa.value-1]     + "<br>Chicken Nuggets 6 pcs" + createTextCartp(0);
+        addPizza(txt1, pa1, pprice1.innerHTML, "./img/home/value_set_1.png")
     }
 
     console.log(topPrice)
 }
 function createTextCartH(num) {
-    let arr_c = ["Pan Medium", "Crispy Thin Medium", "Extreme Cheese Medium", "Pan Large", "Crispy Thin Large", "Extreme Cheese Large"]
+
     if (num == 1) {
         return "1 x " + arr_c[crust1.value] + "<br>" + menu1.value + "<br>" + "(+" + pprice1.innerHTML + ")";
     } else if (num == 2) {
@@ -442,16 +459,25 @@ function createTextCartp(num) {
         return ""
     }
 }
-parento = document.getElementById("order");
+
+let parento = document.getElementById("order");
+let cost = document.getElementById("cost");
+let total = 0;
 function addPizza(pizzaname, detail, pprice, imgsrc) {
+
     
+    total = parseInt(localStorage.getItem("price")) + parseInt(pprice);
+    localStorage.setItem("price", total)
+    
+
+    cost.innerHTML = total;
     dbox = document.createElement("div");
     drov = document.createElement("div");
     dimg = document.createElement("div");
     dtxt = document.createElement("div");
     dpr = document.createElement("div");
     img = document.createElement("img");
-    txt = document.createElement("h5");
+    txt = document.createElement("h6");
     pa = document.createElement("p")
     price = document.createElement("h4");
     btn = document.createElement("button");
@@ -459,7 +485,8 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     drov.classList.add("row");
     dimg.classList.add("col-3");
     img.classList.add("img-fluid");
-    btn.classList.add("btn", "btn-danger", "position-absolute", "bottom-0", "end-0","del")
+    btn.classList.add("btn", "btn-danger", "position-absolute", "bottom-0", "end-0", "del")
+    btn.setAttribute('onclick','log('+pprice+')')
     btn.innerHTML = "ลบรายการ"
 
     img.src = imgsrc;
@@ -470,16 +497,14 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     price.innerHTML = pprice;
     dpr.classList.add("col-3");
     btn.addEventListener("click", function () {
-       
+        alert(price.innerHTML);
         this.parentElement.remove()
-        console.log(this.parentElement)
-        console.log("vok")
-        console.log(parento.innerHTML)
+        
         localStorage.setItem("keepOrder", parento.innerHTML);
-        alert(localStorage.getItem("keepOrder"));
+
 
     });
-    console.log(dbox)
+   
     dimg.appendChild(img);
     dtxt.appendChild(txt);
     dtxt.appendChild(pa);
@@ -491,14 +516,24 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     dbox.appendChild(drov);
     dbox.appendChild(btn)
     parento.appendChild(dbox);
-    alert(localStorage.getItem("keepOrder"))
+    localStorage.setItem("price", total)
+    // alert(localStorage.getItem("price"))
     localStorage.setItem("keepOrder", parento.innerHTML);
-    alert(localStorage.getItem("keepOrder"))
-}
-function retrieve() {
    
+}
+function del(){
+    
+    localStorage.setItem("price", 0)
+    localStorage.setItem("keepOrder", "");
+}
+
+function retrieve() {
+ 
+    // alert(localStorage.getItem("price"))
+    console.log(localStorage.getItem("price"))
+    cost.innerHTML = localStorage.getItem("price")
     alert(localStorage.getItem("keepOrder"))
-    console.log(localStorage.getItem("keepOrder"))
+    
     if (localStorage.getItem("keepOrder") === null) {
         console.log("Nothing in Folder1");
         localStorage.setItem("keepOrder", "");
@@ -508,24 +543,27 @@ function retrieve() {
             "keepOrder"
         );
         let btns = document.getElementsByClassName("del")
-        console.log(btns)
-        let buttons = document.getElementsByTagName("button");
-        console.log(buttons)
-        for (var z = 0; z < buttons.length; z++) {
-            console.log(buttons[z].innerText)
-            console.log(buttons[z].innerHTML)
-            if (buttons[z].innerHTML == "ลบรายการ") {
-                buttons[z].addEventListener("click", function () {
-                    console.log(this)
+
+    let tagh4 = document.getElementsByTagName("h4");
+            
+        for (var z = 0; z < btns.length; z++) {
+            
+            if (btns[z].innerHTML == "ลบรายการ") {
+                
+               btns[z].addEventListener("click", function () {
+               
+                console.log(btns)
+                console.log(this.parentElement)
                     this.parentElement.remove()
                     console.log(this.parentElement)
                     localStorage.setItem("keepOrder", parento.innerHTML);
-                    alert(localStorage.getItem("keepOrder"))
+
                 });
             }
         }
     }
 }
+
 let pizza1 = document.getElementById("pizza1");
 let pizza2 = document.getElementById("pizza2");
 let pizza3 = document.getElementById("pizza3");
