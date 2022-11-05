@@ -268,15 +268,17 @@ let numAdd = [0, 0, 0, 0, 0, 0, 0, 0];
 let topp = "top";
 let topPrice = 0;
 function num_topping(add, num) {
-    console.log(price);
+    console.log(num);
     let topid = topp + num;
     let getid = document.getElementById(topid);
     console.log(topid);
     let pic = 0;
     if (num > 3) {
         pic = 2;
+        console.log(2)
     } else {
         pic = 1
+        console.log(1)
     }
     if (add == 1) {
         topPrice += 39;
@@ -384,12 +386,14 @@ function changePrice(price, pic, set) {
     } if (pic == 2) {
         pprice = pprice2;
     }
-    
     console.log(pprice)
+
     pprice.innerHTML = price + " ฿";
     console.log(price)
 }
 function addToCart(num) {
+    console.log(arr_price[0])
+    console.log(arr_price[1])
     if (num == 1) {
         if (arr_price[0] > arr_price[1]) {
             let txt1 = createTextCartH(1);
