@@ -392,10 +392,11 @@ function changePrice(price, pic, set) {
     console.log(price)
 }
 function addToCart(num) {
+    
     console.log(arr_price[0])
     console.log(arr_price[1])
     if (num == 1) {
-        if (arr_price[0] > arr_price[1]) {
+        if (arr_price[0] >= arr_price[1]) {
             let txt1 = createTextCartH(1);
             let txt2 = createTextCartH(2);
             let pa1 = createTextCartp(0);
@@ -441,8 +442,9 @@ function createTextCartp(num) {
         return ""
     }
 }
+parento = document.getElementById("order");
 function addPizza(pizzaname, detail, pprice, imgsrc) {
-    parent = document.getElementById("order");
+    
     dbox = document.createElement("div");
     drov = document.createElement("div");
     dimg = document.createElement("div");
@@ -457,7 +459,7 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     drov.classList.add("row");
     dimg.classList.add("col-3");
     img.classList.add("img-fluid");
-    btn.classList.add("btn", "btn-danger", "position-absolute", "bottom-0", "end-0")
+    btn.classList.add("btn", "btn-danger", "position-absolute", "bottom-0", "end-0","del")
     btn.innerHTML = "ลบรายการ"
 
     img.src = imgsrc;
@@ -468,10 +470,12 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     price.innerHTML = pprice;
     dpr.classList.add("col-3");
     btn.addEventListener("click", function () {
+       
         this.parentElement.remove()
+        console.log(this.parentElement)
         console.log("vok")
-        console.log(parent.innerHTML)
-        localStorage.setItem("keepOrder", parent.innerHTML);
+        console.log(parento.innerHTML)
+        localStorage.setItem("keepOrder", parento.innerHTML);
         alert(localStorage.getItem("keepOrder"));
 
     });
@@ -486,12 +490,13 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     drov.appendChild(dpr);
     dbox.appendChild(drov);
     dbox.appendChild(btn)
-    parent.appendChild(dbox);
+    parento.appendChild(dbox);
     alert(localStorage.getItem("keepOrder"))
-    localStorage.setItem("keepOrder", parent.innerHTML);
+    localStorage.setItem("keepOrder", parento.innerHTML);
     alert(localStorage.getItem("keepOrder"))
 }
 function retrieve() {
+   
     alert(localStorage.getItem("keepOrder"))
     console.log(localStorage.getItem("keepOrder"))
     if (localStorage.getItem("keepOrder") === null) {
@@ -502,6 +507,8 @@ function retrieve() {
         document.getElementById("order").innerHTML = localStorage.getItem(
             "keepOrder"
         );
+        let btns = document.getElementsByClassName("del")
+        console.log(btns)
         let buttons = document.getElementsByTagName("button");
         console.log(buttons)
         for (var z = 0; z < buttons.length; z++) {
@@ -509,10 +516,10 @@ function retrieve() {
             console.log(buttons[z].innerHTML)
             if (buttons[z].innerHTML == "ลบรายการ") {
                 buttons[z].addEventListener("click", function () {
+                    console.log(this)
                     this.parentElement.remove()
-                    console.log(2)
-                    console.log(parent.innerHTML)
-                    localStorage.setItem("keepOrder", parent.innerHTML);
+                    console.log(this.parentElement)
+                    localStorage.setItem("keepOrder", parento.innerHTML);
                     alert(localStorage.getItem("keepOrder"))
                 });
             }

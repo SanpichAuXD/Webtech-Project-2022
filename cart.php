@@ -31,19 +31,7 @@
             </div>
 
             <div class="order-wrap" id="order">
-                <div class="box">
-                    <div class="row">
-                        <div class="col-3"><img class="img-fluid" src="./img/cheese/Hawaiian_m.png"></div>
-                        <div class="col-6">
-                            <h4 style="font-size: 18px;">1 × EXTREME CHEESE LARGE</h4>
-                            <p></p>
-                            
-                        </div>
-                        <div class="col-3">
-                            <h4>319</h4>
-                        </div>
-                    </div>
-</div>
+                
                 </div>
                 <div class="bbott">
                     <div class="row">
