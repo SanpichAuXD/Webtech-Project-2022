@@ -753,6 +753,7 @@ let list = document.createElement("li");
 let taga = document.createElement("a");
 let tag_phone = document.createElement("a");
 let tag_addr = document.createElement("a");
+tag_addr.classList.add("text-wrap");
 
 
 function valid() {
