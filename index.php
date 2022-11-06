@@ -17,8 +17,8 @@
 </head>                
 
 <body onload="retrieve(); count();">
-<?php include 'nav.php'; ?>
 <?php include 'cart.php'; ?>
+<?php include 'nav.php'; ?>
 <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->

@@ -477,9 +477,6 @@ function count(){
 function addPizza(pizzaname, detail, pprice, imgsrc) {
 
     total_price(pprice);
-    // total = parseInt(localStorage.getItem("price")) + parseInt(pprice);
-    // localStorage.setItem("price", total)
-    
 
     cost.innerHTML = total;
     dbox = document.createElement("div");
@@ -491,14 +488,10 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     txt = document.createElement("h6");
     pa = document.createElement("p")
     price = document.createElement("h4");
-    btn = document.createElement("button");
     dbox.classList.add("box", "position-relative");
     drov.classList.add("row");
     dimg.classList.add("col-3");
     img.classList.add("img-fluid");
-    btn.classList.add("btn", "btn-danger", "position-absolute", "bottom-0", "end-0", "del")
-    btn.setAttribute('onclick','log('+pprice+')')
-    btn.innerHTML = "ลบรายการ"
 
     img.src = imgsrc;
     dtxt.classList.add("col-6");
@@ -507,14 +500,6 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     pa.innerHTML = detail;
     price.innerHTML = pprice;
     dpr.classList.add("col-3");
-    btn.addEventListener("click", function () {
-        alert(price.innerHTML);
-        this.parentElement.remove()
-        
-        localStorage.setItem("keepOrder", parento.innerHTML);
-
-
-    });
    
     dimg.appendChild(img);
     dtxt.appendChild(txt);
@@ -525,7 +510,6 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     drov.appendChild(dtxt);
     drov.appendChild(dpr);
     dbox.appendChild(drov);
-    dbox.appendChild(btn)
     parento.appendChild(dbox);
     // alert(localStorage.getItem("price"))
     localStorage.setItem("keepOrder", parento.innerHTML);
@@ -535,8 +519,9 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
 
 
 function del(){
-    // console.log(parento.childElementCount);
-    localStorage.clear();
+    localStorage.removeItem("keepOrder");
+    localStorage.removeItem("price");
+    // localStorage.clear();
     window.location.reload();
 }
 

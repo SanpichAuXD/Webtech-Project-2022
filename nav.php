@@ -55,44 +55,44 @@
                         <div class="d-none" id="deli">
                             <div class="dropdown w-100 ">
                                 <button class="btn  dropdown-toggle align-text-center "
-                                    style=" width:106%; background-color:#D9D9D9; border-radius:10px;" id="drop-text"
+                                    style=" width:103%; background-color:#D9D9D9; border-radius:10px;" id="drop-text"
                                     type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Your Address
                                 </button>
-                                <ul class="dropdown-menu" id="drop" style=" width:350px;">
-                                    <li><a class="dropdown-item " href="#" data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal">New Address</a></li>
-                                    <li><a class="dropdown-item " href="#">Current Address</a></li>
+                                <ul class="dropdown-menu  " id="drop" style=" width:100%; background-color:#D9D9D9;">
+                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">New Address</a></li><hr class="m-0">
+                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0" href="#">Current Address</a></li>
                                 </ul>
                             </div>
                             <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false"
                                 tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
+                                    <div class="modal-content" style="background-color: rgba(170, 66, 66, 0.9);  box-shadow: 0 5px 25px;  backdrop-filter: blur(10px);">
                                         <div class="modal-header d-block">
                                             <button type="button" class="btn-close d-flex p-2 float-right"
                                                 data-bs-dismiss="modal" aria-label="Close"></button>
-                                            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Add new
+                                            <h1 class="modal-title fs-5 text-center text-light" id="exampleModalLabel">Add new
                                                 address</h1>
 
                                         </div>
                                         <div class="modal-body">
                                             <div class="mb-3">
                                                 <input type="text" class="form-control" id="name"
-                                                    placeholder="ชื่อ-นามสกุลของคุณ">
+                                                    placeholder="Your Name">
                                             </div>
                                             <div class="mb-3">
-                                                <textarea class="form-control" id="address" placeholder="ที่อยู่ของคุณ"
+                                                <textarea class="form-control" id="address" placeholder="Your Address"
                                                     rows="3"></textarea>
                                             </div>
                                             <div class="mb-3">
                                                 <input type="number" class="form-control" id="phone"
-                                                    placeholder="เบอร์โทรของคุณ">
+                                                    placeholder="Your Phone">
                                             </div>
                                         </div>
                                         <div class="modal-footer d-flex justify-content-center align-item-center">
                                             <button onclick="valid()" data-bs-dismiss="modal" type="submit"
-                                                class="btn btn-primary">Save changes</button>
+                                                class="btn btn-success">Save Address</button>
                                         </div>
                                     </div>
                                 </div>

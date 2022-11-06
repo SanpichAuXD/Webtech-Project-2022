@@ -56,7 +56,7 @@
                     <li>
                         <div class="d-none" id="deli">
                             <div class="dropdown w-100 ">
-                                <button class="btn  dropdown-toggle align-text-center " style=" width:106%; background-color:#D9D9D9; border-radius:10px;" id="drop-text" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn  dropdown-toggle align-text-center " style=" width:103%; background-color:#D9D9D9; border-radius:10px;" id="drop-text" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Your Address
                                 </button>
                                 <ul class="dropdown-menu" id="drop" style=" width:350px;">
@@ -66,25 +66,31 @@
                             </div>
                             <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
+                                <div class="modal-content" style="background-color: rgba(170, 66, 66, 0.9);  box-shadow: 0 5px 25px;  backdrop-filter: blur(10px);">
                                         <div class="modal-header d-block">
-                                            <button type="button" class="btn-close d-flex p-2 float-right" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Add new address</h1>
+                                            <button type="button" class="btn-close d-flex p-2 float-right"
+                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <h1 class="modal-title fs-5 text-center text-light" id="exampleModalLabel">Add new
+                                                address</h1>
 
                                         </div>
                                         <div class="modal-body">
                                             <div class="mb-3">
-                                                <input type="text" class="form-control" id="name" placeholder="ชื่อ-นามสกุลของคุณ">
+                                                <input type="text" class="form-control" id="name"
+                                                    placeholder="Your Name">
                                             </div>
                                             <div class="mb-3">
-                                                <textarea class="form-control" id="address" placeholder="ที่อยู่ของคุณ" rows="3"></textarea>
+                                                <textarea class="form-control" id="address" placeholder="Your Address"
+                                                    rows="3"></textarea>
                                             </div>
                                             <div class="mb-3">
-                                                <input type="number" class="form-control" id="phone" placeholder="เบอร์โทรของคุณ">
+                                                <input type="number" class="form-control" id="phone"
+                                                    placeholder="Your Phone">
                                             </div>
                                         </div>
                                         <div class="modal-footer d-flex justify-content-center align-item-center">
-                                            <button onclick="valid()" data-bs-dismiss="modal" type="submit" class="btn btn-primary">Save changes</button>
+                                            <button onclick="valid()" data-bs-dismiss="modal" type="submit"
+                                                class="btn btn-success">Save Address</button>
                                         </div>
                                     </div>
                                 </div>
@@ -123,15 +129,15 @@
         <!-- เลือกพิซซ่า-->
         <br><br>
         <div class="btn-group" role="group" id="pom_select">
-            <a class="btn" id="pom_select_1" role="button" onclick="hidNshopizza(2,2)">เลือกพิซซ่าถาด1</a>
-            <a class="btn" id="pom_select_2" role="button" onclick="hidNshopizza(1,2)">เลือกพิซซ่าถาด2</a>
+            <a class="btn" id="pom_select_1" role="button" onclick="hidNshopizza(2,2)">Select first pizza</a>
+            <a class="btn" id="pom_select_2" role="button" onclick="hidNshopizza(1,2)">Select second pizza</a>
         </div>
     </div>
     <!-- ถาด1 -->
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
     <div class="rounded " id="pizza1">
 
-        <p class="text-center pt-5" style="font-size: 20px;">เลือกพิซซ่าถาดที่1</p>
+        <p class="text-center pt-5" style="font-size: 20px;">Select first pizza</p>
         <img src="./img/pan/Seafood_Cocktail_m.png" id="pizzapic1" width="50%" class="mx-auto d-block">
 
         <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
@@ -172,13 +178,13 @@
         <br>
         <!-- ปรับแต่งพิซซ่าด้วยตัวเอง -->
         <div>
-            <p id="topping"><i>Customiza Pizza</i></p>
+            <p id="topping"><i>Customize Pizza</i></p>
             <!-- บรรทัด 1 -->
             <div class="row">
                 <!-- ชีส -->
                 <div class="col-12 col-md-6   ">
                     <div class="  card m-3" id="card-topping" style="background-color: hsla(0, 0%, 100%,.7); ">
-                        <div class="card-body">
+                        <div class="card-body ">
                             <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034689297313452072/unknown.png" style="width: 80%; 
                             height: 70px; 
                             object-fit: cover; 
@@ -187,7 +193,7 @@
                             margin-right: auto;
                             border-radius: 50px">
                             <!--    ชื่อ topping ชีส-->
-                            <p id="name-topping">Mozzarella Cheese (+ 39฿)</p>
+                            <p class="m-3" id="name-topping">Mozzarella Cheese (+ 39฿)</p>
                             <div class="row">
                                 <a href="#-" class="col-2" onclick="num_topping(0,0)"><i class="bi bi-dash-circle" id="icon-dash-circle"></i></a>
                                 <p class="col-8 text-center mb-0" id="top0">0</p>
@@ -208,7 +214,7 @@
                             margin-right: auto;
                             border-radius: 50px">
                             <!--    ชื่อ topping สับปะรด-->
-                            <p id="name-topping">Pineapple (+ 39฿)</p>
+                            <p class="m-3" id="name-topping">Pineapple (+ 39฿)</p>
                             <div class="row">
                                 <a href="#-" class="col-2" onclick="num_topping(0,1)"><i class="bi bi-dash-circle" id="icon-dash-circle"></i></a>
                                 <p class="col-8 text-center mb-0" id="top1">0</p>
@@ -232,7 +238,7 @@
                             margin-right: auto;
                             border-radius: 50px">
                             <!--    ชื่อ topping เบคอนแผ่น-->
-                            <p id="name-topping">Sliced Bacon (+ 39฿)</p>
+                            <p class="m-3" id="name-topping">Sliced Bacon (+ 39฿)</p>
                             <div class="row">
                                 <a href="#-" class="col-2" onclick="num_topping(0,2)"><i class="bi bi-dash-circle" id="icon-dash-circle"></i></a>
                                 <p class="col-8 text-center mb-0" id="top2">0</p>
@@ -253,7 +259,7 @@
                             margin-right: auto;
                             border-radius: 50px">
                             <!--    ชื่อ topping แฮมแผ่น-->
-                            <p id="name-topping">Sliced Ham (+ 39฿)</p>
+                            <p class="m-3" id="name-topping">Sliced Ham (+ 39฿)</p>
                             <div class="row">
                                 <a href="#-" class="col-2" onclick="num_topping(0,3)"><i class="bi bi-dash-circle" id="icon-dash-circle"></i></a>
                                 <p class="col-8 text-center mb-0" id="top3">0</p>
@@ -268,7 +274,7 @@
     <!-- ถาด2 -->
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
     <div class="rounded d-none" id="pizza2">
-        <p class="text-center pt-5" style="font-size: 20px;">เลือกพิซซ่าถาดที่2</p>
+        <p class="text-center pt-5" style="font-size: 20px;">Select second pizza</p>
         <img src="./img/pan/Seafood_Cocktail_m.png" width="50%" id="pizzapic2" class="mx-auto d-block">
         <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
         <div class="btn-group" id="choose_dropdown">
@@ -305,7 +311,7 @@
         </div><br>
         <!-- ปรับแต่งพิซซ่าด้วยตัวเอง -->
         <div>
-            <p id="topping"><i>ปรับแต่งพิซซ่าด้วยตัวเอง</i></p>
+            <p id="topping"><i>Customize Pizza</i></p>
             <!-- บรรทัด 1 -->
             <div class="row">
                 <!-- ชีส -->
@@ -320,7 +326,7 @@
                             margin-right: auto;
                             border-radius: 50px">
                             <!--    ชื่อ topping ชีส-->
-                            <p id="name-topping">Mozzarella Cheese (+ 39฿)</p>
+                            <p class="m-3" id="name-topping">Mozzarella Cheese (+ 39฿)</p>
                             <div class="row">
                                 <a href="#-" class="col-2" onclick="num_topping(0,4)"><i class="bi bi-dash-circle" id="icon-dash-circle"></i></a>
                                 <p class="col-8 text-center mb-0" id="top4">0</p>
@@ -341,7 +347,7 @@
                             margin-right: auto;
                             border-radius: 50px">
                             <!--    ชื่อ topping สับปะรด-->
-                            <p id="name-topping">Pineapple (+ 39฿)</p>
+                            <p class="m-3" id="name-topping">Pineapple (+ 39฿)</p>
                             <div class="row">
                                 <a href="#-" class="col-2" onclick="num_topping(0,5)"><i class="bi bi-dash-circle" id="icon-dash-circle"></i></a>
                                 <p class="col-8 text-center mb-0" id="top5">0</p>
@@ -365,7 +371,7 @@
                             margin-right: auto;
                             border-radius: 50px">
                             <!--    ชื่อ topping เบคอนแผ่น-->
-                            <p id="name-topping">Sliced Bacon (+ 39฿)</p>
+                            <p class="m-3" id="name-topping">Sliced Bacon (+ 39฿)</p>
                             <div class="row">
                                 <a href="#-" class="col-2" onclick="num_topping(0,6)"><i class="bi bi-dash-circle" id="icon-dash-circle"></i></a>
                                 <p class="col-8 text-center mb-0" id="top6">0</p>
@@ -387,7 +393,7 @@
                             margin-right: auto;
                             border-radius: 50px">
                             <!--    ชื่อ topping แฮมแผ่น-->
-                            <p id="name-topping">Sliced Ham (+ 39฿)</p>
+                            <p class="m-3" id="name-topping">Sliced Ham (+ 39฿)</p>
                             <div class="row">
                                 <a href="#-" class="col-2" onclick="num_topping(0,7)"><i class="bi bi-dash-circle" id="icon-dash-circle"></i></a>
                                 <p class="col-8 text-center mb-0" id="top7">0</p>
@@ -403,7 +409,7 @@
     
     <!-- ปุ่ม ใส่ตะกร้า -->
     <div class="text-center mt-2   ">
-        <a href="#pizza2" class="btn btn-info w-25  mt-5 mb-5 " onclick="hidNshopizza(1,2); keepprice(0); reset(0); changePizza(2)" id="next1"> Next </a>
+        <a href="#pizza2" class="btn btn-success w-25  mt-5 mb-5 " onclick="hidNshopizza(1,2); keepprice(0); reset(0); changePizza(2)" id="next1"> Next </a>
     </div>
     <div class="text-center mt-2 ">
         <a href="index.php" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick=" keepprice(1); addToCart(1);"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i> </a>

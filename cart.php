@@ -27,18 +27,19 @@
             <hr width="100%">
             <div class="text">
                 <h5><b>รายการอาหาร</b></h5>
-            </div>
+            </div><br>
 
             <div class="order-wrap" id="order">
 
             </div>
             <div class="bbott">
                 <div class="row">
-                    <div class="col-6" id="text"><b>ราคารวม</b></div>
-                    <div class="col-6" id="cost"><b>0 ฿</b></div>
-                </div>
+                    <div class="col-4 text-center" id="text"><b>ราคารวม</b></div>
+                    <div class="col-4 text-center" id="cost"><b>0</b></div>
+                    <div class="col-4 text-center" id="cost"><b>฿</b></div>
+                </div><br>
                 <div class="text-center">
-                <!-- <button type="submit" class="btn btn-danger px-5" onclick="count()">show count</button> -->
+                    <!-- <button type="submit" class="btn btn-danger px-5" onclick="count()">show count</button> -->
                     <button type="submit" class="btn btn-danger px-5" onclick="del()">Clear Your Cart</button>
                 </div>
             </div>
@@ -47,11 +48,14 @@
             <div class="bott">
                 <button onclick="del()" type="submit" class="btn btn-success px-5">ชำระเงิน</button>
             </div>
+
         </div>
     </div>
-    <div >
-        <button id="count_cart" >0</button>
-        <button  type="submit" class="btn btn-success p-2 open-btn"><i class="fa fa-shopping-cart" style="font-size:24px"></i></button>
+    <div>
+
+        <button type="submit" class="btn btn-success p-2 open-btn"><i class="fa fa-shopping-cart" style="font-size:24px"></i>
+            <div  id="count_cart" style="background-color: red; position:absolute; top:-10px; left:-15px; font-size:18px; border-radius:50%; width:70%;">0</div>
+        </button>
     </div>
 
 </body>

@@ -71,7 +71,7 @@
     </div><br>
         <!-- ปรับแต่งพิซซ่าด้วยตัวเอง -->
         <div>
-            <p id="topping"><i>Customiza Pizza</i></p>
+            <p id="topping"><i>Customize Pizza</i></p>
             <!-- บรรทัด 1 -->
             <div class="row">
                 <!-- ชีส -->
@@ -86,7 +86,7 @@
                         margin-right: auto;
                         border-radius: 50px">
                             <!--    ชื่อ topping ชีส-->
-                            <p id="name-topping">Mozzarella Cheese (+ 39฿)</p>
+                            <p class="m-3" id="name-topping">Mozzarella Cheese (+ 39฿)</p>
                             <div class="row">
                         <a href="#-" class="col-2" onclick="num_topping(0,0)"><i class="bi bi-dash-circle"
                                 id="icon-dash-circle"></i></a>
@@ -109,7 +109,7 @@
                         margin-right: auto;
                         border-radius: 50px">
                             <!--    ชื่อ topping สับปะรด-->
-                            <p id="name-topping">Pineapple (+ 39฿)</p>
+                            <p class="m-3" id="name-topping">Pineapple (+ 39฿)</p>
                             <div class="row">
                         <a href="#-" class="col-2" onclick="num_topping(0,1)"><i class="bi bi-dash-circle"
                                 id="icon-dash-circle"></i></a>
@@ -135,7 +135,7 @@
                         margin-right: auto;
                         border-radius: 50px">
                             <!--    ชื่อ topping เบคอนแผ่น-->
-                            <p id="name-topping">Sliced Bacon (+ 39฿)</p>
+                            <p class="m-3" id="name-topping">Sliced Bacon (+ 39฿)</p>
                             <div class="row">
                         <a href="#-" class="col-2" onclick="num_topping(0,2)"><i class="bi bi-dash-circle"
                                 id="icon-dash-circle"></i></a>
@@ -158,7 +158,7 @@
                         margin-right: auto;
                         border-radius: 50px">
                             <!--    ชื่อ topping แฮมแผ่น-->
-                            <p id="name-topping">Sliced Ham (+ 39฿)</p>
+                            <p class="m-3" id="name-topping">Sliced Ham (+ 39฿)</p>
                             <div class="row">
                         <a href="#-" class="col-2" onclick="num_topping(0,3)"><i class="bi bi-dash-circle"
                                 id="icon-dash-circle"></i></a>
@@ -182,10 +182,10 @@
 
     <!-- ปุ่ม ใส่ตะกร้า -->
     <div class="text-center mt-2   ">
-        <a href="#pizza2" class="btn btn-info w-25  mt-5 mb-5 " onclick="hidNshopizza(1,2)" id="next1"> Next </a>
+        <a href="#pizza2" class="btn btn-success w-25  mt-5 mb-5 " onclick="hidNshopizza(1,2)" id="next1"> Next </a>
     </div>
     <div class="text-center mt-2 ">
-        <a href="value_set.php" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick=" keepprice(0); addToCart(2);"><i class="bi bi-cart">&nbsp&nbspXXX ฿ </i> </a>
+        <a href="value_set.php" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick=" keepprice(0); addToCart(2);"><i class="bi bi-cart"> Add To Cart </i> </a>
     </div>
     <!-- footer -->
     <?php include 'footer.php'; ?>
