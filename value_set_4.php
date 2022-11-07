@@ -14,7 +14,7 @@
     </style>
 </head>
 
-<body onload="changePizza(1,2); retrieve(); count();">
+<body onload="changePizza(1,2); retrieve(); count(); is_empty();">
 <?php include 'cart.php'; ?>
 <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->

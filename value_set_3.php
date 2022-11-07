@@ -15,7 +15,7 @@
     <!-- <script src="pizza.js"></script> -->
 </head>
 
-<body onload="changePizza(1,3); retrieve(); count();">
+<body onload="changePizza(1,3); retrieve(); count(); is_empty();">
 <?php include 'cart.php'; ?>
 <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
