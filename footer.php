@@ -11,7 +11,7 @@
         <hr>
         <div class="row mb-3">
             <div class="col-12">
-                <a href="index.php" class="btn"><b id="name_footer">pizzahuh</b></a><br>
+                <a href="index.php" class="btn"><b id="name_footer">Pizza Huh 112 Company</b></a><br>
             </div>
             <div class="col-sm-6">
                 <div class="row">

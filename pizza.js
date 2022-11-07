@@ -202,19 +202,19 @@ function ExtractData(data) {
 
 price = 379;
 function setPrice(set) {
-    console.log("1")
+
     if (set == 1) {
-        console.log("2")
+
         price = 379;
     }
     else if (set == 2) {
-        console.log("3")
+
         price = 179
     }
     else {
         price = set
     }
-    console.log(price)
+
 }
 
 // get price from object and add price by condition
@@ -224,16 +224,14 @@ function getPrice(piz, crust, set) {
         price = v4price;
         price = 0;
     }
-    console.log(price)
+
     if (set == 1) {
-        console.log(set)
+
         price = 179;
         return price;
     }
 
     else if (set == 2) {
-
-        // console.log(price)
         ptopping = price - 279;
         price = 499 + ptopping;
         if (crust == 5) {
@@ -244,7 +242,7 @@ function getPrice(piz, crust, set) {
         ptopping = price - 279;
         price = 399 + ptopping;
     }
-    console.log(price);
+
 
     price = price + topPrice;
     if (crust == 1) {
@@ -268,22 +266,22 @@ let numAdd = [0, 0, 0, 0, 0, 0, 0, 0];
 let topp = "top";
 let topPrice = 0;
 function num_topping(add, num) {
-    console.log(num);
+
     let topid = topp + num;
     let getid = document.getElementById(topid);
-    console.log(topid);
+
     let pic = 0;
     if (num > 3) {
         pic = 2;
-        console.log(2)
+
     } else {
         pic = 1
-        console.log(1)
+
     }
     if (add == 1) {
         topPrice += 39;
         price += 39;
-        console.log(price)
+
         numAdd[num]++;
         getid.innerHTML = numAdd[num];
     } else if (numAdd[num] != 0) {
@@ -294,18 +292,18 @@ function num_topping(add, num) {
     }
 
     changePrice(price, pic);
-    console.log(price, pic)
+
 }
 let arr_price = [];
 let arr_topprice = [];
 function keepprice(i) {
     arr_price[i] = price;
     arr_topprice[i] = topPrice;
-    console.log(arr_price);
-    console.log(arr_topprice);
+
+
 }
 function reset(num) {
-    console.log(price)
+
     if (num == 0) {
         price -= topPrice;
     }
@@ -323,10 +321,9 @@ function reset(num) {
         }
     }
 
-    console.log(numAdd)
+
     topPrice = 0;
 }
-console.log("on");
 
 function changePizza(pic, set) {
 
@@ -355,7 +352,7 @@ function changePizza(pic, set) {
     changePrice(price, pic, set);
 
 
-    console.log(price)
+
     if (crust.value == 0) {
         picpiz.src = ("./img/pan/" + (menu.value).split(" ").join("_") + "_m.png");
     }
@@ -375,28 +372,27 @@ function changePizza(pic, set) {
     else if (crust.value == 5) {
         picpiz.src = ("./img/cheese/" + (menu.value).split(" ").join("_") + "_l.png");
     }
-    console.log(picpiz.src)
-    // console.log(menu.value);
+
 }
 
-function changePrice(price, pic, set) {
-    console.log(price)
+function changePrice(price, pic) {
+
     if (pic == 1) {
         pprice = pprice1;
     } if (pic == 2) {
         pprice = pprice2;
     }
-    console.log(pprice)
+
 
     pprice.innerHTML = price + " ฿";
-    console.log(price)
+
 }
 let arr_c = ["Pan Medium", "Crispy Thin Medium", "Extreme Cheese Medium", "Pan Large", "Crispy Thin Large", "Extreme Cheese Large"];
 let arr_spa = ["Spicy Sausage Spaghetti", "Ham & Mushroom Spaghetti in Alfredo Sauce", "Pork Bolognese", "Spaghetti Keemao Sausage"]
 function addToCart(num) {
 
-    console.log(arr_price[0])
-    console.log(arr_price[1])
+
+
     if (num == 1) {
         if (arr_price[0] >= arr_price[1]) {
             let txt1 = createTextCartH(1);
@@ -405,7 +401,7 @@ function addToCart(num) {
             let pa2 = createTextCartp(1);
             addPizza(txt1, pa1, pprice1.innerHTML, pic1.src)
             addPizza(txt2, pa2, "0 ฿", pic2.src)
-            console.log(menu1.value, crust1.value, pic1.src)
+
         } else {
             let txt1 = createTextCartH(2);
             let txt2 = createTextCartH(1);
@@ -413,10 +409,10 @@ function addToCart(num) {
             let pa2 = createTextCartp(0);
             addPizza(txt1, pa1, pprice2.innerHTML, pic1.src)
             addPizza(txt2, pa2, "0 ฿", pic2.src)
-            console.log(txt1, pa1);
-            console.log(txt2, pa2);
-            console.log(arr_price[1])
-            console.log(menu2, crust2, pic2.src)
+
+
+
+
         }
     }
     else if (num == 2) {
@@ -431,16 +427,16 @@ function addToCart(num) {
     }
     else if (num == 4) {
         let txt1 = "1 × Koom Yok Gang Set<br>" + arr_c[crust1.value] + "<br>"
-        let pa1 = menu1.value + "<br>" + arr_spa[sespa.value-1] + "Chicken Sticks<br>Waffle Fries<br>Chicken Nuggets 6 pcs" + createTextCartp(0);
+        let pa1 = menu1.value + "<br>" + arr_spa[sespa.value - 1] + "Chicken Sticks<br>Waffle Fries<br>Chicken Nuggets 6 pcs" + createTextCartp(0);
         addPizza(txt1, pa1, pprice1.innerHTML, "./img/home/value_set_1.png")
     }
     else if (num == 5) {
         let txt1 = "1 × KOOM IMM FIN SET<br>" + arr_c[crust1.value] + "<br>"
-        let pa1 = menu1.value + "<br>BBQ Chicken Wings 4 pcs<br>" + arr_spa[sespa.value-1]     + "<br>Chicken Nuggets 6 pcs" + createTextCartp(0);
+        let pa1 = menu1.value + "<br>BBQ Chicken Wings 4 pcs<br>" + arr_spa[sespa.value - 1] + "<br>Chicken Nuggets 6 pcs" + createTextCartp(0);
         addPizza(txt1, pa1, pprice1.innerHTML, "./img/home/value_set_1.png")
     }
 
-    console.log(topPrice)
+
 }
 function createTextCartH(num) {
 
@@ -451,9 +447,9 @@ function createTextCartH(num) {
     }
 }
 function createTextCartp(num) {
-    console.log(arr_topprice[num]);
+
     if (arr_topprice[num] > 0) {
-        console.log(arr_topprice[num]);
+
         return "<br> +Extra Topping (+" + arr_topprice[num] + ")"
     } else {
         return ""
@@ -464,26 +460,36 @@ let parento = document.getElementById("order");
 let cost = document.getElementById("cost");
 let total = 0;
 
-function total_pricep(pprice){
+function total_pricep(pprice) {
     total = parseInt(localStorage.getItem("price")) + parseInt(pprice);
     localStorage.setItem("price", total)
 }
-function total_pricem(pprice){
+function total_pricem(pprice) {
     total = parseInt(localStorage.getItem("price")) - parseInt(pprice);
     cost.innerHTML = total;
     localStorage.setItem("price", total)
-    count();
 }
 let c_cart = document.getElementById("count_cart");
-function count(){
+function count() {
     c_cart.innerHTML = parento.childElementCount;
-    console.log(parento.childElementCount)
+
+}
+
+function is_empty(){
+    let empty = document.getElementById("empty");
+    let not_empty = document.getElementById("not_empty");
+    if(parento.childElementCount != 0){
+        empty.classList.add("d-none");
+        not_empty.classList.remove("d-none");
+    }
+    else{
+        empty.classList.remove("d-none");
+        not_empty.classList.add("d-none");
+    }
 }
 
 function addPizza(pizzaname, detail, pprice, imgsrc) {
-
     total_pricep(pprice);
-
     cost.innerHTML = total;
     dbox = document.createElement("div");
     drov = document.createElement("div");
@@ -499,8 +505,8 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     drov.classList.add("row");
     dimg.classList.add("col-3");
     img.classList.add("img-fluid");
-    btn.classList.add("btn", "btn-danger", "position-absolute", "bottom-0", "end-0","del")
-    btn.innerHTML = "ลบรายการ"
+    btn.classList.add("btn", "btn-danger", "position-absolute", "bottom-2", "end-3", "del");
+    btn.innerHTML = "Remove";
     img.src = imgsrc;
     dtxt.classList.add("col-6");
 
@@ -510,12 +516,10 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     dpr.classList.add("col-3");
     btn.addEventListener("click", function () {
         total_pricem(parseInt(this.parentElement.getAttribute("data-cost")));
-        this.parentElement.remove()
-        console.log("vok")
-        console.log(parent.innerHTML)
+        this.parentElement.remove();
         localStorage.setItem("keepOrder", parent.innerHTML);
-       
-
+        count();
+        is_empty();
     });
     dimg.appendChild(img);
     dtxt.appendChild(txt);
@@ -529,30 +533,29 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     dbox.appendChild(btn)
     dbox.dataset.cost = pprice;
     parento.appendChild(dbox);
-    // alert(localStorage.getItem("price"))
     localStorage.setItem("keepOrder", parento.innerHTML);
-   
+
 }
 
 
 
-function del(){
+function del() {
+    // console.log(typeof(parento.childElementCount));
     localStorage.removeItem("keepOrder");
     localStorage.removeItem("price");
-    // localStorage.clear();
     window.location.reload();
 }
 
 function retrieve() {
     if (localStorage.getItem("price") === null) {
-        
+
         localStorage.setItem("price", 0);
-    } 
-    console.log(localStorage.getItem("price"))
+    }
+
     cost.innerHTML = localStorage.getItem("price")
-    
+
     if (localStorage.getItem("keepOrder") === null) {
-        console.log("Nothing in Folder1");
+
         localStorage.setItem("keepOrder", "");
     }
     else {
@@ -561,23 +564,23 @@ function retrieve() {
         );
         let btns = document.getElementsByClassName("del")
 
-   
-            
-        for (var z = 0; z < btns.length; z++) {
-            
-            if (btns[z].innerHTML == "ลบรายการ") {
-                
-               btns[z].addEventListener("click", function () {
-                total_pricem(parseInt(this.parentElement.getAttribute("data-cost")));
-                    this.parentElement.remove()
-                    console.log(this.parentElement)
-                    localStorage.setItem("keepOrder", parento.innerHTML);
 
+
+        for (var z = 0; z < btns.length; z++) {
+
+            if (btns[z].innerHTML == "Remove") {
+
+                btns[z].addEventListener("click", function () {
+                    total_pricem(parseInt(this.parentElement.getAttribute("data-cost")));
+                    this.parentElement.remove()
+
+                    localStorage.setItem("keepOrder", parento.innerHTML);
+                    count();
+                    is_empty();
                 });
             }
         }
     }
-    // console.log(parento.childElementCount);
 }
 
 let pizza1 = document.getElementById("pizza1");
@@ -777,7 +780,6 @@ function valid() {
         return false;
     }
     else if (!isSend) {
-        // btn_ch.addAttribute("data-bs-dismiss='modal'");
         taga.classList.add('dropdown-item', 'fs-4');
         taga.setAttribute("data-bs-toggle", "modal");
         taga.innerText = namee.value;

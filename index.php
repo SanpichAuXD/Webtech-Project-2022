@@ -16,7 +16,7 @@
     </style>
 </head>                
 
-<body onload="retrieve(); count();">
+<body onload="retrieve(); count(); is_empty();">
 <?php include 'cart.php'; ?>
 <?php include 'nav.php'; ?>
 <?php include 'background.php'; ?>

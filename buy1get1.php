@@ -18,7 +18,7 @@
 
 </head>
 
-<body onload="retrieve(); count();">
+<body onload="retrieve(); count(); is_empty();">
 <?php include 'cart.php'; ?>
 <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
@@ -102,7 +102,7 @@
                     <ul class="nav" style="font-size: 16px;">
                         <!-- buy 1 get 1 -->
                         <li class="nav-item pizza-set" id="b1g1">
-                            <a class="nav-link  fw-bold m-auto h-100 see-nav see-nav-b1g1" href="buy1get1.php">Buy 1 get 1 free</a>
+                            <a class="nav-link  fw-bold m-auto h-100 see-nav see-nav-b1g1" href="buy1get1.php">Buy 1 get 1 Free</a>
                         </li>
                         <!-- value set -->
                         <li class="nav-item pizza-set">
@@ -185,7 +185,7 @@
                 <div class="col-12 col-md-6   ">
                     <div class="  card m-3" id="card-topping" style="background-color: hsla(0, 0%, 100%,.7); ">
                         <div class="card-body ">
-                            <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034689297313452072/unknown.png" style="width: 80%; 
+                            <img src="./img/topping/cheese.png" style="width: 80%; 
                             height: 70px; 
                             object-fit: cover; 
                             display: block;
@@ -206,7 +206,7 @@
                 <div class="col-12 col-md-6 ">
                     <div class="card m-3" id="card-topping" style="background-color: hsla(0, 0%, 100%,.7);">
                         <div class="card-body">
-                            <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034689386215915570/unknown.png" style="width: 80%; 
+                            <img src="./img/topping/pineapple.png" style="width: 80%; 
                             height: 70px; 
                             object-fit: cover; 
                             display: block;
@@ -230,7 +230,7 @@
                 <div class="col-12 col-md-6 ">
                     <div class="card m-3" id="card-topping" style="background-color: hsla(0, 0%, 100%,.7);">
                         <div class="card-body">
-                            <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034689386626945024/unknown.png" style="width: 80%; 
+                            <img src="./img/topping/bacon.png" style="width: 80%; 
                             height: 70px; 
                             object-fit: cover; 
                             display: block;
@@ -251,7 +251,7 @@
                 <div class="col-12 col-md-6 ">
                     <div class="card m-3" id="card-topping" style="background-color: hsla(0, 0%, 100%,.7);">
                         <div class="card-body">
-                            <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034689387075743764/unknown.png" style="width: 80%; 
+                            <img src="./img/topping/ham.png" style="width: 80%; 
                             height: 70px; 
                             object-fit: cover; 
                             display: block;
@@ -318,7 +318,7 @@
                 <div class="col-12 col-md-6   ">
                     <div class="  card m-3" id="card-topping" style="background-color: hsla(0, 0%, 100%,.7); ">
                         <div class="card-body">
-                            <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034689297313452072/unknown.png" style="width: 80%; 
+                            <img src="./img/topping/cheese.png" style="width: 80%; 
                             height: 70px; 
                             object-fit: cover; 
                             display: block;
@@ -339,7 +339,7 @@
                 <div class="col-12 col-md-6 ">
                     <div class="card m-3" id="card-topping" style="background-color: hsla(0, 0%, 100%,.7);">
                         <div class="card-body">
-                            <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034689386215915570/unknown.png" style="width: 80%; 
+                            <img src="./img/topping/pineapple.png" style="width: 80%; 
                             height: 70px; 
                             object-fit: cover; 
                             display: block;
@@ -363,7 +363,7 @@
                 <div class="col-12 col-md-6 ">
                     <div class="card m-3" id="card-topping" style="background-color: hsla(0, 0%, 100%,.7);">
                         <div class="card-body">
-                            <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034689386626945024/unknown.png" style="width: 80%; 
+                            <img src="./img/topping/bacon.png" style="width: 80%; 
                             height: 70px; 
                             object-fit: cover; 
                             display: block;
@@ -385,7 +385,7 @@
                 <div class="col-12 col-md-6 ">
                     <div class="card m-3" id="card-topping" style="background-color: hsla(0, 0%, 100%,.7);">
                         <div class="card-body">
-                            <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034689387075743764/unknown.png" style="width: 80%; 
+                            <img src="./img/topping/ham.png" style="width: 80%; 
                             height: 70px; 
                             object-fit: cover; 
                             display: block;

@@ -13,7 +13,7 @@
     }
 </style>
 
-<body onload="count()">
+<body onload="count(); is_empty();">
     <header style="position: sticky ; top:0; z-index:100;">
         <ul class="nav-tabs " style="background-color: white;">
             <div class="container-fluid nav">
@@ -104,7 +104,7 @@
                     <ul class="nav" style="font-size: 16px;">
                         <!-- buy 1 get 1 -->
                         <li class="nav-item pizza-set">
-                            <a class="nav-link  fw-bold m-auto h-100 see-nav" href="buy1get1.php">Buy 1 get 1 free</a>
+                            <a class="nav-link  fw-bold m-auto h-100 see-nav" href="buy1get1.php">Buy 1 get 1 Free</a>
                         </li>
                         <!-- value set -->
                         <li class="nav-item pizza-set">
