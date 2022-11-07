@@ -649,7 +649,7 @@ body {
 footer{
     width: 100%;
     text-align: center;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 #name_footer{

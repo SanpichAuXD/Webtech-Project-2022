@@ -44,7 +44,7 @@
             </div>
 
             <div class="col-sm-12">
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1C5lzXGMSx0M8cLg7swRPDA51JQKiu5k&ehbc=2E312F" zoom="15" width="70%" height="360"></iframe><br>
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1C5lzXGMSx0M8cLg7swRPDA51JQKiu5k&ehbc=2E312F" zoom="15" width="50%" height="360"></iframe><br>
             </div>
 
 

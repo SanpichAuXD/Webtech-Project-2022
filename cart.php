@@ -38,10 +38,6 @@
                     <div class="col-4 text-center" id="cost"><b>0</b></div>
                     <div class="col-4 text-center" id="cost"><b>฿</b></div>
                 </div><br>
-                <div class="text-center">
-                    <!-- <button type="submit" class="btn btn-danger px-5" onclick="count()">show count</button> -->
-                    <button type="submit" class="btn btn-danger px-5" onclick="del()">Clear Your Cart</button>
-                </div>
             </div>
 
 

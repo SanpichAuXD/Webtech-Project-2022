@@ -454,7 +454,7 @@ function createTextCartp(num) {
     console.log(arr_topprice[num]);
     if (arr_topprice[num] > 0) {
         console.log(arr_topprice[num]);
-        return " +Extra Topping (+" + arr_topprice[num] + ")"
+        return "<br> +Extra Topping (+" + arr_topprice[num] + ")"
     } else {
         return ""
     }
