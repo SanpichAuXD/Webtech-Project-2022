@@ -464,19 +464,25 @@ let parento = document.getElementById("order");
 let cost = document.getElementById("cost");
 let total = 0;
 
-function total_price(pprice){
+function total_pricep(pprice){
     total = parseInt(localStorage.getItem("price")) + parseInt(pprice);
     localStorage.setItem("price", total)
 }
-
+function total_pricem(pprice){
+    total = parseInt(localStorage.getItem("price")) - parseInt(pprice);
+    cost.innerHTML = total;
+    localStorage.setItem("price", total)
+    count();
+}
+let c_cart = document.getElementById("count_cart");
 function count(){
-    let c_cart = document.getElementById("count_cart");
     c_cart.innerHTML = parento.childElementCount;
+    console.log(parento.childElementCount)
 }
 
 function addPizza(pizzaname, detail, pprice, imgsrc) {
 
-    total_price(pprice);
+    total_pricep(pprice);
 
     cost.innerHTML = total;
     dbox = document.createElement("div");
@@ -488,11 +494,13 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     txt = document.createElement("h6");
     pa = document.createElement("p")
     price = document.createElement("h4");
+    btn = document.createElement("button");
     dbox.classList.add("box", "position-relative");
     drov.classList.add("row");
     dimg.classList.add("col-3");
     img.classList.add("img-fluid");
-
+    btn.classList.add("btn", "btn-danger", "position-absolute", "bottom-0", "end-0","del")
+    btn.innerHTML = "ลบรายการ"
     img.src = imgsrc;
     dtxt.classList.add("col-6");
 
@@ -500,7 +508,15 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     pa.innerHTML = detail;
     price.innerHTML = pprice;
     dpr.classList.add("col-3");
-   
+    btn.addEventListener("click", function () {
+        total_pricem(parseInt(this.parentElement.getAttribute("data-cost")));
+        this.parentElement.remove()
+        console.log("vok")
+        console.log(parent.innerHTML)
+        localStorage.setItem("keepOrder", parent.innerHTML);
+       
+
+    });
     dimg.appendChild(img);
     dtxt.appendChild(txt);
     dtxt.appendChild(pa);
@@ -510,6 +526,8 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     drov.appendChild(dtxt);
     drov.appendChild(dpr);
     dbox.appendChild(drov);
+    dbox.appendChild(btn)
+    dbox.dataset.cost = pprice;
     parento.appendChild(dbox);
     // alert(localStorage.getItem("price"))
     localStorage.setItem("keepOrder", parento.innerHTML);
@@ -543,16 +561,14 @@ function retrieve() {
         );
         let btns = document.getElementsByClassName("del")
 
-    let tagh4 = document.getElementsByTagName("h4");
+   
             
         for (var z = 0; z < btns.length; z++) {
             
             if (btns[z].innerHTML == "ลบรายการ") {
                 
                btns[z].addEventListener("click", function () {
-               
-                console.log(btns)
-                console.log(this.parentElement)
+                total_pricem(parseInt(this.parentElement.getAttribute("data-cost")));
                     this.parentElement.remove()
                     console.log(this.parentElement)
                     localStorage.setItem("keepOrder", parento.innerHTML);
