@@ -498,7 +498,7 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     img.classList.add("img-fluid");
     btn.classList.add("btn", "btn-danger", "position-absolute", "bottom-0", "end-0", "del")
     btn.setAttribute('onclick','log('+pprice+')')
-    btn.innerHTML = "ลบรายการ"
+    btn.innerHTML = "remove"
 
     img.src = imgsrc;
     dtxt.classList.add("col-6");
@@ -562,7 +562,7 @@ function retrieve() {
             
         for (var z = 0; z < btns.length; z++) {
             
-            if (btns[z].innerHTML == "ลบรายการ") {
+            if (btns[z].innerHTML == "remove") {
                 
                btns[z].addEventListener("click", function () {
                
