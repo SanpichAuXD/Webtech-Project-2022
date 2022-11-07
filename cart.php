@@ -26,7 +26,7 @@
             </div>
             <hr width="100%">
             <div class="text">
-                <h5><b>รายการอาหาร</b></h5>
+                <h5><b>My cart</b></h5>
             </div>
 
             <div class="order-wrap" id="order">
@@ -34,7 +34,7 @@
             </div>
             <div class="bbott">
                 <div class="row">
-                    <div class="col-6" id="text"><b>ราคารวม</b></div>
+                    <div class="col-6" id="text"><b>Total Price</b></div>
                     <div class="col-6" id="cost"><b>0 ฿</b></div>
                 </div>
                 <div class="text-center">
@@ -45,7 +45,7 @@
 
 
             <div class="bott">
-                <button onclick="del()" type="submit" class="btn btn-success px-5">ชำระเงิน</button>
+                <button onclick="del()" type="submit" class="btn btn-success px-5">proceed to checkout</button>
             </div>
         </div>
     </div>
