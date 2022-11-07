@@ -817,3 +817,10 @@ footer{
     position: fixed;
     z-index: -9999;
 }
+
+/* นับจำนวนการสั่งซื้อ */
+#count_cart{
+    margin-bottom: 0;
+    bottom: 50%;
+    right: 10px;
+}
