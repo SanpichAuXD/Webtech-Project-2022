@@ -38,7 +38,7 @@
                     <div class="col-6" id="cost"><b>0 ฿</b></div>
                 </div>
                 <div class="text-center">
-                <!-- <button type="submit" class="btn btn-danger px-5" onclick="count()">show count</button> -->
+                    <!-- <button type="submit" class="btn btn-danger px-5" onclick="count()">show count</button> -->
                     <button type="submit" class="btn btn-danger px-5" onclick="del()">Clear Your Cart</button>
                 </div>
             </div>
@@ -49,9 +49,10 @@
             </div>
         </div>
     </div>
-    <div >
-        <button id="count_cart" >0</button>
-        <button  type="submit" class="btn btn-success p-2 open-btn"><i class="fa fa-shopping-cart" style="font-size:24px"></i></button>
+    <div>
+        <button type="submit" class="btn btn-success p-2 open-btn"><i class="fa fa-shopping-cart" style="font-size:24px"></i>
+            <p id="count_cart">0</p>
+        </button>
     </div>
 
 </body>
