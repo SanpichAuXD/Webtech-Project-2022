@@ -185,7 +185,7 @@
         <a href="#pizza2" class="btn btn-info w-25  mt-5 mb-5 " onclick="hidNshopizza(1,2)" id="next1"> Next </a>
     </div>
     <div class="text-center mt-2 ">
-        <a href="value_set.php" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick=" keepprice(0); addToCart(2);"><i class="bi bi-cart">&nbsp&nbspXXX ฿ </i> </a>
+        <a href="value_set.php" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick=" keepprice(0); addToCart(2);"><i class="bi bi-cart">&nbsp&nbspAdd to cart</i> </a>
     </div>
     <!-- footer -->
     <?php include 'footer.php'; ?>
