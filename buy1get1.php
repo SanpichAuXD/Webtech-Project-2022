@@ -120,15 +120,15 @@
         <!-- เลือกพิซซ่า-->
         <br><br>
         <div class="btn-group" role="group" id="pom_select">
-            <a class="btn" id="pom_select_1" role="button" onclick="hidNshopizza(2,2)">เลือกพิซซ่าถาด1</a>
-            <a class="btn" id="pom_select_2" role="button" onclick="hidNshopizza(1,2)">เลือกพิซซ่าถาด2</a>
+            <a class="btn" id="pom_select_1" role="button" onclick="hidNshopizza(2,2)">Select first pizza</a>
+            <a class="btn" id="pom_select_2" role="button" onclick="hidNshopizza(1,2)">Select second pizza</a>
         </div>
     </div>
     <!-- ถาด1 -->
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
     <div class="rounded " id="pizza1">
 
-        <p class="text-center pt-5" style="font-size: 20px;">เลือกพิซซ่าถาดที่1</p>
+        <p class="text-center pt-5" style="font-size: 20px;">Select first pizza</p>
         <img src="./img/pan/Seafood_Cocktail_m.png" id="pizzapic1" width="50%" class="mx-auto d-block">
 
         <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
@@ -265,7 +265,7 @@
     <!-- ถาด2 -->
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
     <div class="rounded d-none" id="pizza2">
-        <p class="text-center pt-5" style="font-size: 20px;">เลือกพิซซ่าถาดที่2</p>
+        <p class="text-center pt-5" style="font-size: 20px;">Select second pizza</p>
         <img src="./img/pan/Seafood_Cocktail_m.png" width="50%" id="pizzapic2" class="mx-auto d-block">
         <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
         <div class="btn-group" id="choose_dropdown">
