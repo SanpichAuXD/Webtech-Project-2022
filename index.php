@@ -13,16 +13,16 @@
     <style>
         <?php include 'style.css'; ?>
     </style>
-</head>                
+</head>
 
 <body onload="retrieve(); count();">
-<?php include 'cart.php'; ?>
-<?php include 'background.php'; ?>
+    <?php include 'cart.php'; ?>
+    <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <?php include 'nav.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
-    
+
     <!-- โฆษณา -->
     <section id="sec1">
         <div id="ad-container">
@@ -68,7 +68,7 @@
             </div>
         </div>
     </section><br><br>
-   
+
     <section id="sec2">
         <!-- <div class="d-flex justify-content-center align-items-center">
             <a href="buy1get1.php" onclick="rec_select(5)" role="button" class='btn btn-light text-white mx-2'>Buy now</a>
@@ -80,8 +80,15 @@
             <a href='buy1get1.php' class='btn btn-light text-white mx-2'>Buy now</a>
         </div> -->
     </section>
+    <br><br><br>
+    <div style="display: flex; justify-content: center;
+    align-items: center; ">
+        <img src="img/soon.png" width="40%" style="background:hsl(0, 55%, 47%); border-radius: 20%;">
+        <h1 style="position:absolute;">coming soon</h1>
+    </div>
+    <br>
     <!-- footer -->
-   
+
     <?php include 'footer.php'; ?>
     <script src="pizza.js"></script>
 </body>
