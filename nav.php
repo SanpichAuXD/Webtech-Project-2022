@@ -14,7 +14,7 @@
 </style>
 
 <body onload="count(); is_empty();">
-    <header style="position: sticky ; top:0; z-index:100;">
+    <header style="  z-index:100;">
         <ul class="nav-tabs " style="background-color: hsl(26, 26%, 12%); ">
             <div class="container-fluid nav">
                 <!-- logo -->

@@ -73,7 +73,7 @@
     <!-- recommend menu -->
     <div>
         <div class="d-flex justify-content-center align-item-center">
-        <h2 style="margin-left:8%; color:white;  border-radius: 20px; padding:5px; width:max-content; font-size:28px;">Recommend Menu</h2>
+        <h2 class="text-center" style=" color:white;  border-radius: 20px; padding:5px; width:max-content; font-size:28px;">Recommend Menu</h2>
         </div><br>
         <div class="container">
             <div class="row">
