@@ -816,7 +816,7 @@ footer{
 
 /* recommend menu */
 #c_recommend_menu {
-    background: var(--red);
+    background: #dd4948;
 }
 
 .card-body {
