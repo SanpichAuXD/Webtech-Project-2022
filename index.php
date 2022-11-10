@@ -69,21 +69,72 @@
             </div>
         </div>
     </section><br><br>
-   
-    <section id="sec2">
-        <!-- <div class="d-flex justify-content-center align-items-center">
-            <a href="buy1get1.php" onclick="rec_select(5)" role="button" class='btn btn-light text-white mx-2'>Buy now</a>
-        </div> -->
+    <br>
 
-    </section>
-    <section id="sec2">
-        <!-- <div class="d-flex justify-content-center align-items-center">
-            <a href='buy1get1.php' class='btn btn-light text-white mx-2'>Buy now</a>
-        </div> -->
-    </section>
+<!-- recommend menu -->
+<div>
+    <h2 style="margin-left:8%; color:#271E17; background:#e3c596d6; border-radius: 20px; padding:5px; width:max-content; font-size:100%;">recommend menu</h2>
+    <div class="container">
+        <div class="row">
+            <!-- recommend 1 -->
+            <div class="col-sm">
+                <div class="card" id="c_recommend_menu" style="width: 15rem;  margin:auto;">
+                    <img class="card-img-top" src="./img/pasta/pasta_1.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title"  id="name_recommend_menu">Egg Tart Hong Kong Style 2 Pcs.</h6>
+                        <h6 class="card-title" style="float: right;">129฿</h6><br>
+                        
+                        <a href="#" class="btn btn-success" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- recommend 2 -->
+            <div class="col-sm">
+                <div class="card" id="c_recommend_menu" style="width: 15rem;  margin:auto;">
+                    <img class="card-img-top" src="./img/cheese/4_Cheese_&_Bacon_l.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title"  id="name_recommend_menu">Mocha Almond Fudge Ice Cream</h6>
+                        <h6 class="card-title" style="float: right;">219฿</h6><br>
+                        
+                        <a href="#" class="btn btn-success" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- recommend 3 -->
+            <div class="col-sm">
+                <div class="card" id="c_recommend_menu" style="width: 15rem;  margin:auto;">
+                    <img class="card-img-top" src="img/Caesar_Salad.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title"  id="name_recommend_menu">Caesar Salad</h6>
+                        <h6 class="card-title" style="float: right;">129฿</h6><br>
+                        
+                        <a href="#" class="btn btn-success" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- recommend 4 -->
+            <div class="col-sm">
+                <div class="card" id="c_recommend_menu" style="width: 15rem; margin:auto; ">
+                    <img class="card-img-top" src="img/BBQ_Pork.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title" id="name_recommend_menu">BBQ Pork Ribs</h6>
+                        <h6 class="card-title" style="float: right;">359฿</h6><br>
+                        <a href="#" class="btn btn-success" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div style="display: flex; justify-content: center;
+align-items: center; ">
+    <img src="./img/home/soon.jpg" width="60%" style="background:#E3C696c3; border-radius: 20%;">
+    <h1 style="position:absolute;">coming soon</h1>
+</div>
+<br>
     <!-- footer -->
-   
-    <?php include 'footer.php'; ?>
+    <?php include 'footer.php';?>
     <script src="pizza.js"></script>
 </body>
 
