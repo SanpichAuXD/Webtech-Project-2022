@@ -625,6 +625,28 @@ function hidNshopizza(num, check) {
             pum2.style.backgroundColor = back_color;
         }
     }
+    if (check == 11) {
+    if (num == 1) {
+            but1.classList.add("d-none");
+            last.classList.remove("d-none");
+            pizza1.classList.remove("d-none");
+            pizza1.classList.add("d-none");
+            pizza2.classList.remove("d-none");
+            pizza2.classList.add("d-flex");
+            pum1.style.backgroundColor = back_color;
+            pum2.style.backgroundColor = sel_color;
+        }
+        else {
+            but1.classList.remove("d-none");
+            last.classList.add("d-none");
+            pizza1.classList.remove("d-none");
+            pizza2.classList.remove("d-flex");
+            pizza2.classList.add("d-none");
+            pizza1.classList.add("d-flex");
+            pum1.style.backgroundColor = sel_color;
+            pum2.style.backgroundColor = back_color;
+        }
+    }
     if (check == 4) {
         if (num == 1) {
             but1.classList.add("d-none");
@@ -730,19 +752,22 @@ function take_deli(num) {
     if (num) {
         deli.classList.add("d-none");
         take.classList.remove("d-none");
-        color_take.classList.remove("text-dark");
-        color_take.classList.add("bg-secondary", "text-light");
-        color_deli.classList.remove("bg-secondary", "text-light");
-        color_deli.classList.add("text-dark");
+        color_deli.style.backgroundColor = "hsla(0, 100%, 66%, 0.6)";
+        color_take.style.backgroundColor = "hsl(26, 51%, 15%)";
+        console.log("555")
 
     }
     else {
         take.classList.add("d-none");
         deli.classList.remove("d-none");
-        color_deli.classList.remove("text-dark");
-        color_deli.classList.add("bg-secondary", "text-light");
-        color_take.classList.remove("bg-secondary", "text-light");
-        color_take.classList.add("text-dark");
+        color_take.style.backgroundColor = "hsla(0, 100%, 66%, 0.6)";
+        color_deli.style.backgroundColor = "hsl(26, 51%, 15%)";
+        console.log("111")
+
+        // color_deli.classList.remove("text-dark");
+        // color_deli.style.backgroundColor = "#E3C696";
+        // color_take.style.backgroundColor = "#ffffff";
+        // color_take.classList.add("text-dark");
 
 
     }

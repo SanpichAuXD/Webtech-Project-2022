@@ -15,23 +15,23 @@
 
 <body onload="count(); is_empty();">
     <header style="position: sticky ; top:0; z-index:100;">
-        <ul class="nav-tabs " style="background-color: white;">
+        <ul class="nav-tabs " style="background-color: hsl(26, 26%, 12%); ">
             <div class="container-fluid nav">
                 <!-- logo -->
-                <a id="logo" class="navbar-brand" class="nav-a" href="index.php">
+                <a id="logo" class="navbar-brand text-center" class="nav-a" href="index.php">
                     <img id="logo-img" src="img/home/Logo.png" alt="Logo" class="d-inline-block">
                 </a>
 
                 <div class="nav-item nav-delivery">
                     <!-- delivery takaway -->
                     <li class="deliver nav-item text-center d-flex fw-semibold">
-                        <a id="switch-deli" class="nav-link text-dark d-inline m-auto nav-a deli-take " href="#"
-                            style="border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;"
+                        <a id="switch-deli" class="nav-link text-light d-inline m-auto nav-a deli-take " href="#"
+                            style="background-color:hsla(0, 100%, 66%, 0.6); border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;"
                             onclick="take_deli(0)">Delivery</a>
                         <div class="line"></div>
-                        <a id="switch-take" class="nav-link  d-inline m-auto nav-a deli-take bg-secondary text-light"
+                        <a id="switch-take" class="nav-link  d-inline m-auto nav-a deli-take  text-light"
                             href="#"
-                            style="border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"
+                            style="background-color:hsl(26, 51%, 15%) ; border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"
                             onclick="take_deli(1)">Takeaway</a>
                     </li>
                     <!-- select address -->
@@ -39,7 +39,7 @@
 
                         <input class="fw-semibold" id="select-address" list="datalistOptions" type="search"
                             class="search-data " placeholder="Select Address" required
-                            style="width:100%; height: 37px;">
+                            style="width:100%; height: 31px;">
                         <datalist id="datalistOptions">
                             <?php
                             $url = "pizza.json";
@@ -54,8 +54,8 @@
                     <li>
                         <div class="d-none" id="deli">
                             <div class="dropdown w-100 ">
-                                <button class="btn  dropdown-toggle align-text-center "
-                                    style=" width:103%; background-color:#D9D9D9; border-radius:10px;" id="drop-text"
+                                <button id="deli-address" class="btn dropdown-toggle align-text-center text-light"
+                                    style=" width:103%; height:31px; background-color:#e64453; border-radius:10px;" id="drop-text"
                                     type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Your Address
                                 </button>
@@ -98,7 +98,7 @@
                                 </div>
                             </div>
                     </li>
-                </div>
+                </div> 
 
                 <div class="nav navbar-links" style="margin-left: 10px;">
                     <ul class="nav" style="font-size: 16px;">

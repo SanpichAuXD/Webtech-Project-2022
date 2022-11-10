@@ -20,13 +20,13 @@
 
 </head>
 
-<body onload="retrieve(); count();">
+<body onload="retrieve(); count(); is_empty();">
 <?php include 'cart.php'; ?>
 <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <header style="position: sticky ; top:0; z-index:100;">
-        <ul class="nav-tabs " style="background-color: white;" >
+        <ul class="nav-tabs " style="background-color: hsl(26, 26%, 12%); ">
             <div class="container-fluid nav">
                 <!-- logo -->
                 <a id="logo" class="navbar-brand" class="nav-a" href="index.php">
@@ -36,14 +36,21 @@
                 <div class="nav-item nav-delivery">
                     <!-- delivery takaway -->
                     <li class="deliver nav-item text-center d-flex fw-semibold">
-                        <a id="switch-deli" class="nav-link text-dark d-inline m-auto nav-a deli-take " href="#" style="border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;" onclick="take_deli(0)">Delivery</a>
+                        <a id="switch-deli" class="nav-link text-light d-inline m-auto nav-a deli-take " href="#"
+                            style="background-color:hsla(0, 100%, 66%, 0.6); border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;"
+                            onclick="take_deli(0)">Delivery</a>
                         <div class="line"></div>
-                        <a id="switch-take" class="nav-link  d-inline m-auto nav-a deli-take bg-secondary text-light" href="#" style="border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;" onclick="take_deli(1)">Takeaway</a>
+                        <a id="switch-take" class="nav-link  d-inline m-auto nav-a deli-take  text-light"
+                            href="#"
+                            style="background-color:hsl(26, 51%, 15%) ; border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"
+                            onclick="take_deli(1)">Takeaway</a>
                     </li>
                     <!-- select address -->
                     <li class="deliver nav-item text-center" id="take" style="height: 30px; width: 100%;">
 
-                        <input class="fw-semibold" id="select-address" list="datalistOptions" type="search" class="search-data " placeholder="Select Address" required style="width:100%; height: 37px;">
+                        <input class="fw-semibold" id="select-address" list="datalistOptions" type="search"
+                            class="search-data " placeholder="Select Address" required
+                            style="width:100%; height: 31px;">
                         <datalist id="datalistOptions">
                             <?php
                             $url = "pizza.json";
@@ -58,17 +65,21 @@
                     <li>
                         <div class="d-none" id="deli">
                             <div class="dropdown w-100 ">
-                                <button class="btn  dropdown-toggle align-text-center " style=" width:103%; background-color:#D9D9D9; border-radius:10px;" id="drop-text" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button id="deli-address" class="btn dropdown-toggle align-text-center text-light"
+                                    style=" width:103%; height:31px; background-color:#e64453; border-radius:10px;" id="drop-text"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Your Address
                                 </button>
-                                <ul class="dropdown-menu" id="drop" style=" width:350px;">
-                                    <li><a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">New Address</a></li>
-                                    <li><a class="dropdown-item " href="#">Current Address</a></li>
+                                <ul class="dropdown-menu  " id="drop" style=" width:100%; background-color:#D9D9D9;">
+                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">New Address</a></li><hr class="m-0">
+                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0" href="#">Current Address</a></li>
                                 </ul>
                             </div>
-                            <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content" style="background-color: rgba(170, 66, 66, 0.9);  box-shadow: 0 5px 25px;  backdrop-filter: blur(10px);">
+                                    <div class="modal-content" style="background-color: rgba(170, 66, 66, 0.9);  box-shadow: 0 5px 25px;  backdrop-filter: blur(10px);">
                                         <div class="modal-header d-block">
                                             <button type="button" class="btn-close d-flex p-2 float-right"
                                                 data-bs-dismiss="modal" aria-label="Close"></button>
@@ -103,12 +114,13 @@
                 <div class="nav navbar-links" style="margin-left: 10px;">
                     <ul class="nav" style="font-size: 16px;">
                         <!-- buy 1 get 1 -->
-                        <li class="nav-item pizza-set" >
-                            <a   class="nav-link  fw-bold m-auto h-100 see-nav" href="buy1get1.php">Buy 1 get 1 free</a>
+                        <li class="nav-item pizza-set">
+                            <a class="nav-link  fw-bold m-auto h-100 see-nav" href="buy1get1.php">Buy 1 get 1 Free</a>
                         </li>
                         <!-- value set -->
                         <li class="nav-item pizza-set" id="va-set">
-                            <a   class="nav-link  fw-bold m-auto h-100 see-nav see-nav-va-set ms-4 me-4" href="value_set.php">Value Set</a>
+                            <a class="nav-link  fw-bold m-auto h-100 see-nav ms-4 me-4" href="value_set.php">Value
+                                Set</a>
                         </li>
                     </ul>
                 </div>

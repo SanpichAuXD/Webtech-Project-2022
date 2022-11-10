@@ -15,8 +15,8 @@
 </head>
 
 <body onload="setPrice(2); retrieve(); count(); is_empty();">
-<?php include 'cart.php'; ?>
-<?php include 'background.php'; ?>
+    <?php include 'cart.php'; ?>
+    <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <?php include 'nav.php'; ?>
@@ -39,38 +39,41 @@
         </div>
     </div>
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
-    <div class="rounded " id="pizza1">
-        <p class="text-center pt-5" style="font-size: 20px;">Select Pizza</p>
-        <img id="pizzapic1" src="https://cdn.1112.com/1112/public//images/products/pizza/Oct2021/102208_MP.png" width="50%" class="mx-auto d-block">
-        <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
-        <div class="btn-group" id="choose_dropdown">
-            <div class="row ">
-                <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center ">
-                    <select id="selectpizza1" class="text-center form-select form-select-md mb-3 me-3 ms-3" style="width: 100%;" aria-label=".form-select-md " onchange="reset(1); changePizza(1,1);">
-                        <?php
-                        $url = "pizza.json";
-                        $response = file_get_contents($url);
-                        $result = json_decode($response);
-                        for ($i = 0; $i < count($result->menu) - 1; $i++) {
-                            echo '<option value="' . $result->menu[$i]->eng_name . '">' . $result->menu[$i]->eng_name . '</option>';
-                        }
-                        ?>
-                    </select>
-                </div>
-                <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center">
-                    <select style="width: 100%;" id="selectcrust1" class="text-center form-select form-select-md mb-3 me-3 ms-3" onchange="changePizza(1,1)" style="width: 250px;" aria-label=".form-select-md ">
-                    <option selected value="0">Small Pizza</option>
-                    </select>
+    <div class="rounded d-flex" id="pizza1">
+        <div class="left">
+            <p class="text-center pt-5" style="font-size: 20px;">Select Pizza</p>
+            <img id="pizzapic1" src="https://cdn.1112.com/1112/public//images/products/pizza/Oct2021/102208_MP.png" width="50%" class="mx-auto d-block">
+            <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
+            <div class="btn-group" id="choose_dropdown">
+                <div class="row ">
+                    <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center ">
+                        <select id="selectpizza1" class="text-center form-select form-select-md mb-3 me-3 ms-3" style="width: 100%;" aria-label=".form-select-md " onchange="reset(1); changePizza(1,1);">
+                            <?php
+                            $url = "pizza.json";
+                            $response = file_get_contents($url);
+                            $result = json_decode($response);
+                            for ($i = 0; $i < count($result->menu) - 1; $i++) {
+                                echo '<option value="' . $result->menu[$i]->eng_name . '">' . $result->menu[$i]->eng_name . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center">
+                        <select style="width: 100%;" id="selectcrust1" class="text-center form-select form-select-md mb-3 me-3 ms-3" onchange="changePizza(1,1)" style="width: 250px;" aria-label=".form-select-md ">
+                            <option selected value="0">Small Pizza</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
-        <br><div style="margin-left:15%; margin-right:15%;">
-        <p class="text-start" id="desc1">Shrimp, Crab Sticks, Ham, Pineapple and Thousand Island Sauce</p>
-        <br>
-        <h3 class="text-end" id="pprice1">179 ฿</h3>
-    </div><br>
+            <br>
+            <div style="margin-left:15%; margin-right:15%;">
+                <p class="text-start" id="desc1">Shrimp, Crab Sticks, Ham, Pineapple and Thousand Island Sauce</p>
+                <br>
+                <h3 class="text-end" id="pprice1">179 ฿</h3>
+            </div>
+        </div><br>
         <!-- ปรับแต่งพิซซ่าด้วยตัวเอง -->
-        <div>
+        <div class="right">
             <p id="topping"><i>Customize Pizza</i></p>
             <!-- บรรทัด 1 -->
             <div class="row">
@@ -88,12 +91,10 @@
                             <!--    ชื่อ topping ชีส-->
                             <p class="m-3" id="name-topping">Mozzarella Cheese (+ 39฿)</p>
                             <div class="row">
-                        <a href="#-" class="col-2" onclick="num_topping(0,0)"><i class="bi bi-dash-circle"
-                                id="icon-dash-circle"></i></a>
+                                <a href="#-" class="col-2" onclick="num_topping(0,0)"><i class="bi bi-dash-circle" id="icon-dash-circle"></i></a>
                                 <p class="col-8 text-center mb-0" id="top0">0</p>
-                        <a href="#+" class="col-2"onclick="num_topping(1,0)"><i class="bi bi-plus-circle"
-                                id="icon-plus-circle"></i></a>
-                        </div>
+                                <a href="#+" class="col-2" onclick="num_topping(1,0)"><i class="bi bi-plus-circle" id="icon-plus-circle"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,12 +112,10 @@
                             <!--    ชื่อ topping สับปะรด-->
                             <p class="m-3" id="name-topping">Pineapple (+ 39฿)</p>
                             <div class="row">
-                        <a href="#-" class="col-2" onclick="num_topping(0,1)"><i class="bi bi-dash-circle"
-                                id="icon-dash-circle"></i></a>
+                                <a href="#-" class="col-2" onclick="num_topping(0,1)"><i class="bi bi-dash-circle" id="icon-dash-circle"></i></a>
                                 <p class="col-8 text-center mb-0" id="top1">0</p>
-                        <a href="#+" class="col-2"onclick="num_topping(1,1)"><i class="bi bi-plus-circle"
-                                id="icon-plus-circle"></i></a>
-                        </div>
+                                <a href="#+" class="col-2" onclick="num_topping(1,1)"><i class="bi bi-plus-circle" id="icon-plus-circle"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -137,12 +136,10 @@
                             <!--    ชื่อ topping เบคอนแผ่น-->
                             <p class="m-3" id="name-topping">Sliced Bacon (+ 39฿)</p>
                             <div class="row">
-                        <a href="#-" class="col-2" onclick="num_topping(0,2)"><i class="bi bi-dash-circle"
-                                id="icon-dash-circle"></i></a>
+                                <a href="#-" class="col-2" onclick="num_topping(0,2)"><i class="bi bi-dash-circle" id="icon-dash-circle"></i></a>
                                 <p class="col-8 text-center mb-0" id="top2">0</p>
-                        <a href="#+" class="col-2"onclick="num_topping(1,2)"><i class="bi bi-plus-circle"
-                                id="icon-plus-circle"></i></a>
-                        </div>
+                                <a href="#+" class="col-2" onclick="num_topping(1,2)"><i class="bi bi-plus-circle" id="icon-plus-circle"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -160,12 +157,10 @@
                             <!--    ชื่อ topping แฮมแผ่น-->
                             <p class="m-3" id="name-topping">Sliced Ham (+ 39฿)</p>
                             <div class="row">
-                        <a href="#-" class="col-2" onclick="num_topping(0,3)"><i class="bi bi-dash-circle"
-                                id="icon-dash-circle"></i></a>
+                                <a href="#-" class="col-2" onclick="num_topping(0,3)"><i class="bi bi-dash-circle" id="icon-dash-circle"></i></a>
                                 <p class="col-8 text-center mb-0" id="top3">0</p>
-                        <a href="#+" class="col-2"onclick="num_topping(1,3)"><i class="bi bi-plus-circle"
-                                id="icon-plus-circle"></i></a>
-                        </div>
+                                <a href="#+" class="col-2" onclick="num_topping(1,3)"><i class="bi bi-plus-circle" id="icon-plus-circle"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>

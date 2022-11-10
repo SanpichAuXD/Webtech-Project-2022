@@ -38,12 +38,6 @@ li {
 
 }
 
-body {
-    background-color: #271E17;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-}
 
 .line {
     width: .5px;
@@ -56,7 +50,7 @@ body {
 }
 
 #select-address {
-    background-color: #D9D9D9;
+    background-color: var(--red);
     border-radius: 10px;
     border: none;
     padding: 10px;
@@ -70,7 +64,7 @@ body {
 }
 
 #select-address::placeholder {
-    color: black;
+    color: var(--white);
     text-align: center;
 }
 
@@ -78,9 +72,6 @@ input:focus::-webkit-input-placeholder {
     opacity: 0;
 }
 
-.nav-a:hover {
-    background-color: #c7c7c7;
-}
 
 .pizza-set {
     height: 100%;
@@ -89,26 +80,26 @@ input:focus::-webkit-input-placeholder {
 }
 
 .pizza-set:hover {
-    background-color: hsl(26, 26%, 12%);
+    background-color: var(--brown);
 
 }
 .see-nav{
-    color: black;
+    color: var(--white);
 }
 .see-nav:hover{
     color: white;
 }
 #b1g1{
-    background-color: hsl(26, 26%, 12%) ;
+    background-color: var(--brown);
 }
 .see-nav-b1g1{
-    color: white;
+    color: var(--yellow);
 }
 #va-set{
-    background-color: hsl(26, 26%, 12%) ;
+    background-color: var(--brown);
 }
 .see-nav-va-set{
-    color: white;
+    color: var(--yellow);
 }
 
 .deli-take {
@@ -118,7 +109,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 .deliver {
-    background-color: #D9D9D9;
+    background-color: var(--red);
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -432,18 +423,20 @@ input:focus::-webkit-input-placeholder {
 
 
 body {
+    height: 100vh;
     font-size: clamp(14px, 2.5vw, 20px);
-    background-color: #271E17;
+    background-color: var(--brown);
     margin: 0;
     padding: 0;
     color: #fff;
-    --red: hsla(0, 100%, 66%, 0.4);
-    --brown: hsl(26, 26%, 12%);
+    --red: hsla(0, 100%, 66%, 0.6);
+    --brown: hsl(26, 51%, 15%);
     --grey: hsl(0, 0%, 78%);
     --black: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
     --white1: hsla(0, 0%, 100%, .7);
     --blue: hsl(240, 100%, 50%);
+    --yellow: #E3C696;
 }
 
 /* ปุ่ม-------------------------------------------------------------START*/
@@ -451,15 +444,9 @@ body {
     padding: auto;
 }
 
-/* ปุ่มแปลง TH-EN */
-#language {
-    background-color: var(--grey);
-    height: 15%;
-}
-
 /* ปุ่ม deli-take */
 #deli-take {
-    background-color: var(--grey);
+    /* background-color: var(--grey); */
     width: 350px;
 }
 
@@ -472,7 +459,7 @@ body {
 }
 
 #bg-select-drop {
-    background: var(--grey);
+    background: var(--red);
     width: 350px;
 }
 
@@ -483,7 +470,7 @@ body {
 }
 
 #nav:hover {
-    color: var(--blue);
+    color: var(--white);
 }
 
 /* ปุ่ม-------------------------------------------------------------END*/
@@ -537,8 +524,8 @@ body {
 #pizza5,
 #pizza6 {
     background: var(--red);
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 3%;
 }
 
@@ -822,4 +809,7 @@ footer{
     width: 40vh;
     position: fixed;
     z-index: -9999;
+}
+.left{
+    width: 65vw;
 }
