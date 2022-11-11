@@ -73,7 +73,7 @@
                             <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center">
                                 <select style="width: 100%;" id="selectcrust1"
                                     class="text-center form-select form-select-md mb-3 me-3 ms-3"
-                                    onchange="changePizza(1)" style="width: 250px;" aria-label=".form-select-md ">
+                                    onchange="changePizza(1,3)" style="width: 250px;" aria-label=".form-select-md ">
                                     <option id="testkuy" value="0">Pan Medium</option>
                                     <option value="1">Crispy Thin Medium</option>
                                     <option value="2">Extreme Cheese Medium</option>
