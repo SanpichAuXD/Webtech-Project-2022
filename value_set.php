@@ -25,30 +25,30 @@
 <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
-    <header style="position: sticky ; top:0; z-index:100;">
+    <header style="  z-index:100;">
         <ul class="nav-tabs " style="background-color: hsl(26, 26%, 12%); ">
             <div class="container-fluid nav">
                 <!-- logo -->
-                <a id="logo" class="navbar-brand" class="nav-a" href="index.php">
+                <a id="logo" class="navbar-brand text-center" class="nav-a" href="index.php">
                     <img id="logo-img" src="img/home/Logo.png" alt="Logo" class="d-inline-block">
                 </a>
 
                 <div class="nav-item nav-delivery">
                     <!-- delivery takaway -->
                     <li class="deliver nav-item text-center d-flex fw-semibold">
-                        <a id="switch-deli" class="nav-link text-light d-inline m-auto nav-a deli-take " href="#"
-                            style="background-color:hsla(0, 100%, 66%, 0.6); border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;"
+                        <a id="switch-deli" class="nav-link  d-inline m-auto nav-a deli-take " href="#"
+                            style="background-color:#912e00; color:white; border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;"
                             onclick="take_deli(0)">Delivery</a>
                         <div class="line"></div>
-                        <a id="switch-take" class="nav-link  d-inline m-auto nav-a deli-take  text-light"
+                        <a id="switch-take" class="nav-link  d-inline m-auto nav-a deli-take "
                             href="#"
-                            style="background-color:hsl(26, 51%, 15%) ; border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"
+                            style="background-color:#dabf91 ; color:black; border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"
                             onclick="take_deli(1)">Takeaway</a>
                     </li>
                     <!-- select address -->
                     <li class="deliver nav-item text-center" id="take" style="height: 30px; width: 100%;">
 
-                        <input class="fw-semibold" id="select-address" list="datalistOptions" type="search"
+                        <input class="fw-semibold text-light" id="select-address" list="datalistOptions" type="search"
                             class="search-data " placeholder="Select Address" required
                             style="width:100%; height: 31px;">
                         <datalist id="datalistOptions">
@@ -66,20 +66,20 @@
                         <div class="d-none" id="deli">
                             <div class="dropdown w-100 ">
                                 <button id="deli-address" class="btn dropdown-toggle align-text-center text-light"
-                                    style=" width:103%; height:31px; background-color:#e64453; border-radius:10px;" id="drop-text"
+                                    style=" width:103%; height:31px; background-color:#912e00; border-radius:10px;" id="drop-text"
                                     type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Your Address
                                 </button>
-                                <ul class="dropdown-menu  " id="drop" style=" width:100%; background-color:#D9D9D9;">
-                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0" href="#" data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal">New Address</a></li><hr class="m-0">
-                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0" href="#">Current Address</a></li>
+                                <ul class="dropdown-menu  " id="drop" style=" width:100%; background-color:#912e00;">
+                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0 text-light" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">New Address</a></li><hr class="m-0 text-light fs-5">
+                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0 text-light" href="#">Current Address</a></li>
                                 </ul>
                             </div>
                             <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false"
                                 tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content" style="background-color: rgba(170, 66, 66, 0.9);  box-shadow: 0 5px 25px;  backdrop-filter: blur(10px);">
+                                    <div class="modal-content" style="background-color: #912e00;  box-shadow: 0 5px 25px;  backdrop-filter: blur(10px);">
                                         <div class="modal-header d-block">
                                             <button type="button" class="btn-close d-flex p-2 float-right"
                                                 data-bs-dismiss="modal" aria-label="Close"></button>
@@ -109,7 +109,7 @@
                                 </div>
                             </div>
                     </li>
-                </div>
+                </div> 
 
                 <div class="nav navbar-links" style="margin-left: 10px;">
                     <ul class="nav" style="font-size: 16px;">
@@ -134,10 +134,9 @@
     </header>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
 
-    <div>
+    <div class="container">
         <a href="index.php"><i class="bi bi-arrow-left" id="back"></i></a>
-        <br>
-        <h1 class="text-center">Value set</h1><br>
+        <h1 class="text-center">Value set</h1>
     </div>
 
     <!---menu 1--->

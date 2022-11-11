@@ -5,11 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>value_set_1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!---icon--->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <style>
@@ -28,29 +25,30 @@
     <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
-    <header style=" z-index:100;">
+    <header style="  z-index:100;">
         <ul class="nav-tabs " style="background-color: hsl(26, 26%, 12%); ">
             <div class="container-fluid nav">
                 <!-- logo -->
-                <a id="logo" class="navbar-brand" class="nav-a" href="index.php">
+                <a id="logo" class="navbar-brand text-center" class="nav-a" href="index.php">
                     <img id="logo-img" src="img/home/Logo.png" alt="Logo" class="d-inline-block">
                 </a>
 
                 <div class="nav-item nav-delivery">
                     <!-- delivery takaway -->
                     <li class="deliver nav-item text-center d-flex fw-semibold">
-                        <a id="switch-deli" class="nav-link text-light d-inline m-auto nav-a deli-take " href="#"
-                            style="background-color:hsla(0, 100%, 66%, 0.6); border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;"
+                        <a id="switch-deli" class="nav-link  d-inline m-auto nav-a deli-take " href="#"
+                            style="background-color:#912e00; color:white; border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;"
                             onclick="take_deli(0)">Delivery</a>
                         <div class="line"></div>
-                        <a id="switch-take" class="nav-link  d-inline m-auto nav-a deli-take  text-light" href="#"
-                            style="background-color:hsl(26, 51%, 15%) ; border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"
+                        <a id="switch-take" class="nav-link  d-inline m-auto nav-a deli-take "
+                            href="#"
+                            style="background-color:#dabf91 ; color:black; border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"
                             onclick="take_deli(1)">Takeaway</a>
                     </li>
                     <!-- select address -->
                     <li class="deliver nav-item text-center" id="take" style="height: 30px; width: 100%;">
 
-                        <input class="fw-semibold" id="select-address" list="datalistOptions" type="search"
+                        <input class="fw-semibold text-light" id="select-address" list="datalistOptions" type="search"
                             class="search-data " placeholder="Select Address" required
                             style="width:100%; height: 31px;">
                         <datalist id="datalistOptions">
@@ -68,28 +66,24 @@
                         <div class="d-none" id="deli">
                             <div class="dropdown w-100 ">
                                 <button id="deli-address" class="btn dropdown-toggle align-text-center text-light"
-                                    style=" width:103%; height:31px; background-color:#e64453; border-radius:10px;"
-                                    id="drop-text" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    style=" width:103%; height:31px; background-color:#912e00; border-radius:10px;" id="drop-text"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Your Address
                                 </button>
-                                <ul class="dropdown-menu  " id="drop" style=" width:100%; background-color:#D9D9D9;">
-                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0" href="#"
-                                            data-bs-toggle="modal" data-bs-target="#exampleModal">New Address</a></li>
-                                    <hr class="m-0">
-                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0" href="#">Current Address</a>
-                                    </li>
+                                <ul class="dropdown-menu  " id="drop" style=" width:100%; background-color:#912e00;">
+                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0 text-light" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">New Address</a></li><hr class="m-0 text-light fs-5">
+                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0 text-light" href="#">Current Address</a></li>
                                 </ul>
                             </div>
                             <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false"
                                 tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content"
-                                        style="background-color: rgba(170, 66, 66, 0.9);  box-shadow: 0 5px 25px;  backdrop-filter: blur(10px);">
+                                    <div class="modal-content" style="background-color: #912e00;  box-shadow: 0 5px 25px;  backdrop-filter: blur(10px);">
                                         <div class="modal-header d-block">
                                             <button type="button" class="btn-close d-flex p-2 float-right"
                                                 data-bs-dismiss="modal" aria-label="Close"></button>
-                                            <h1 class="modal-title fs-5 text-center text-light" id="exampleModalLabel">
-                                                Add new
+                                            <h1 class="modal-title fs-5 text-center text-light" id="exampleModalLabel">Add new
                                                 address</h1>
 
                                         </div>
@@ -115,7 +109,7 @@
                                 </div>
                             </div>
                     </li>
-                </div>
+                </div> 
 
                 <div class="nav navbar-links" style="margin-left: 10px;">
                     <ul class="nav" style="font-size: 16px;">
@@ -140,12 +134,11 @@
     </header>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
 
-    <div>
+    <div class="container">
         <!-- ปุ่ม back -->
-        <a href="index.php"><i class="bi bi-arrow-left" id="back"></i></a>
-        <br>
+        <a href="index.php"><i class="bi bi-arrow-left " id="back"></i></a>
         <!-- ชื่อ เมนู -->
-        <h3 id="name_value_set">Special DealBuy 1 Get 1</h3><br>
+        <h3 id="name_value_set" class="text-center m-0 mb-4">Special DealBuy 1 Get 1</h3>
         <!-- เลือกพิซซ่า-->
         <div class="btn-group" role="group" id="pom_select">
             <a class="btn" id="pom_select_1" role="button" onclick="hidNshopizza(2,11)">Select first pizza</a>
@@ -155,7 +148,7 @@
     <!-- ถาด1 -->
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
     <div class="rounded d-flex" id="pizza1">
-        <div class="order-wrap p-3">
+        <div class="order-wrap p-3 w-100 ">
             <div class="row ">
                 <div class="col-8">
                     <p class="text-center pt-5" style="font-size: 20px;">Select first pizza</p>
@@ -165,9 +158,7 @@
                     <div class="btn-group" id="choose_dropdown">
                         <div class="row ">
                             <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center ">
-                                <select id="selectpizza1" class="text-center form-select form-select-md mb-3 ms-3 me-3"
-                                    style="width: 100%;" aria-label=".form-select-md "
-                                    onchange="reset(1); changePizza(1);">
+                                <select id="selectpizza1" class="text-center form-select form-select-md mb-3 ms-3 me-3" style="width: 100%;" aria-label=".form-select-md " onchange="reset(1); changePizza(1);">
                                     <?php
                                     $url = "pizza.json";
                                     $response = file_get_contents($url);
@@ -181,9 +172,7 @@
                                 </select>
                             </div>
                             <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center">
-                                <select style="width: 100%;" id="selectcrust1"
-                                    class="text-center form-select form-select-md mb-3 me-3 ms-3"
-                                    onchange="changePizza(1)" style="width: 250px;" aria-label=".form-select-md ">
+                                <select style="width: 100%;" id="selectcrust1" class="text-center form-select form-select-md mb-3 me-3 ms-3" onchange="changePizza(1)" style="width: 250px;" aria-label=".form-select-md ">
                                     <option id="testkuy" value="0">Pan Medium</option>
                                     <option value="1">Crispy Thin Medium</option>
                                     <option value="2">Extreme Cheese Medium</option>
@@ -196,7 +185,7 @@
                     </div>
                     <br>
                     <div class="text-start" style="margin-left:15%; margin-right:15%;">
-                        <p class="text-start" id="desc1">Shrimp, Crab Sticks, Ham, Pineapple and Thousand Island Sauce
+                        <p class="text-start mb-0" id="desc1">Shrimp, Crab Sticks, Ham, Pineapple and Thousand Island Sauce
                         </p>
                         <br>
                         <h3 class="text-end" id="pprice1">379 ฿</h3>
@@ -210,8 +199,7 @@
                     <div class="topping-wrap ">
                         <div class="row justify-content-center">
                             <!-- ชีส -->
-                            <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
                                 <div class="card-body p-0 ">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -243,8 +231,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <!-- สับปะรด -->
-                            <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -276,8 +263,7 @@
                         <!-- บรรทัด 2 -->
                         <div class="row justify-content-center">
                             <!-- เบคอนแผ่น -->
-                            <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -308,8 +294,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <!-- แฮมแผ่น -->
-                            <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -339,8 +324,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="text-center mt-2  justify-content-center">
-                                <a href="#pizza2" class="btn btn-success  " style="width:85%;"
-                                    onclick="hidNshopizza(1,11); keepprice(0); reset(0); changePizza(2)" id="next1">
+                                <a href="#pizza2" class="btn btn-success  " style="width:85%;" onclick="hidNshopizza(1,11); keepprice(0); reset(0); changePizza(2)" id="next1">
                                     Next </a>
                             </div>
                         </div>
@@ -355,7 +339,7 @@
     <!-- ถาด2 -->
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
     <div class="rounded d-none" id="pizza2">
-    <div class="order-wrap p-3">
+        <div class="order-wrap p-3 w-100">
             <div class="row ">
                 <div class="col-8">
                     <p class="text-center pt-5" style="font-size: 20px;">Select second pizza</p>
@@ -365,9 +349,7 @@
                     <div class="btn-group" id="choose_dropdown">
                         <div class="row ">
                             <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center ">
-                                <select id="selectpizza2" class="text-center form-select form-select-md mb-3 ms-3 me-3"
-                                    style="width: 100%;" aria-label=".form-select-md "
-                                    onchange="reset(1); changePizza(2);">
+                                <select id="selectpizza2" class="text-center form-select form-select-md mb-3 ms-3 me-3" style="width: 100%;" aria-label=".form-select-md " onchange="reset(1); changePizza(2);">
                                     <?php
                                     $url = "pizza.json";
                                     $response = file_get_contents($url);
@@ -381,9 +363,7 @@
                                 </select>
                             </div>
                             <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center">
-                                <select style="width: 100%;" id="selectcrust2"
-                                    class="text-center form-select form-select-md mb-3 me-3 ms-3"
-                                    onchange="changePizza(2)" style="width: 250px;" aria-label=".form-select-md ">
+                                <select style="width: 100%;" id="selectcrust2" class="text-center form-select form-select-md mb-3 me-3 ms-3" onchange="changePizza(2)" style="width: 250px;" aria-label=".form-select-md ">
                                     <option id="testkuy" value="0">Pan Medium</option>
                                     <option value="1">Crispy Thin Medium</option>
                                     <option value="2">Extreme Cheese Medium</option>
@@ -396,7 +376,7 @@
                     </div>
                     <br>
                     <div class="text-start" style="margin-left:15%; margin-right:15%;">
-                        <p class="text-start" id="desc2">Shrimp, Crab Sticks, Ham, Pineapple and Thousand Island Sauce
+                        <p class="text-start mb-0" id="desc2">Shrimp, Crab Sticks, Ham, Pineapple and Thousand Island Sauce
                         </p>
                         <br>
                         <h3 class="text-end" id="pprice2">379 ฿</h3>
@@ -410,8 +390,7 @@
                     <div class="topping-wrap ">
                         <div class="row justify-content-center">
                             <!-- ชีส -->
-                            <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
                                 <div class="card-body p-0 ">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -443,8 +422,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <!-- สับปะรด -->
-                            <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -476,8 +454,7 @@
                         <!-- บรรทัด 2 -->
                         <div class="row justify-content-center">
                             <!-- เบคอนแผ่น -->
-                            <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -508,8 +485,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <!-- แฮมแผ่น -->
-                            <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -539,9 +515,8 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="text-center mt-2 ">
-        <a href="index.php" class="btn p-2 btn-success d-none" style="width:85%;" id="last"
-            onclick=" keepprice(1); addToCart(1);"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i> </a>
-    </div>
+                                <a href="index.php" class="btn p-2 btn-success d-none" style="width:85%;" id="last" onclick=" keepprice(1); addToCart(1);"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i> </a>
+                            </div>
                         </div>
                     </div>
                 </div>

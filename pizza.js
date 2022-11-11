@@ -390,9 +390,6 @@ function changePrice(price, pic) {
 let arr_c = ["Pan Medium", "Crispy Thin Medium", "Extreme Cheese Medium", "Pan Large", "Crispy Thin Large", "Extreme Cheese Large"];
 let arr_spa = ["Spicy Sausage Spaghetti", "Ham & Mushroom Spaghetti in Alfredo Sauce", "Pork Bolognese", "Spaghetti Keemao Sausage"]
 function addToCart(num) {
-
-
-
     if (num == 1) {
         if (arr_price[0] >= arr_price[1]) {
             let txt1 = createTextCartH(1);
@@ -409,9 +406,6 @@ function addToCart(num) {
             let pa2 = createTextCartp(0);
             addPizza(txt1, pa1, pprice2.innerHTML, pic1.src)
             addPizza(txt2, pa2, "0 ฿", pic2.src)
-
-
-
 
         }
     }
@@ -439,7 +433,6 @@ function addToCart(num) {
 
 }
 function createTextCartH(num) {
-
     if (num == 1) {
         return "1 x " + arr_c[crust1.value] + "<br>" + menu1.value + "<br>" + "(+" + pprice1.innerHTML + ")";
     } else if (num == 2) {
@@ -534,13 +527,13 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     dbox.dataset.cost = pprice;
     parento.appendChild(dbox);
     localStorage.setItem("keepOrder", parento.innerHTML);
-
+    window.location.reload();
 }
 
 
 
 function del() {
-    // console.log(typeof(parento.childElementCount));
+    Swal.fire('Any fool can use a computer');
     localStorage.removeItem("keepOrder");
     localStorage.removeItem("price");
     window.location.reload();
@@ -603,7 +596,7 @@ let pum4 = document.getElementById("pom_select_4");
 let pum5 = document.getElementById("pom_select_5");
 let pum6 = document.getElementById("pom_select_6");
 
-let sel_color = "hsla(0, 100%, 66%, 0.4)";
+let sel_color = "#912e00";
 let back_color = "#CBB09C";
 function hidNshopizza(num, check) {
 
@@ -752,22 +745,20 @@ function take_deli(num) {
     if (num) {
         deli.classList.add("d-none");
         take.classList.remove("d-none");
-        color_deli.style.backgroundColor = "hsla(0, 100%, 66%, 0.6)";
-        color_take.style.backgroundColor = "hsl(26, 51%, 15%)";
-        console.log("555")
+        color_deli.style.backgroundColor = "#912e00";
+        color_take.style.backgroundColor = "#dabf91";
+        color_deli.style.color = "white";
+        color_take.style.color = "black";
 
     }
     else {
         take.classList.add("d-none");
         deli.classList.remove("d-none");
-        color_take.style.backgroundColor = "hsla(0, 100%, 66%, 0.6)";
-        color_deli.style.backgroundColor = "hsl(26, 51%, 15%)";
-        console.log("111")
+        color_take.style.backgroundColor = "#912e00";
+        color_deli.style.backgroundColor = "#dabf91";
+        color_deli.style.color = "black";
+        color_take.style.color = "white";
 
-        // color_deli.classList.remove("text-dark");
-        // color_deli.style.backgroundColor = "#E3C696";
-        // color_take.style.backgroundColor = "#ffffff";
-        // color_take.classList.add("text-dark");
 
 
     }
@@ -805,13 +796,13 @@ function valid() {
         return false;
     }
     else if (!isSend) {
-        taga.classList.add('dropdown-item', 'fs-4');
+        taga.classList.add('dropdown-item',"text-light", 'fs-4');
         taga.setAttribute("data-bs-toggle", "modal");
         taga.innerText = namee.value;
-        tag_addr.classList.add('dropdown-item');
+        tag_addr.classList.add('dropdown-item',"text-light");
         tag_addr.setAttribute("data-bs-toggle", "modal");
         tag_addr.innerText = address.value;
-        tag_phone.classList.add('dropdown-item');
+        tag_phone.classList.add('dropdown-item',"text-light");
         tag_phone.setAttribute("data-bs-toggle", "modal");
         tag_phone.innerText = phone.value;
         drop.removeChild(drop.lastElementChild);

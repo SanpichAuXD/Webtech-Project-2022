@@ -228,7 +228,7 @@
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <div class="text-center mt-2  justify-content-center">
+                            <div class="text-center w-25  mt-2 mb-5   justify-content-center">
                                 <a href="#pizza2" class="btn btn-success  " style="width:85%;"
                                     onclick="hidNshopizza(1,4); keepprice(0); reset(0); changePizza(2)" id="next1">
                                     Next </a>
@@ -248,7 +248,7 @@
     <!-- เลือกพาสต้า -->
     <div class="rounded pb-5 d-none" id="pizza2">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Pasta</p>
-        <img id="spaimg" src="https://cdn.discordapp.com/attachments/1012625488482680942/1034726186162597958/unknown.png" width="50%" class="mx-auto d-block">
+        <img id="spaimg" src="https://cdn.discordapp.com/attachments/1012625488482680942/1034726186162597958/unknown.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
         <div id="choose_dropdown">
             <div class="dropdown">
@@ -264,30 +264,30 @@
                 </select>
             </div>
         </div>
-        <div class="text-center mt-2   ">
-        <a href="#pizza2" class="btn btn-success w-25  mt-5 mb-5 " onclick="hidNshopizza(2,4);" id="next2"> Next </a>
+        <div class="text-center    ">
+        <a href="#pizza2" class="btn btn-success w-25  mt-2 mb-5 " onclick="hidNshopizza(2,4);" id="next2"> Next </a>
     </div>
     </div>
 
     <!-- เลือกปีกไก่ -->
     <div class="rounded pb-5 d-none" id="pizza3">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Chicken Wings</p>
-        <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034729468373254204/unknown.png" width="50%" class="mx-auto d-block">
+        <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034729468373254204/unknown.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
-        <button type="button" class="btn" id="button_choose_part" disabled>BBQ Chicken Wings 4 pcs</button>
-        <div class="text-center mt-2   ">
-        <a href="#pizza4" class="btn btn-success w-25  mt-5 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
+        <button type="button" class="btn w-25" id="button_choose_part" disabled>BBQ Chicken Wings 4 pcs</button>
+        <div class="text-center    ">
+        <a href="#pizza4" class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
     </div>
     </div>
 
     <!-- เลือกนักเก็ต -->
     <div class="rounded pb-5 d-none" id="pizza4">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Chicken Nuggets</p>
-        <img src="https://cdn.1112.com/1112/public/images/Apr2019/TeamChicken/116720.png" width="50%" class="mx-auto d-block">
+        <img src="https://cdn.1112.com/1112/public/images/Apr2019/TeamChicken/116720.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
-        <button type="button" class="btn" id="button_choose_part" disabled>Chicken Nuggets 6 pcs</button>
-        <div class="text-center mt-2 ">
-        <a href="value_set.php" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick="count(); keepprice(0); addToCart(5);"><i class="bi bi-cart"> Add To Cart</i> </a>
+        <button type="button" class="btn w-25 text-center" id="button_choose_part" disabled>Chicken Nuggets 6 pcs</button>
+        <div class="text-center  ">
+        <a href="value_set.php" class="btn p-2 mt-2 w-25 mb-5 btn-success d-none" id="last" onclick="count(); keepprice(0); addToCart(5);"><i class="bi bi-cart"> Add To Cart</i> </a>
     </div>
     </div>
 

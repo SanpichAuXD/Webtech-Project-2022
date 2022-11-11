@@ -225,8 +225,8 @@
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                        <div class="text-center mt-2   ">
-        <a href="#pizza2" class="btn btn-success w-25  mt-5 mb-5 " onclick="hidNshopizza(1,4)" id="next1"> Next </a>
+                        <div class="text-center    ">
+        <a href="#pizza2" class="btn btn-success w-25  mt-2 mb-5 " onclick="hidNshopizza(1,4)" id="next1"> Next </a>
     </div>
                         </div>
                     </div>
@@ -240,7 +240,7 @@
     <!-- เลือกพาสต้า -->
     <div class="rounded pb-5 d-none" id="pizza2">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Pasta</p>
-        <img id="spaimg" src="https://cdn.discordapp.com/attachments/1012625488482680942/1034726186162597958/unknown.png" width="50%" class="mx-auto d-block">
+        <img id="spaimg" src="https://cdn.discordapp.com/attachments/1012625488482680942/1034726186162597958/unknown.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
         <div id="choose_dropdown">
             <div class="dropdown ">
@@ -256,34 +256,34 @@
                 </select>
             </div>
         </div>
-        <div class="text-center mt-2   ">
-        <a href="#pizza3" class="btn btn-success w-25  mt-5 mb-5 d-none" onclick="hidNshopizza(2,4)" id="next2"> Next </a>
+        <div class="text-center    ">
+        <a href="#pizza3" class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(2,4)" id="next2"> Next </a>
     </div>
     </div>
 
     <!-- เลือกชิคเก้นสติ๊กส์ -->
     <div class="rounded pb-5 d-none " id="pizza3">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Chicken Sticks</p>
-        <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034726186548482048/unknown.png" width="50%" class="mx-auto d-block">
+        <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034726186548482048/unknown.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
-        <button type="button" class="btn" id="button_choose_part" disabled>Chicken Stick</button>
-        <div class="text-center mt-2   ">
-        <a href="#pizza4" class="btn btn-success w-25  mt-5 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
+        <button type="button" class="btn w-25 text-center" id="button_choose_part" disabled>Chicken Stick</button>
+        <div class="text-center   ">
+        <a href="#pizza4" class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
     </div>
     </div>
 
     <!-- เลือกวาฟเฟิล ฟรายส์ -->
     <div class="rounded pb-5 d-none" id="pizza4">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Waffle Fries</p>
-        <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034726186967900221/unknown.png" width="50%" class="mx-auto d-block">
+        <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034726186967900221/unknown.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
-        <button type="button" class="btn" id="button_choose_part" disabled>Waffle Fries</button>
+        <button type="button" class="btn w-25 text-center" id="button_choose_part" disabled>Waffle Fries</button>
+        <div class="text-center  ">
+        <a href="value_set.php" class="btn p-2 mt-2 w-25 mb-5 btn-success d-none" id="last" onclick="count(); keepprice(0); addToCart(4);"><i class="bi bi-cart"> Add To Cart</i> </a>
+    </div>
     </div>
 
     <!-- ปุ่ม ใส่ตะกร้า -->
-    <div class="text-center mt-2 ">
-        <a href="value_set.php" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick="count(); keepprice(0); addToCart(4);"><i class="bi bi-cart"> Add To Cart</i> </a>
-    </div>
     <!-- footer -->
     <?php include 'footer.php'; ?>
     <script src="pizza.js"></script>
