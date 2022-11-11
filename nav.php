@@ -15,7 +15,7 @@
 
 <body onload="count(); is_empty();">
     <header style="  z-index:100;">
-        <ul class="nav-tabs " style="background-color: hsl(26, 26%, 12%); ">
+        <ul class="nav-tabs " style="background-color: var(--dark_brown); ">
             <div class="container-fluid nav">
                 <!-- logo -->
                 <a id="logo" class="navbar-brand text-center" class="nav-a" href="index.php">
@@ -26,12 +26,12 @@
                     <!-- delivery takaway -->
                     <li class="deliver nav-item text-center d-flex fw-semibold">
                         <a id="switch-deli" class="nav-link  d-inline m-auto nav-a deli-take " href="#"
-                            style="background-color:#912e00; color:white; border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;"
+                            style="background-color:var(--red); color:white; border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;"
                             onclick="take_deli(0)">Delivery</a>
                         <div class="line"></div>
                         <a id="switch-take" class="nav-link  d-inline m-auto nav-a deli-take "
                             href="#"
-                            style="background-color:#dabf91 ; color:black; border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"
+                            style="background-color:var(--yellow) ; color:black; border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"
                             onclick="take_deli(1)">Takeaway</a>
                     </li>
                     <!-- select address -->
@@ -55,11 +55,11 @@
                         <div class="d-none" id="deli">
                             <div class="dropdown w-100 ">
                                 <button id="deli-address" class="btn dropdown-toggle align-text-center text-light"
-                                    style=" width:103%; height:31px; background-color:#912e00; border-radius:10px;" id="drop-text"
+                                    style=" width:103%; height:31px; background-color:var(--red); border-radius:10px;" id="drop-text"
                                     type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Your Address
                                 </button>
-                                <ul class="dropdown-menu  " id="drop" style=" width:100%; background-color:#912e00;">
+                                <ul class="dropdown-menu  " id="drop" style=" width:100%; background-color:var(--red);">
                                     <li><a class="dropdown-item mt-1 mb-1 text-center p-0 text-light" href="#" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal">New Address</a></li><hr class="m-0 text-light fs-5">
                                     <li><a class="dropdown-item mt-1 mb-1 text-center p-0 text-light" href="#">Current Address</a></li>
@@ -68,12 +68,12 @@
                             <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false"
                                 tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content" style="background-color: #912e00;  box-shadow: 0 5px 25px;  backdrop-filter: blur(10px);">
+                                    <div class="modal-content" style="background-color: var(--dark_brown);  box-shadow: 0 5px 25px;  backdrop-filter: blur(10px);">
                                         <div class="modal-header d-block">
                                             <button type="button" class="btn-close d-flex p-2 float-right"
-                                                data-bs-dismiss="modal" aria-label="Close"></button>
-                                            <h1 class="modal-title fs-5 text-center text-light" id="exampleModalLabel">Add new
-                                                address</h1>
+                                                data-bs-dismiss="modal" aria-label="Close" style="background-color: var(--yellow) ;"></button>
+                                            <h1 class="modal-title fs-5 text-center text-light" id="exampleModalLabel">Add New
+                                                Address</h1>
 
                                         </div>
                                         <div class="modal-body">
@@ -92,7 +92,7 @@
                                         </div>
                                         <div class="modal-footer d-flex justify-content-center align-item-center">
                                             <button onclick="valid()" data-bs-dismiss="modal" type="submit"
-                                                class="btn btn-success">Save Address</button>
+                                                class="btn " style="background-color: var(--yellow);">Save Address</button>
                                         </div>
                                     </div>
                                 </div>

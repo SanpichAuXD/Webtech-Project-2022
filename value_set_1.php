@@ -34,8 +34,8 @@
         <!-- เลือกพิซซ่า | เลือกไก่ป๊อป -->
         <br>
         <div class="btn-group row " role="group" id="pom_select">
-            <a onclick="hidNshopizza(2,2)" class="col-6 btn " id="pom_select_1" role="button">Select Pizza</a>
-            <a onclick="hidNshopizza(1,2)" class="col-6 btn" id="pom_select_2" role="button">Select Chicken Pop</a>
+            <a onclick="hidNshopizza(2,11)" class="col-6 btn " id="pom_select_1" role="button">Select Pizza</a>
+            <a onclick="hidNshopizza(1,11)" class="col-6 btn" id="pom_select_2" role="button">Select Chicken Pop</a>
         </div>
     </div>
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
@@ -43,7 +43,7 @@
         <div class="order-wrap p-3 w-100">
             <div class="row ">
                 <div class="col-8">
-                    <p class="text-center pt-5" style="font-size: 20px;">Select first pizza</p>
+                    <p class="text-center pt-2" style="font-size: 20px;">Select First Pizza</p>
                     <img src="./img/pan/Seafood_Cocktail_m.png" id="pizzapic1" width="50%" class="mx-auto d-block">
 
                     <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
@@ -84,7 +84,6 @@
                 </div>
                 <!-- ปรับแต่งพิซซ่าด้วยตัวเอง -->
                 <div class="col-4  ">
-                    <br>
                     <p id="topping"><i>Customize Pizza</i></p>
                     <!-- บรรทัด 1 -->
                     <div class="topping-wrap ">

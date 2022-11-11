@@ -141,8 +141,8 @@
         <h3 id="name_value_set" class="text-center m-0 mb-4">Special DealBuy 1 Get 1</h3>
         <!-- เลือกพิซซ่า-->
         <div class="btn-group" role="group" id="pom_select">
-            <a class="btn" id="pom_select_1" role="button" onclick="hidNshopizza(2,11)">Select first pizza</a>
-            <a class="btn" id="pom_select_2" role="button" onclick="hidNshopizza(1,11)">Select second pizza</a>
+            <a class="btn" id="pom_select_1" role="button" onclick="hidNshopizza(2,11)">Select First Pizza</a>
+            <a class="btn" id="pom_select_2" role="button" onclick="hidNshopizza(1,11)">Select Second Pizza</a>
         </div>
     </div>
     <!-- ถาด1 -->
@@ -151,7 +151,7 @@
         <div class="order-wrap p-3 w-100 ">
             <div class="row ">
                 <div class="col-8">
-                    <p class="text-center pt-5" style="font-size: 20px;">Select first pizza</p>
+                    <p class="text-center pt-2" style="font-size: 20px;">Select First Pizza</p>
                     <img src="./img/pan/Seafood_Cocktail_m.png" id="pizzapic1" width="50%" class="mx-auto d-block">
 
                     <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
@@ -193,7 +193,6 @@
                 </div>
                 <!-- ปรับแต่งพิซซ่าด้วยตัวเอง -->
                 <div class="col-4  ">
-                    <br>
                     <p id="topping"><i>Customize Pizza</i></p>
                     <!-- บรรทัด 1 -->
                     <div class="topping-wrap ">
@@ -324,7 +323,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="text-center mt-2  justify-content-center">
-                                <a  class="btn btn-success  " style="width:85%;" onclick="hidNshopizza(1,11); keepprice(0); reset(0); changePizza(2)" id="next1">
+                                <a  class="btn  " style="width:85%;" onclick="hidNshopizza(1,11); keepprice(0); reset(0); changePizza(2)" id="next1">
                                     Next </a>
                             </div>
                         </div>
@@ -342,7 +341,7 @@
         <div class="order-wrap p-3 w-100">
             <div class="row ">
                 <div class="col-8">
-                    <p class="text-center pt-5" style="font-size: 20px;">Select second pizza</p>
+                    <p class="text-center pt-2" style="font-size: 20px;">Select Second Pizza</p>
                     <img src="./img/pan/Seafood_Cocktail_m.png" id="pizzapic2" width="50%" class="mx-auto d-block">
 
                     <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
@@ -384,7 +383,6 @@
                 </div>
                 <!-- ปรับแต่งพิซซ่าด้วยตัวเอง -->
                 <div class="col-4  ">
-                    <br>
                     <p id="topping"><i>Customize Pizza</i></p>
                     <!-- บรรทัด 1 -->
                     <div class="topping-wrap ">
@@ -515,7 +513,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="text-center mt-2 ">
-                                <a href="index.php" class="btn p-2 btn-success d-none" style="width:85%;" id="last" onclick=" keepprice(1); addToCart(1);"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i> </a>
+                                <a href="index.php" class="btn p-2 d-none" style="width:85%;" id="last" onclick=" keepprice(1); addToCart(1);"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i> </a>
                             </div>
                         </div>
                     </div>

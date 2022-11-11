@@ -45,7 +45,7 @@
                     </div><br>
                 </div>
                 <div class="bott text-center">
-                    <button onclick="del()" type="submit" class="btn btn-success px-5">Purchase</button>
+                    <button onclick="del()" type="submit" class="btn  px-5" style="background-color: var(--yellow);">Purchase</button>
                 </div>
             </div>
         </div>

@@ -102,10 +102,10 @@ function right(x) {
     let i3 = document.getElementById("img3");
     let i4 = document.getElementById("img4");
     if (x == '1') {
-        c1.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c1.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c2.style = "left: 0; right:0; transform: scale(1, 1); opacity: 1; z-index: 1;"
-        c3.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: .5; z-index: 0;"
-        c4.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: .5; z-index: -1;"
+        c3.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
+        c4.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
 
         btl1.style.display = "none";
         btr1.style.display = "none";
@@ -116,10 +116,10 @@ function right(x) {
         i2.classList.add('card-hov');
     }
     else if (x == '2') {
-        c1.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: .5; z-index: -1;"
-        c2.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c1.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
+        c2.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c3.style = "left: 0; right:0; transform: scale(1, 1); opacity: 1; z-index: 1;"
-        c4.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c4.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
 
         btl2.style.display = "none";
         btr2.style.display = "none";
@@ -130,9 +130,9 @@ function right(x) {
         i3.classList.add('card-hov');
     }
     else if (x == '3') {
-        c1.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: .5; z-index: 0;"
-        c2.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: .5; z-index: -1;"
-        c3.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c1.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
+        c2.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
+        c3.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c4.style = "left: 0; right:0; transform: scale(1, 1); opacity: 1; z-index: 1;"
 
         btl3.style.display = "none";
@@ -145,9 +145,9 @@ function right(x) {
     }
     else if (x == '4') {
         c1.style = "left: 0; right:0; transform: scale(1, 1); opacity: 1; z-index: 1;"
-        c2.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: .5; z-index: 0;"
-        c3.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: .5; z-index: -1;"
-        c4.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c2.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
+        c3.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
+        c4.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
 
         btl4.style.display = "none";
         btr4.style.display = "none";
@@ -158,13 +158,13 @@ function right(x) {
         i1.classList.add('card-hov');
     }
 }
-function reloading(){
+function reloading() {
     var refresh = window.localStorage.getItem('refresh');
-console.log(refresh);
-if (refresh===null){
-    window.location.reload();
-    window.localStorage.setItem('refresh', "1");
-}
+    console.log(refresh);
+    if (refresh === null) {
+        window.location.reload();
+        window.localStorage.setItem('refresh', "1");
+    }
 
 }
 let menu1 = document.getElementById("selectpizza1");
@@ -191,6 +191,7 @@ let request = new XMLHttpRequest();
 request.onreadystatechange = function () {
     if (request.readyState == 4 && request.status == 200) {
         ExtractData(JSON.parse(request.responseText));
+        console.log("done");
     }
 };
 request.open("GET", requestURL, true);
@@ -224,33 +225,57 @@ function setPrice(set) {
     }
 
 }
+function log() {
+    console.log(pizprice["Seafood Cocktail"]);
+}
 
 // get price from object and add price by condition
 function getPrice(piz, crust, set) {
     let price = parseInt(pizprice[piz]);
-    if (set == 4) {
-        price = v4price;
-        price = 0;
-    }
+    let checkNan = 0;
+    if (isNaN(price)) {
+        checkNan = 1;
+        if (set == 3) {
+            price = 399;
 
+        }
+        else if (set == 2) {
+            price = 499;
+        }
+    }
+    console.log(price)
     if (set == 1) {
 
         price = 179;
         return price;
     }
-
-    else if (set == 2) {
-        ptopping = price - 279;
-        price = 499 + ptopping;
-        if (crust == 5) {
-            price += 150;
+    if (checkNan != 1) {
+        if (set == 2) {
+            ptopping = price - 279;
+            price = 499 + ptopping;
+            if (crust == 5) {
+                price += 150;
+            }
+            return price;
         }
-        return price;
-    } else if (set == 3) {
-        ptopping = price - 279;
-        price = 399 + ptopping;
+        else if (set == 3) {
+            ptopping = price - 279;
+            price = 399 + ptopping;
+        }
     }
-
+    else{
+        if (set == 2) {
+            price = 599;
+            if (crust == 5) {
+                price += 150;
+            }
+            return price;
+        }
+        else if (set == 3) {
+            price = 499;
+        }
+        checkNan = 0;
+    }
 
     price = price + topPrice;
     if (crust == 1) {
@@ -268,10 +293,13 @@ function getPrice(piz, crust, set) {
 }
 
 function changeDesc(piz) {
-    console.log(piz)
-    console.log(pizprice)
-    console.log(pizprice[piz])
-    desc.innerHTML = pizprice[piz][1];
+    if (pizprice[piz] === undefined) {
+        desc.innerHTML = "Shrimp, Crab Sticks, Ham, Pineapple and Thousand Island Sauce";
+    }
+    else {
+        console.log(pizprice[piz])
+        desc.innerHTML = pizprice[piz][1];
+    }
 }
 let numAdd = [0, 0, 0, 0, 0, 0, 0, 0];
 let topp = "top";
@@ -296,7 +324,7 @@ function num_topping(add, num) {
         numAdd[num]++;
         getid.innerHTML = numAdd[num];
     } else if (numAdd[num] != 0) {
-        console.log("ควย")
+
         topPrice -= 39;
         price -= 39;
         numAdd[num]--;
@@ -358,6 +386,15 @@ function changePizza(pic, set) {
 
     price = getPrice(menu.value, crust.value, set);
 
+    // if (set == 3){
+    //     price = 499;
+
+    // }
+    // else if (set == 2){
+    //     price = 599;
+    // }else{
+    //     
+    // }
 
     changeDesc(menu.value);
 
@@ -480,14 +517,14 @@ function count() {
 
 }
 
-function is_empty(){
+function is_empty() {
     let empty = document.getElementById("empty");
     let not_empty = document.getElementById("not_empty");
-    if(parento.childElementCount != 0){
+    if (parento.childElementCount != 0) {
         empty.classList.add("d-none");
         not_empty.classList.remove("d-none");
     }
-    else{
+    else {
         empty.classList.remove("d-none");
         not_empty.classList.add("d-none");
     }
@@ -510,7 +547,8 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     drov.classList.add("row");
     dimg.classList.add("col-3");
     img.classList.add("img-fluid");
-    btn.classList.add("btn", "btn-danger", "position-absolute", "bottom-2", "end-3", "del");
+    btn.classList.add("btn", "position-absolute", "bottom-2", "end-3", "del");
+    btn.style.backgroundColor = "#dabf91";
     btn.innerHTML = "Remove";
     img.src = imgsrc;
     dtxt.classList.add("col-6");
@@ -554,12 +592,12 @@ function del() {
         title: 'Thank for purchase',
         text: '「ありがとう」 (Arigatou)',
         confirmButtonText: 'ok'
-      }).then((result) => {
+    }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
             window.location.reload();
-        } 
-      })
+        }
+    })
 }
 
 function retrieve() {
@@ -622,45 +660,28 @@ let pum6 = document.getElementById("pom_select_6");
 let sel_color = "#912e00";
 let back_color = "#CBB09C";
 function hidNshopizza(num, check) {
-
-    if (check == 2) {
+    if (check == 11) {
         if (num == 1) {
             but1.classList.add("d-none");
             last.classList.remove("d-none");
+            pizza1.classList.remove("d-none");
             pizza1.classList.add("d-none");
             pizza2.classList.remove("d-none");
             pum1.style.backgroundColor = back_color;
             pum2.style.backgroundColor = sel_color;
+            pum1.style.color = "black";
+            pum2.style.color = "white";
         }
         else {
             but1.classList.remove("d-none");
             last.classList.add("d-none");
             pizza1.classList.remove("d-none");
-            pizza2.classList.add("d-none");
-            pum1.style.backgroundColor = sel_color;
-            pum2.style.backgroundColor = back_color;
-        }
-    }
-    if (check == 11) {
-    if (num == 1) {
-            but1.classList.add("d-none");
-            last.classList.remove("d-none");
-            pizza1.classList.remove("d-none");
-            pizza1.classList.add("d-none");
-            pizza2.classList.remove("d-none");
-            
-            pum1.style.backgroundColor = back_color;
-            pum2.style.backgroundColor = sel_color;
-        }
-        else {
-            but1.classList.remove("d-none");
-            last.classList.add("d-none");
-            pizza1.classList.remove("d-none");
-            
             pizza2.classList.add("d-none");
             pizza1.classList.add("d-flex");
             pum1.style.backgroundColor = sel_color;
             pum2.style.backgroundColor = back_color;
+            pum1.style.color = "white";
+            pum2.style.color = "black";
         }
     }
     if (check == 4) {
@@ -671,6 +692,8 @@ function hidNshopizza(num, check) {
             pizza2.classList.remove("d-none");
             pum1.style.backgroundColor = back_color;
             pum2.style.backgroundColor = sel_color;
+            pum1.style.color = "black";
+            pum2.style.color = "white";
         }
         else if (num == 2) {
             but2.classList.add("d-none");
@@ -679,6 +702,8 @@ function hidNshopizza(num, check) {
             pizza3.classList.remove("d-none");
             pum2.style.backgroundColor = back_color;
             pum3.style.backgroundColor = sel_color;
+            pum2.style.color = "black";
+            pum3.style.color = "white";
         }
         else if (num == 3) {
             but3.classList.add("d-none");
@@ -687,6 +712,8 @@ function hidNshopizza(num, check) {
             pizza4.classList.remove("d-none");
             pum3.style.backgroundColor = back_color;
             pum4.style.backgroundColor = sel_color;
+            pum3.style.color = "black";
+            pum4.style.color = "white";
 
         }
     }
@@ -709,6 +736,10 @@ function hidNshopizza46(num, check) {
             pum2.style.backgroundColor = back_color;
             pum3.style.backgroundColor = back_color;
             pum4.style.backgroundColor = back_color;
+            pum1.style.color = "white";
+            pum2.style.color = "black";
+            pum3.style.color = "black";
+            pum4.style.color = "black";
         }
         else if (num == 2) {
             but1.classList.add("d-none");
@@ -723,6 +754,10 @@ function hidNshopizza46(num, check) {
             pum2.style.backgroundColor = sel_color;
             pum3.style.backgroundColor = back_color;
             pum4.style.backgroundColor = back_color;
+            pum1.style.color = "black";
+            pum2.style.color = "white";
+            pum3.style.color = "black";
+            pum4.style.color = "black";
         }
         else if (num == 3) {
             but1.classList.add("d-none");
@@ -737,6 +772,10 @@ function hidNshopizza46(num, check) {
             pum2.style.backgroundColor = back_color;
             pum3.style.backgroundColor = sel_color;
             pum4.style.backgroundColor = back_color;
+            pum1.style.color = "black";
+            pum2.style.color = "black";
+            pum3.style.color = "white";
+            pum4.style.color = "black";
         }
         else if (num == 4) {
             but1.classList.add("d-none");
@@ -751,6 +790,10 @@ function hidNshopizza46(num, check) {
             pum2.style.backgroundColor = back_color;
             pum3.style.backgroundColor = back_color;
             pum4.style.backgroundColor = sel_color;
+            pum1.style.color = "black";
+            pum2.style.color = "black";
+            pum3.style.color = "black";
+            pum4.style.color = "white";
         }
     }
 }
@@ -819,13 +862,13 @@ function valid() {
         return false;
     }
     else if (!isSend) {
-        taga.classList.add('dropdown-item',"text-light", 'fs-4');
+        taga.classList.add('dropdown-item', "text-light", 'fs-4');
         taga.setAttribute("data-bs-toggle", "modal");
         taga.innerText = namee.value;
-        tag_addr.classList.add('dropdown-item',"text-light");
+        tag_addr.classList.add('dropdown-item', "text-light");
         tag_addr.setAttribute("data-bs-toggle", "modal");
         tag_addr.innerText = address.value;
-        tag_phone.classList.add('dropdown-item',"text-light");
+        tag_phone.classList.add('dropdown-item', "text-light");
         tag_phone.setAttribute("data-bs-toggle", "modal");
         tag_phone.innerText = phone.value;
         drop.removeChild(drop.lastElementChild);

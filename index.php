@@ -79,48 +79,48 @@
             <div class="row">
                 <!-- recommend 1 -->
                 <div class="col-sm-3 home_c">
-                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
-                        <img class="card-img-top" src="./img/home/rec_1.png" alt="Card image cap">
+                    <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
+                        <img class="card-img-top p-3 img-fluid" src="./img/home/rec_1.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Chocolate Chip Ice Cream</h6>
                             <h6 class="card-title" style="float: right;">219฿</h6><br>
 
-                            <a  class="btn btn-success" onclick="addPizza('Chocolate Chip Ice Cream', '', '219', './img/home/rec_1.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
+                            <a  class="btn" onclick="addPizza('Chocolate Chip Ice Cream', '', '219', './img/home/rec_1.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
                         </div>
                     </div>
                 </div>
                 <!-- recommend 2 -->
                 <div class="col-sm-3 home_c">
-                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
-                        <img class="card-img-top" src="./img/home/rec_2.png" alt="Card image cap">
+                    <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
+                        <img class="card-img-top p-3 img-fluid" src="./img/home/rec_2.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Caesar Salad</h6>
                             <h6 class="card-title" style="float: right;">149฿</h6><br>
 
-                            <a  class="btn btn-success" onclick="addPizza('Caesar Salad', '', '149', './img/home/rec_2.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
+                            <a  class="btn" onclick="addPizza('Caesar Salad', '', '149', './img/home/rec_2.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
                         </div>
                     </div>
                 </div>
                 <!-- recommend 3 -->
                 <div class="col-sm-3 home_c">
-                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
-                        <img class="card-img-top" src="img/home/rec_3.png" alt="Card image cap">
+                    <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
+                        <img class="card-img-top p-3 img-fluid" src="img/home/rec_3.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">BBQ Pork Ribs</h6>
                             <h6 class="card-title" style="float: right;">359฿</h6><br>
 
-                            <a  class="btn btn-success"  onclick="addPizza('BBQ Pork Ribs', '', '359', './img/home/rec_3.png')"  id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
+                            <a  class="btn"  onclick="addPizza('BBQ Pork Ribs', '', '359', './img/home/rec_3.png')"  id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
                         </div>
                     </div>
                 </div>
                 <!-- recommend 4 -->
                 <div class="col-sm-3 home_c">
-                    <div class="card" id="c_recommend_menu" style="width: 13rem; margin:auto; ">
-                        <img class="card-img-top" src="img/home/rec_4.png" alt="Card image cap">
+                    <div class="card" id="c_recommend_menu" style="width: 14rem; margin:auto; ">
+                        <img class="card-img-top p-3 img-fluid" src="img/home/rec_4.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Calamari</h6>
                             <h6 class="card-title" style="float: right;">99฿</h6><br>
-                            <a  class="btn btn-success" onclick="addPizza('Calamari', '', '99', './img/home/rec_4.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
+                            <a  class="btn" onclick="addPizza('Calamari', '', '99', './img/home/rec_4.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
                         </div>
                     </div>
                 </div>
@@ -128,48 +128,48 @@
             <div class="row">
                 <!-- recommend 5 -->
                 <div class="col-sm-3 home_c">
-                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
-                        <img class="card-img-top" src="img/home/rec_5.png" alt="Card image cap">
+                    <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
+                        <img class="card-img-top p-3 img-fluid" src="img/home/rec_5.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Chip & Cheese Dip</h6>
                             <h6 class="card-title" style="float: right;">109฿</h6><br>
 
-                            <a  class="btn btn-success" onclick="addPizza('Chip & Cheese Dip', '', '109', './img/home/rec_5.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
+                            <a  class="btn" onclick="addPizza('Chip & Cheese Dip', '', '109', './img/home/rec_5.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
                         </div>
                     </div>
                 </div>
                 <!-- recommend 6 -->
                 <div class="col-sm-3 home_c">
-                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
-                        <img class="card-img-top" src="img/home/rec_6.png" alt="Card image cap">
+                    <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
+                        <img class="card-img-top p-3 img-fluid" src="img/home/rec_6.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Cheese Sticks</h6>
                             <h6 class="card-title" style="float: right;">89฿</h6><br>
-                            <a  class="btn btn-success"  onclick="addPizza('Cheese Sticks', '', '89', './img/home/rec_6.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
+                            <a  class="btn"  onclick="addPizza('Cheese Sticks', '', '89', './img/home/rec_6.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
                         </div>
                     </div>
                 </div>
                 <!-- recommend 7 -->
                 <div class="col-sm-3 home_c">
-                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
-                        <img class="card-img-top" src="img/home/rec_7.png" alt="Card image cap">
+                    <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
+                        <img class="card-img-top p-3 img-fluid" src="img/home/rec_7.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Coke 510 ml.</h6>
                             <h6 class="card-title" style="float: right;">24฿</h6><br>
 
-                            <a  class="btn btn-success" onclick="addPizza('Coke 510 ml.', '', '24', './img/home/rec_7.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
+                            <a  class="btn " onclick="addPizza('Coke 510 ml.', '', '24', './img/home/rec_7.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
                         </div>
                     </div>
                 </div>
                 <!-- recommend 8 -->
                 <div class="col-sm-3 home_c">
-                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
-                        <img class="card-img-top" src="img/home/rec_8.png" alt="Card image cap">
+                    <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
+                        <img class="card-img-top p-3 img-fluid" src="img/home/rec_8.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Egg Tart 2 Pcs.</h6>
                             <h6 class="card-title" style="float: right;">39฿</h6><br>
 
-                            <a  class="btn btn-success" onclick="addPizza('Egg Tart 2 Pcs.', '', '39', './img/home/rec_8.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
+                            <a  class="btn" onclick="addPizza('Egg Tart 2 Pcs.', '', '39', './img/home/rec_8.png')" id="get_cart"><i class="bi bi-cart">&nbsp&nbspAdd to Cart</i></a>
                         </div>
                     </div>
                 </div>

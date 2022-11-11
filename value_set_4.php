@@ -14,7 +14,7 @@
     </style>
 </head>
 
-<body onload="reloading(); changePizza(1,2); retrieve(); count(); is_empty();">
+<body onload=" changePizza(1,2); retrieve(); count(); is_empty();">
     <?php include 'cart.php'; ?>
     <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
@@ -45,7 +45,7 @@
         <div class="order-wrap p-3 w-100">
             <div class="row ">
                 <div class="col-8">
-                    <p class="text-center pt-5" style="font-size: 20px;">Select first pizza</p>
+                    <p class="text-center pt-2" style="font-size: 20px;">Select first pizza</p>
                     <img src="./img/cheese/Seafood_Cocktail_m.png" id="pizzapic1" width="50%" class="mx-auto d-block">
 
                     <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
@@ -83,7 +83,6 @@
                 </div>
                 <!-- ปรับแต่งพิซซ่าด้วยตัวเอง -->
                 <div class="col-4  ">
-                    <br>
                     <p id="topping"><i>Customize Pizza</i></p>
                     <!-- บรรทัด 1 -->
                     <div class="topping-wrap ">
