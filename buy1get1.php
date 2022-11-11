@@ -358,7 +358,7 @@
     <div class="order-wrap p-3">
             <div class="row ">
                 <div class="col-8">
-                    <p class="text-center pt-5" style="font-size: 20px;">Select first pizza</p>
+                    <p class="text-center pt-5" style="font-size: 20px;">Select second pizza</p>
                     <img src="./img/pan/Seafood_Cocktail_m.png" id="pizzapic2" width="50%" class="mx-auto d-block">
 
                     <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
@@ -415,7 +415,7 @@
                                 <div class="card-body p-0 ">
                                     <div class="row">
                                         <div class="col-1 mt-3">
-                                            <a href="#-" class="col-2" onclick="num_topping(0,0)">
+                                            <a href="#-" class="col-2" onclick="num_topping(0,4)">
                                                 <i class="bi bi-dash-circle" id="icon-dash-circle"></i>
                                             </a>
                                         </div>
@@ -429,7 +429,7 @@
                                             border-radius: 50px">
                                         </div>
                                         <div class="col-1 mt-3">
-                                            <a href="#+" class="col-2" onclick="num_topping(1,0)">
+                                            <a href="#+" class="col-2" onclick="num_topping(1,4)">
                                                 <i class="bi bi-plus-circle" id="icon-plus-circle"></i>
                                             </a>
                                         </div>
@@ -437,7 +437,7 @@
 
                                     <!--    ชื่อ topping ชีส-->
                                     <div id="name-topping">Mozzarella Cheese (+ 39฿)</div>
-                                    <div class="text-center" id="top0">0</div>
+                                    <div class="text-center" id="top4">0</div>
                                 </div>
                             </div>
                         </div>
@@ -448,7 +448,7 @@
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
-                                            <a href="#-" class="col-2" onclick="num_topping(0,1)">
+                                            <a href="#-" class="col-2" onclick="num_topping(0,5)">
                                                 <i class="bi bi-dash-circle" id="icon-dash-circle"></i>
                                             </a>
                                         </div>
@@ -462,14 +462,14 @@
                                             border-radius: 50px">
                                         </div>
                                         <div class="col-1 mt-3">
-                                            <a href="#+" class="col-2" onclick="num_topping(1,1)">
+                                            <a href="#+" class="col-2" onclick="num_topping(1,5)">
                                                 <i class="bi bi-plus-circle" id="icon-plus-circle"></i>
                                             </a>
                                         </div>
                                     </div>
                                     <!--    ชื่อ topping สับปะรด-->
                                     <div id="name-topping">Pineapple (+ 39฿)</div>
-                                    <div class="text-center" id="top1">0</div>
+                                    <div class="text-center" id="top5">0</div>
                                 </div>
                             </div>
                         </div>
@@ -481,7 +481,7 @@
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
-                                            <a href="#-" class="col-2" onclick="num_topping(0,2)">
+                                            <a href="#-" class="col-2" onclick="num_topping(0,6)">
                                                 <i class="bi bi-dash-circle" id="icon-dash-circle"></i>
                                             </a>
                                         </div>
@@ -495,14 +495,14 @@
                                             border-radius: 50px">
                                         </div>
                                         <div class="col-1 mt-3">
-                                            <a href="#+" class="col-2" onclick="num_topping(1,2)">
+                                            <a href="#+" class="col-2" onclick="num_topping(1,6)">
                                                 <i class="bi bi-plus-circle" id="icon-plus-circle"></i>
                                             </a>
                                         </div>
                                     </div>
                                     <!--    ชื่อ topping เบคอนแผ่น-->
                                     <div id="name-topping">Sliced Bacon (+ 39฿)</div>
-                                    <div class="text-center" id="top2">0</div>
+                                    <div class="text-center" id="top6">0</div>
                                 </div>
                             </div>
                         </div>
@@ -513,7 +513,7 @@
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
-                                            <a href="#-" class="col-2" onclick="num_topping(0,3)">
+                                            <a href="#-" class="col-2" onclick="num_topping(0,7)">
                                                 <i class="bi bi-dash-circle" id="icon-dash-circle"></i>
                                             </a>
                                         </div>
@@ -526,14 +526,14 @@
                                             border-radius: 50px">
                                         </div>
                                         <div class="col-1 mt-3">
-                                            <a href="#+" class="col-2" onclick="num_topping(1,3)">
+                                            <a href="#+" class="col-2" onclick="num_topping(1,7)">
                                                 <i class="bi bi-plus-circle" id="icon-plus-circle"></i>
                                             </a>
                                         </div>
                                     </div>
                                     <!--    ชื่อ topping แฮมแผ่น-->
                                     <div id="name-topping">Sliced Ham (+ 39฿)</div>
-                                    <div class="text-center" id="top3">0</div>
+                                    <div class="text-center" id="top7">0</div>
                                 </div>
                             </div>
                         </div>

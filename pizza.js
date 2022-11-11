@@ -632,7 +632,7 @@ function hidNshopizza(num, check) {
             pizza1.classList.remove("d-none");
             pizza1.classList.add("d-none");
             pizza2.classList.remove("d-none");
-            pizza2.classList.add("d-flex");
+            
             pum1.style.backgroundColor = back_color;
             pum2.style.backgroundColor = sel_color;
         }
@@ -640,7 +640,7 @@ function hidNshopizza(num, check) {
             but1.classList.remove("d-none");
             last.classList.add("d-none");
             pizza1.classList.remove("d-none");
-            pizza2.classList.remove("d-flex");
+            
             pizza2.classList.add("d-none");
             pizza1.classList.add("d-flex");
             pum1.style.backgroundColor = sel_color;
