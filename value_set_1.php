@@ -35,7 +35,7 @@
         <br>
         <div class="btn-group row " role="group" id="pom_select">
             <a onclick="hidNshopizza(2,2)" class="col-6 btn " id="pom_select_1" role="button">Select Pizza</a>
-            <a onclick="hidNshopizza(1,2)" class="col-6 btn" id="pom_select_2" role="button">Select Chicken Pop(M)</a>
+            <a onclick="hidNshopizza(1,2)" class="col-6 btn" id="pom_select_2" role="button">Select Chicken Pop</a>
         </div>
     </div>
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
@@ -44,7 +44,7 @@
             <div class="row ">
                 <div class="col-8">
                     <p class="text-center pt-5" style="font-size: 20px;">Select first pizza</p>
-                    <img src="./img/pan/Seafood_Cocktail_m.png" id="pizzapic1" width="100%" class="mx-auto d-block">
+                    <img src="./img/pan/Seafood_Cocktail_m.png" id="pizzapic1" width="50%" class="mx-auto d-block">
 
                     <!-- dropdown เลือกขอบและขนาด & เลือกหน้าอื่น -->
                     <div class="btn-group" id="choose_dropdown">
@@ -219,7 +219,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="text-center mt-2  justify-content-center">
-                                <a href="#pizza2" class="btn btn-success  " style="width:85%;"
+                                <a  class="btn btn-success  " style="width:85%;"
                                     onclick="hidNshopizza(1,11); keepprice(0); reset(0); changePizza(2)" id="next1">
                                     Next </a>
                             </div>
@@ -235,7 +235,7 @@
     <!-- เลือกไก่ป๊อป -->
     <div class="rounded pb-5 d-none" id="pizza2">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Chicken Pop</p>
-        <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034712366803320833/unknown.png" width="30%" class="mx-auto d-block">
+        <img src="./img/home/chick_pop.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
         <button type="button" class="btn w-25 d-flex justify-content-center align-item-center" id="button_choose_part" disabled>Chicken Pop(M)</button>
         <div class="text-center  ">

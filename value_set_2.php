@@ -220,7 +220,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="text-center mt-2  justify-content-center">
-                                <a href="#pizza2" class="btn btn-success  " style="width:85%;"
+                                <a  class="btn btn-success  " style="width:85%;"
                                     onclick="hidNshopizza(1,2); keepprice(0); reset(0); changePizza(2)" id="next1">
                                     Next </a>
                             </div>
@@ -236,7 +236,7 @@
     <!-- เลือกขนมปังกระเทียม -->
     <div class="rounded pb-5 d-none" id="pizza2">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Garlic Bread</p>
-        <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034729996968787990/unknown.png" width="30%" class="mx-auto d-block">
+        <img src="./img/home/garlic_br.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
         <button type="button" class="btn w-25 d-flex justify-content-center align-item-center" id="button_choose_part" disabled>Garlic Bread</button>
         <div class="text-center ">

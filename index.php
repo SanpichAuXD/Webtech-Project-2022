@@ -68,7 +68,7 @@
             </div>
         </div>
     </section><br><br>
-    <br><br><br>
+    <br><hr><br>
 
     <!-- recommend menu -->
     <div id="sec2">
@@ -78,8 +78,8 @@
         <div class="container">
             <div class="row">
                 <!-- recommend 1 -->
-                <div class="col-sm-3">
-                    <div class="card" id="c_recommend_menu" style="width: 15rem;  margin:auto;">
+                <div class="col-sm-3 home_c">
+                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
                         <img class="card-img-top" src="./img/home/rec_1.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Chocolate Chip Ice Cream</h6>
@@ -90,8 +90,8 @@
                     </div>
                 </div>
                 <!-- recommend 2 -->
-                <div class="col-sm-3">
-                    <div class="card" id="c_recommend_menu" style="width: 15rem;  margin:auto;">
+                <div class="col-sm-3 home_c">
+                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
                         <img class="card-img-top" src="./img/home/rec_2.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Caesar Salad</h6>
@@ -102,8 +102,8 @@
                     </div>
                 </div>
                 <!-- recommend 3 -->
-                <div class="col-sm-3">
-                    <div class="card" id="c_recommend_menu" style="width: 15rem;  margin:auto;">
+                <div class="col-sm-3 home_c">
+                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
                         <img class="card-img-top" src="img/home/rec_3.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">BBQ Pork Ribs</h6>
@@ -114,8 +114,8 @@
                     </div>
                 </div>
                 <!-- recommend 4 -->
-                <div class="col-sm-3">
-                    <div class="card" id="c_recommend_menu" style="width: 15rem; margin:auto; ">
+                <div class="col-sm-3 home_c">
+                    <div class="card" id="c_recommend_menu" style="width: 13rem; margin:auto; ">
                         <img class="card-img-top" src="img/home/rec_4.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Calamari</h6>
@@ -127,8 +127,8 @@
             </div><br>
             <div class="row">
                 <!-- recommend 5 -->
-                <div class="col-sm-3">
-                    <div class="card" id="c_recommend_menu" style="width: 15rem;  margin:auto;">
+                <div class="col-sm-3 home_c">
+                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
                         <img class="card-img-top" src="img/home/rec_5.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Chip & Cheese Dip</h6>
@@ -139,8 +139,8 @@
                     </div>
                 </div>
                 <!-- recommend 6 -->
-                <div class="col-sm-3">
-                    <div class="card" id="c_recommend_menu" style="width: 15rem;  margin:auto;">
+                <div class="col-sm-3 home_c">
+                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
                         <img class="card-img-top" src="img/home/rec_6.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Cheese Sticks</h6>
@@ -150,8 +150,8 @@
                     </div>
                 </div>
                 <!-- recommend 7 -->
-                <div class="col-sm-3">
-                    <div class="card" id="c_recommend_menu" style="width: 15rem;  margin:auto;">
+                <div class="col-sm-3 home_c">
+                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
                         <img class="card-img-top" src="img/home/rec_7.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Coke 510 ml.</h6>
@@ -162,8 +162,8 @@
                     </div>
                 </div>
                 <!-- recommend 8 -->
-                <div class="col-sm-3">
-                    <div class="card" id="c_recommend_menu" style="width: 15rem;  margin:auto;">
+                <div class="col-sm-3 home_c">
+                    <div class="card" id="c_recommend_menu" style="width: 13rem;  margin:auto;">
                         <img class="card-img-top" src="img/home/rec_8.png" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title" id="name_recommend_menu">Egg Tart 2 Pcs.</h6>
@@ -176,7 +176,7 @@
             </div>
         </div>
     </div>
-    <br><br>
+    <br><br><hr><br>
     <div style="display: flex; justify-content: center;
 align-items: center; ">
         <img src="./img/home/soon.jpg" width="60%" style="background:#E3C696c3; border-radius: 20%;">

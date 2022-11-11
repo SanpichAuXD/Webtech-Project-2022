@@ -811,6 +811,9 @@ footer{
 #c_recommend_menu {
     background: #912e00;
 }
+.home_c{
+    padding: 0;
+}
 
 .card-body {
     align-self: normal;

@@ -15,7 +15,7 @@
     <!-- <script src="pizza.js"></script> -->
 </head>
 
-<body onload="changePizza(1,3); retrieve(); count(); is_empty();">
+<body onload="reloading(); changePizza(1,3); retrieve(); count(); is_empty();">
 <?php include 'cart.php'; ?>
 <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
@@ -37,8 +37,8 @@
         <div class="btn-group row" role="group" id="pom_select">
            <a onclick="hidNshopizza46(1,4)" class="col-3 btn" id="pom_select_1" role="button">Select Pizza</a>
             <a onclick="hidNshopizza46(2,4)" class="col-3 btn" id="pom_select_2" role="button">Select Pasta</a>
-            <a onclick="hidNshopizza46(3,4)" class="col-3 btn" id="pom_select_3" role="button">Select Chicken Sticks</a>
-            <a onclick="hidNshopizza46(4,4)" class="col-3 btn" id="pom_select_4" role="button">Select Waffle Fries</a>
+            <a onclick="hidNshopizza46(3,4)" class="col-3 btn" id="pom_select_3" role="button">Select Chicken Wings</a>
+            <a onclick="hidNshopizza46(4,4)" class="col-3 btn" id="pom_select_4" role="button">Select Chicken Nuggets</a>
             
         </div>
     </div>
@@ -229,7 +229,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="text-center   mt-2   justify-content-center">
-                                <a href="#pizza2" class="btn btn-success  " style="width:85%;"
+                                <a  class="btn btn-success  " style="width:85%;"
                                     onclick="hidNshopizza(1,4); keepprice(0); reset(0); changePizza(2)" id="next1">
                                     Next </a>
                             </div>
@@ -248,7 +248,7 @@
     <!-- เลือกพาสต้า -->
     <div class="rounded pb-5 d-none" id="pizza2">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Pasta</p>
-        <img id="spaimg" src="https://cdn.discordapp.com/attachments/1012625488482680942/1034726186162597958/unknown.png" width="30%" class="mx-auto d-block">
+        <img id="spaimg" src="./img/pasta/pasta_1.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
         <div id="choose_dropdown">
             <div class="dropdown">
@@ -265,25 +265,25 @@
             </div>
         </div>
         <div class="text-center    ">
-        <a href="#pizza2" class="btn btn-success w-25  mt-2 mb-5 " onclick="hidNshopizza(2,4);" id="next2"> Next </a>
+        <a  class="btn btn-success w-25  mt-2 mb-5 " onclick="hidNshopizza(2,4);" id="next2"> Next </a>
     </div>
     </div>
 
     <!-- เลือกปีกไก่ -->
     <div class="rounded pb-5 d-none" id="pizza3">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Chicken Wings</p>
-        <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034729468373254204/unknown.png" width="30%" class="mx-auto d-block">
+        <img src="./img/home/chick_wing.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
         <button type="button" class="btn w-25 d-flex justify-content-center align-item-center" id="button_choose_part" disabled>BBQ Chicken Wings 4 pcs</button>
         <div class="text-center    ">
-        <a href="#pizza4" class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
+        <a  class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
     </div>
     </div>
 
     <!-- เลือกนักเก็ต -->
     <div class="rounded pb-5 d-none" id="pizza4">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Chicken Nuggets</p>
-        <img src="https://cdn.1112.com/1112/public/images/Apr2019/TeamChicken/116720.png" width="30%" class="mx-auto d-block">
+        <img src="./img/home/chick_nug.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
         <button type="button" class="btn w-25 d-flex justify-content-center align-item-center" id="button_choose_part" disabled>Chicken Nuggets 6 pcs</button>
         <div class="text-center  ">
@@ -291,21 +291,7 @@
     </div>
     </div>
 
-   
-   
 
-    <!-- ปุ่ม ใส่ตะกร้า -->
-   
-    <!-- <div class="text-center mt-2   ">
-        <a href="#pizza3" class="btn btn-success w-25  mt-5 mb-5 d-none" onclick="hidNshopizza(2,4); " id="next2"> Next </a>
-    </div>
-    <div class="text-center mt-2   ">
-        <a href="#pizza4" class="btn btn-success w-25  mt-5 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
-    </div>
-    
-    <div class="text-center mt-2 ">
-        <a href="value_set.php" class="btn p-2 mt-5 w-25 mb-5 btn-success d-none" id="last" onclick="count(); keepprice(0); addToCart(5);"><i class="bi bi-cart"> Add To Cart</i> </a>
-    </div> -->
     <!-- footer -->
     <?php include 'footer.php'; ?>
     <script src="pizza.js"></script>

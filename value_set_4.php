@@ -14,7 +14,7 @@
     </style>
 </head>
 
-<body onload="changePizza(1,2); retrieve(); count(); is_empty();">
+<body onload="reloading(); changePizza(1,2); retrieve(); count(); is_empty();">
     <?php include 'cart.php'; ?>
     <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
@@ -214,7 +214,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="text-center    ">
-                                <a href="#pizza2" class="btn btn-success   mt-2 mb-5 " style="width:85%;" onclick="hidNshopizza(1,4)" id="next1"> Next </a>
+                                <a  class="btn btn-success   mt-2 mb-5 " style="width:85%;" onclick="hidNshopizza(1,4)" id="next1"> Next </a>
                             </div>
                         </div>
                     </div>
@@ -245,27 +245,27 @@
             </div>
         </div>
         <div class="text-center    ">
-            <a href="#pizza3" class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(2,4)" id="next2"> Next </a>
+            <a  class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(2,4)" id="next2"> Next </a>
         </div>
     </div>
 
     <!-- เลือกชิคเก้นสติ๊กส์ -->
     <div class="rounded pb-5 d-none " id="pizza3">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Chicken Sticks</p>
-        <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034726186548482048/unknown.png" width="30%" class="mx-auto d-block">
+        <img src="./img/home/chick_stick.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
         <div class="text-center">
             <button type="button" class="btn w-25 d-flex justify-content-center align-item-center" id="button_choose_part" disabled>Chicken Stick</button>
         </div>
         <div class="text-center   ">
-            <a href="#pizza4" class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
+            <a  class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
         </div>
     </div>
 
     <!-- เลือกวาฟเฟิล ฟรายส์ -->
     <div class="rounded pb-5 d-none" id="pizza4">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Waffle Fries</p>
-        <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034726186967900221/unknown.png" width="30%" class="mx-auto d-block">
+        <img src="./img/home/waffle.png" width="31%" class="mx-auto d-block">
         <!-- disabled -->
         <div class="text-center">
         <button type="button" class="btn w-25 d-flex justify-content-center align-item-center" id="button_choose_part" disabled>Waffle Fries</button>

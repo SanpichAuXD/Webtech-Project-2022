@@ -158,7 +158,15 @@ function right(x) {
         i1.classList.add('card-hov');
     }
 }
+function reloading(){
+    var refresh = window.localStorage.getItem('refresh');
+console.log(refresh);
+if (refresh===null){
+    window.location.reload();
+    window.localStorage.setItem('refresh', "1");
+}
 
+}
 let menu1 = document.getElementById("selectpizza1");
 let menu2 = document.getElementById("selectpizza2");
 let crust1 = document.getElementById("selectcrust1");
@@ -199,7 +207,7 @@ function ExtractData(data) {
     }
 
 }
-
+console.log(pizprice)
 price = 379;
 function setPrice(set) {
 
@@ -260,6 +268,9 @@ function getPrice(piz, crust, set) {
 }
 
 function changeDesc(piz) {
+    console.log(piz)
+    console.log(pizprice)
+    console.log(pizprice[piz])
     desc.innerHTML = pizprice[piz][1];
 }
 let numAdd = [0, 0, 0, 0, 0, 0, 0, 0];
@@ -327,7 +338,7 @@ function reset(num) {
 }
 
 function changePizza(pic, set) {
-
+    console.log("on")
     if (pic == 1) {
         picpiz = pic1;
         menu = menu1;
