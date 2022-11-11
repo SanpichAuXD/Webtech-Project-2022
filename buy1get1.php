@@ -324,7 +324,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="text-center mt-2  justify-content-center">
-                                <a href="#pizza2" class="btn btn-success  " style="width:85%;" onclick="hidNshopizza(1,11); keepprice(0); reset(0); changePizza(2)" id="next1">
+                                <a  class="btn btn-success  " style="width:85%;" onclick="hidNshopizza(1,11); keepprice(0); reset(0); changePizza(2)" id="next1">
                                     Next </a>
                             </div>
                         </div>

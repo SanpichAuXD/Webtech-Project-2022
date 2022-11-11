@@ -542,7 +542,6 @@ body {
 #button_choose_part {
     background: hsla(0, 0%, 100%, 0.5);
     color: hsl(0, 0%, 100%);
-    margin-right: 15px;
     padding: 10px;
 }
 
@@ -596,7 +595,7 @@ body {
 }
 
 #pom_select {
-    width: 50%;
+    width: 70%;
     display: flex;
     margin-left: auto;
     margin-right: auto;

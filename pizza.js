@@ -285,6 +285,7 @@ function num_topping(add, num) {
         numAdd[num]++;
         getid.innerHTML = numAdd[num];
     } else if (numAdd[num] != 0) {
+        console.log("ควย")
         topPrice -= 39;
         price -= 39;
         numAdd[num]--;
@@ -533,10 +534,21 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
 
 
 function del() {
-    Swal.fire('Any fool can use a computer');
     localStorage.removeItem("keepOrder");
     localStorage.removeItem("price");
-    window.location.reload();
+    // window.location.reload();
+    popScreen.classList.remove("active");
+    Swal.fire({
+        icon: 'success',
+        title: 'Thank for purchase',
+        text: '「ありがとう」 (Arigatou)',
+        confirmButtonText: 'ok'
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            window.location.reload();
+        } 
+      })
 }
 
 function retrieve() {

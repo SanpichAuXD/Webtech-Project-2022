@@ -184,7 +184,7 @@
                 <h3>KOOM IMM FIN SET</h3><br>
                 <!--แก้ไข---บรรยาย---->
                 <span>Enjoy with group with medium pan pizza with classic topping, BBQ chicken wing 4 pcs., spaghetti 129.- and chicken nuggets.</span><br>
-                <div class="float-end p-4 mt-3"><a href="value_set_4.php" id="plus" class="btn rounded pt-1 pb-1 ps-4 pe-4">399 ฿<i class="bi bi-cart-plus"></i></a></div>
+                <div class="float-end p-4 mt-3"><a href="value_set_3.php" id="plus" class="btn rounded pt-1 pb-1 ps-4 pe-4">399 ฿<i class="bi bi-cart-plus"></i></a></div>
             </div>
         </div>
     </div>
@@ -200,7 +200,7 @@
                 <h3>Koom Yok Gang Set</h3><br>
                 <!--แก้ไข---บรรยาย---->
                 <span>Enjoy with group with medium extreme crust pizza with classic topping, spaghetti 129.-, chicken stick and waffle fries.</span><br>
-                <div class="float-end p-4 mt-3"><a href="value_set_3.php" id="plus" class="btn rounded pt-1 pb-1 ps-4 pe-4">499 ฿<i class="bi bi-cart-plus"></i></a></div>
+                <div class="float-end p-4 mt-3"><a href="value_set_4.php" id="plus" class="btn rounded pt-1 pb-1 ps-4 pe-4">499 ฿<i class="bi bi-cart-plus"></i></a></div>
             </div>
         </div>
     </div>

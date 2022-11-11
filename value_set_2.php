@@ -22,7 +22,7 @@
     <?php include 'nav.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
 
-    <div>
+    <div class="container">
         <!-- ปุ่ม back -->
         <a href="value_set.php"><i class="bi bi-arrow-left" id="back"></i></a>
         <br>
@@ -32,7 +32,7 @@
             <h5 id="text_value_set">Duo combination with small pan pizza with deluxe topping and garlic bread.</h5>
         </div>
         <!-- เลือกพิซซ่า | เลือกขนมปังกระเทียม -->
-        <br><br>
+        <br>
         <div class="btn-group row" role="group" id="pom_select">
             <a onclick="hidNshopizza(2,2)" class="col-6 btn " id="pom_select_1" role="button">Choose Pizza</a>
             <a onclick="hidNshopizza(1,2)" class="col-6 btn" id="pom_select_2" role="button">Select Garlic Bread</a>
@@ -52,7 +52,7 @@
                             <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center ">
                                 <select id="selectpizza1" class="text-center form-select form-select-md mb-3 ms-3 me-3"
                                     style="width: 100%;" aria-label=".form-select-md "
-                                    onchange="reset(1); changePizza(1);">
+                                    onchange="reset(1); changePizza(1,1);">
                                     <?php
                                     $url = "pizza.json";
                                     $response = file_get_contents($url);
@@ -68,13 +68,9 @@
                             <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center">
                                 <select style="width: 100%;" id="selectcrust1"
                                     class="text-center form-select form-select-md mb-3 me-3 ms-3"
-                                    onchange="changePizza(1)" style="width: 250px;" aria-label=".form-select-md ">
-                                    <option id="testkuy" value="0">Pan Medium</option>
-                                    <option value="1">Crispy Thin Medium</option>
-                                    <option value="2">Extreme Cheese Medium</option>
-                                    <option value="3">Pan Large</option>
-                                    <option value="4">Crispy Thin Large</option>
-                                    <option value="5">Extreme Cheese Large</option>
+                                    onchange="changePizza(1,1)" style="width: 250px;" aria-label=".form-select-md ">
+                                    <option id="testkuy" value="0">Small Pizza</option>
+                                    
                                 </select>
                             </div>
                         </div>
@@ -242,7 +238,7 @@
         <p class="text-center pt-5 " style="font-size: 20px;">Select Garlic Bread</p>
         <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034729996968787990/unknown.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
-        <button type="button" class="btn w-25 text-center" id="button_choose_part" disabled>Garlic Bread</button>
+        <button type="button" class="btn w-25 d-flex justify-content-center align-item-center" id="button_choose_part" disabled>Garlic Bread</button>
         <div class="text-center ">
         <a href="value_set.php" class="btn p-2 mt-2 w-25 mb-2 btn-success d-none" id="last" onclick=" keepprice(0); addToCart(3);"><i class="bi bi-cart"> Add To Cart</i> </a>
     </div>

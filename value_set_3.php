@@ -23,7 +23,7 @@
     <?php include 'nav.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
 
-    <div>
+    <div class="container">
         <!-- ปุ่ม back -->
         <a href="value_set.php"><i class="bi bi-arrow-left" id="back"></i></a>
         <br>
@@ -33,7 +33,7 @@
             <h5 id="text_value_set">Enjoy with group with medium pan pizza with classic topping, BBQ chicken wing 4 pcs., spaghetti 129.- and chicken nuggets.</h5>
         </div>
         <!-- เลือกพิซซ่า | เลือกไก่ป๊อป -->
-        <br><br>
+        <br>
         <div class="btn-group row" role="group" id="pom_select">
            <a onclick="hidNshopizza46(1,4)" class="col-3 btn" id="pom_select_1" role="button">Select Pizza</a>
             <a onclick="hidNshopizza46(2,4)" class="col-3 btn" id="pom_select_2" role="button">Select Pasta</a>
@@ -45,7 +45,7 @@
     <!-- ถาด1 -->
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
     <div class="rounded d-flex" id="pizza1">
-        <div class="order-wrap p-3">
+        <div class="order-wrap p-3 w-100 ">
             <div class="row ">
                 <div class="col-8">
                     <p class="text-center pt-5" style="font-size: 20px;">Select first pizza</p>
@@ -57,7 +57,7 @@
                             <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center ">
                                 <select id="selectpizza1" class="text-center form-select form-select-md mb-3 ms-3 me-3"
                                     style="width: 100%;" aria-label=".form-select-md "
-                                    onchange="reset(1); changePizza(1);">
+                                    onchange="reset(1); changePizza(1,3);">
                                     <?php
                                     $url = "pizza.json";
                                     $response = file_get_contents($url);
@@ -89,7 +89,7 @@
                         <p class="text-start" id="desc1">Shrimp, Crab Sticks, Ham, Pineapple and Thousand Island Sauce
                         </p>
                         <br>
-                        <h3 class="text-end" id="pprice1">179 ฿</h3>
+                        <h3 class="text-end" id="pprice1">399 ฿</h3>
                     </div>
                 </div>
                 <!-- ปรับแต่งพิซซ่าด้วยตัวเอง -->
@@ -228,7 +228,7 @@
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <div class="text-center w-25  mt-2 mb-5   justify-content-center">
+                            <div class="text-center   mt-2   justify-content-center">
                                 <a href="#pizza2" class="btn btn-success  " style="width:85%;"
                                     onclick="hidNshopizza(1,4); keepprice(0); reset(0); changePizza(2)" id="next1">
                                     Next </a>
@@ -252,7 +252,7 @@
         <!-- disabled -->
         <div id="choose_dropdown">
             <div class="dropdown">
-                <select id="selectspa" class="text-center form-select form-select-md mb-3" style="width: 200px;" aria-label=".form-select-md " onchange="changeSpa()">
+                <select id="selectspa" class="text-center form-select form-select-md " style="width:82%; margin:auto;" aria-label=".form-select-md " onchange="changeSpa()">
                     <?php
                     $url = "pizza.json";
                     $response = file_get_contents($url);
@@ -274,7 +274,7 @@
         <p class="text-center pt-5 " style="font-size: 20px;">Select Chicken Wings</p>
         <img src="https://cdn.discordapp.com/attachments/1012625488482680942/1034729468373254204/unknown.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
-        <button type="button" class="btn w-25" id="button_choose_part" disabled>BBQ Chicken Wings 4 pcs</button>
+        <button type="button" class="btn w-25 d-flex justify-content-center align-item-center" id="button_choose_part" disabled>BBQ Chicken Wings 4 pcs</button>
         <div class="text-center    ">
         <a href="#pizza4" class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
     </div>
@@ -285,7 +285,7 @@
         <p class="text-center pt-5 " style="font-size: 20px;">Select Chicken Nuggets</p>
         <img src="https://cdn.1112.com/1112/public/images/Apr2019/TeamChicken/116720.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
-        <button type="button" class="btn w-25 text-center" id="button_choose_part" disabled>Chicken Nuggets 6 pcs</button>
+        <button type="button" class="btn w-25 d-flex justify-content-center align-item-center" id="button_choose_part" disabled>Chicken Nuggets 6 pcs</button>
         <div class="text-center  ">
         <a href="value_set.php" class="btn p-2 mt-2 w-25 mb-5 btn-success d-none" id="last" onclick="count(); keepprice(0); addToCart(5);"><i class="bi bi-cart"> Add To Cart</i> </a>
     </div>
