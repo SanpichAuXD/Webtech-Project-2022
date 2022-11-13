@@ -78,7 +78,7 @@
         <div class="container">
             <div class="row">
                 <!-- recommend 1 -->
-                <div class="col-sm-3 home_c">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 home_c pt-4">
                     <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
                         <img class="card-img-top p-3 img-fluid" src="./img/home/rec_1.png" alt="Card image cap">
                         <div class="card-body">
@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <!-- recommend 2 -->
-                <div class="col-sm-3 home_c">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 home_c pt-4">
                     <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
                         <img class="card-img-top p-3 img-fluid" src="./img/home/rec_2.png" alt="Card image cap">
                         <div class="card-body">
@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <!-- recommend 3 -->
-                <div class="col-sm-3 home_c">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 home_c pt-4">
                     <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
                         <img class="card-img-top p-3 img-fluid" src="img/home/rec_3.png" alt="Card image cap">
                         <div class="card-body">
@@ -114,7 +114,7 @@
                     </div>
                 </div>
                 <!-- recommend 4 -->
-                <div class="col-sm-3 home_c">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 home_c pt-4">
                     <div class="card" id="c_recommend_menu" style="width: 14rem; margin:auto; ">
                         <img class="card-img-top p-3 img-fluid" src="img/home/rec_4.png" alt="Card image cap">
                         <div class="card-body">
@@ -124,10 +124,9 @@
                         </div>
                     </div>
                 </div>
-            </div><br>
-            <div class="row">
+        
                 <!-- recommend 5 -->
-                <div class="col-sm-3 home_c">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 home_c pt-4">
                     <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
                         <img class="card-img-top p-3 img-fluid" src="img/home/rec_5.png" alt="Card image cap">
                         <div class="card-body">
@@ -139,7 +138,7 @@
                     </div>
                 </div>
                 <!-- recommend 6 -->
-                <div class="col-sm-3 home_c">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 home_c pt-4">
                     <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
                         <img class="card-img-top p-3 img-fluid" src="img/home/rec_6.png" alt="Card image cap">
                         <div class="card-body">
@@ -150,7 +149,7 @@
                     </div>
                 </div>
                 <!-- recommend 7 -->
-                <div class="col-sm-3 home_c">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 home_c pt-4">
                     <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
                         <img class="card-img-top p-3 img-fluid" src="img/home/rec_7.png" alt="Card image cap">
                         <div class="card-body">
@@ -162,7 +161,7 @@
                     </div>
                 </div>
                 <!-- recommend 8 -->
-                <div class="col-sm-3 home_c">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 home_c pt-4">
                     <div class="card" id="c_recommend_menu" style="width: 14rem;  margin:auto;">
                         <img class="card-img-top p-3 img-fluid" src="img/home/rec_8.png" alt="Card image cap">
                         <div class="card-body">
@@ -173,14 +172,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+             </div>
         </div>
     </div>
     <br><br><hr><br>
     <div style="display: flex; justify-content: center;
 align-items: center; ">
-        <img src="./img/home/soon.jpg" width="60%" style="background:#E3C696c3; border-radius: 20%;">
-        <h1 style="position:absolute; color:#E3C696c3">coming soon</h1>
+        <img src="./img/home/soon.jpg" width="50%" style="background:#E3C696c3; border-radius: 20%;">
+        <h1 style="position:absolute; color:white">coming soon</h1>
     </div>
     <br>
     <!-- footer -->

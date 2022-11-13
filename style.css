@@ -20,6 +20,9 @@ ul {
     font-size: 12px;
     position: relative;
 }
+.container-fluid{
+    flex-direction: row-reverse;
+}
 
 .nav-tabs .nav-delivery {
     font-size: 14px;
@@ -119,6 +122,7 @@ input:focus::-webkit-input-placeholder {
 #logo {
     width: calc(94.1px/.9);
     height: calc(85px/.9);
+    margin: auto;
 }
 
 #logo-img {
@@ -132,10 +136,9 @@ input:focus::-webkit-input-placeholder {
 }
 
 .toggle-button {
-    position: absolute;
+    position: relative;
     top: 28px;
-    bottom: 0;
-    right: 10px;
+    margin-left:20px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -147,7 +150,7 @@ input:focus::-webkit-input-placeholder {
 .toggle-button .bar {
     height: 5px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     border-radius: 500px;
 }
 
@@ -211,6 +214,10 @@ input:focus::-webkit-input-placeholder {
 @media (max-width: 400px) {
     #logo {
         display: none;
+    }
+    .nav-delivery {
+        margin-left: auto;
+        margin-right: 5px;
     }
 }
 

@@ -844,7 +844,7 @@ tag_addr.classList.add("text-wrap");
 
 function valid() {
     if (namee.value == "" || address.value == "" || phone.value == "") {
-        alert("dfesff");
+        alert("Please fill out your information");
         return false;
     }
     else if (!isNaN(namee.value)) {

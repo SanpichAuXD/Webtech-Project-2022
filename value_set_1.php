@@ -90,7 +90,7 @@
                         <div class="row justify-content-center">
                             <!-- ชีส -->
                             <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                                style="width: 80%; background-color: hsl(8, 100%, 75%);">
                                 <div class="card-body p-0 ">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -116,14 +116,14 @@
 
                                     <!--    ชื่อ topping ชีส-->
                                     <div id="name-topping">Mozzarella Cheese (+ 39฿)</div>
-                                    <div class="text-center" id="top0">0</div>
+                                    <div class="text-center text-dark" id="top0">0</div>
                                 </div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <!-- สับปะรด -->
                             <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                                style="width: 80%; background-color: hsl(8, 100%, 75%);">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -148,7 +148,7 @@
                                     </div>
                                     <!--    ชื่อ topping สับปะรด-->
                                     <div id="name-topping">Pineapple (+ 39฿)</div>
-                                    <div class="text-center" id="top1">0</div>
+                                    <div class="text-center text-dark" id="top1">0</div>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +156,7 @@
                         <div class="row justify-content-center">
                             <!-- เบคอนแผ่น -->
                             <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                                style="width: 80%; background-color: hsl(8, 100%, 75%);">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -181,14 +181,14 @@
                                     </div>
                                     <!--    ชื่อ topping เบคอนแผ่น-->
                                     <div id="name-topping">Sliced Bacon (+ 39฿)</div>
-                                    <div class="text-center" id="top2">0</div>
+                                    <div class="text-center text-dark" id="top2">0</div>
                                 </div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <!-- แฮมแผ่น -->
                             <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                                style="width: 80%; background-color: hsl(8, 100%, 75%);">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -212,7 +212,7 @@
                                     </div>
                                     <!--    ชื่อ topping แฮมแผ่น-->
                                     <div id="name-topping">Sliced Ham (+ 39฿)</div>
-                                    <div class="text-center" id="top3">0</div>
+                                    <div class="text-center text-dark" id="top3">0</div>
                                 </div>
                             </div>
                         </div>

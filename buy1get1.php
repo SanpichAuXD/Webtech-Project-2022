@@ -26,31 +26,20 @@
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <header style="  z-index:100;">
-        <ul class="nav-tabs " style="background-color: hsl(26, 26%, 12%); ">
+        <ul class="nav-tabs " style="background-color: var(--dark_brown); ">
             <div class="container-fluid nav">
-                <!-- logo -->
-                <a id="logo" class="navbar-brand text-center" class="nav-a" href="index.php">
-                    <img id="logo-img" src="img/home/Logo.png" alt="Logo" class="d-inline-block">
-                </a>
 
                 <div class="nav-item nav-delivery">
                     <!-- delivery takaway -->
                     <li class="deliver nav-item text-center d-flex fw-semibold">
-                        <a id="switch-deli" class="nav-link  d-inline m-auto nav-a deli-take " href="#"
-                            style="background-color:#912e00; color:white; border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;"
-                            onclick="take_deli(0)">Delivery</a>
+                        <a id="switch-deli" class="nav-link  d-inline m-auto nav-a deli-take " href="#" style="background-color:var(--red); color:white; border-top-left-radius: 10px; border-top-right-radius: 0; border-bottom-left-radius: 10px;" onclick="take_deli(0)">Delivery</a>
                         <div class="line"></div>
-                        <a id="switch-take" class="nav-link  d-inline m-auto nav-a deli-take "
-                            href="#"
-                            style="background-color:#dabf91 ; color:black; border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"
-                            onclick="take_deli(1)">Takeaway</a>
+                        <a id="switch-take" class="nav-link  d-inline m-auto nav-a deli-take " href="#" style="background-color:var(--yellow) ; color:black; border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;" onclick="take_deli(1)">Takeaway</a>
                     </li>
                     <!-- select address -->
                     <li class="deliver nav-item text-center" id="take" style="height: 30px; width: 100%;">
 
-                        <input class="fw-semibold text-light" id="select-address" list="datalistOptions" type="search"
-                            class="search-data " placeholder="Select Address" required
-                            style="width:100%; height: 31px;">
+                        <input class="fw-semibold text-light" id="select-address" list="datalistOptions" type="search" class="search-data " placeholder="Select Address" required style="width:100%; height: 31px;">
                         <datalist id="datalistOptions">
                             <?php
                             $url = "pizza.json";
@@ -65,52 +54,55 @@
                     <li>
                         <div class="d-none" id="deli">
                             <div class="dropdown w-100 ">
-                                <button id="deli-address" class="btn dropdown-toggle align-text-center text-light"
-                                    style=" width:103%; height:31px; background-color:#912e00; border-radius:10px;" id="drop-text"
-                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button id="deli-address" class="fw-semibold btn dropdown-toggle align-text-center text-light" style=" width:103%; height:31px; background-color:var(--red); border-radius:10px; font-size: 14px;" id="drop-text" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Your Address
                                 </button>
-                                <ul class="dropdown-menu  " id="drop" style=" width:100%; background-color:#912e00;">
-                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0 text-light" href="#" data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal">New Address</a></li><hr class="m-0 text-light fs-5">
+                                <ul class="dropdown-menu fw-semibold" id="drop" style=" width:100%; background-color:var(--red); font-size: 14px;">
+                                    <li><a class="dropdown-item mt-1 mb-1 text-center p-0 text-light" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">New Address</a></li>
+                                    <hr class="m-0 text-light fs-5">
                                     <li><a class="dropdown-item mt-1 mb-1 text-center p-0 text-light" href="#">Current Address</a></li>
                                 </ul>
                             </div>
-                            <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false"
-                                tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content" style="background-color: #912e00;  box-shadow: 0 5px 25px;  backdrop-filter: blur(10px);">
+                                    <div class="modal-content" style="background-color: var(--dark_brown);  box-shadow: 0 5px 25px;  backdrop-filter: blur(10px);">
                                         <div class="modal-header d-block">
-                                            <button type="button" class="btn-close d-flex p-2 float-right"
-                                                data-bs-dismiss="modal" aria-label="Close"></button>
-                                            <h1 class="modal-title fs-5 text-center text-light" id="exampleModalLabel">Add new
-                                                address</h1>
+                                            <button type="button" class="btn-close d-flex p-2 float-right" data-bs-dismiss="modal" aria-label="Close" style="background-color: var(--yellow) ;"></button>
+                                            <h1 class="modal-title fs-5 text-center text-light" id="exampleModalLabel">Add New
+                                                Address</h1>
 
                                         </div>
                                         <div class="modal-body">
                                             <div class="mb-3">
-                                                <input type="text" class="form-control" id="name"
-                                                    placeholder="Your Name">
+                                                <input type="text" class="form-control" id="name" placeholder="Your Name">
                                             </div>
                                             <div class="mb-3">
-                                                <textarea class="form-control" id="address" placeholder="Your Address"
-                                                    rows="3"></textarea>
+                                                <textarea class="form-control" id="address" placeholder="Your Address" rows="3"></textarea>
                                             </div>
                                             <div class="mb-3">
-                                                <input type="number" class="form-control" id="phone"
-                                                    placeholder="Your Phone">
+                                                <input type="number" class="form-control" id="phone" placeholder="Your Phone">
                                             </div>
                                         </div>
                                         <div class="modal-footer d-flex justify-content-center align-item-center">
-                                            <button onclick="valid()" data-bs-dismiss="modal" type="submit"
-                                                class="btn btn-success">Save Address</button>
+                                            <button onclick="valid()" data-bs-dismiss="modal" type="submit" class="btn " style="background-color: var(--yellow);">Save Address</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </li>
-                </div> 
+                </div>
 
+                <!-- logo -->
+                <a id="logo" class="navbar-brand text-center" class="nav-a" href="index.php">
+                    <img id="logo-img" src="img/home/Logo.png" alt="Logo" class="d-inline-block">
+                </a>
+                
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
                 <div class="nav navbar-links" style="margin-left: 10px;">
                     <ul class="nav" style="font-size: 16px;">
                         <!-- buy 1 get 1 -->
@@ -124,11 +116,6 @@
                         </li>
                     </ul>
                 </div>
-                <a href="#" class="toggle-button">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </a>
             </div>
         </ul>
     </header>
@@ -138,7 +125,7 @@
         <!-- ปุ่ม back -->
         <a href="index.php"><i class="bi bi-arrow-left " id="back"></i></a>
         <!-- ชื่อ เมนู -->
-        <h3 id="name_value_set" class="text-center m-0 mb-4">Special DealBuy 1 Get 1</h3>
+        <h3 id="name_value_set" class="text-center m-0 mb-4">Special Deal Buy 1 Get 1</h3>
         <!-- เลือกพิซซ่า-->
         <div class="btn-group" role="group" id="pom_select">
             <a class="btn" id="pom_select_1" role="button" onclick="hidNshopizza(2,11)">Select First Pizza</a>
@@ -198,7 +185,7 @@
                     <div class="topping-wrap ">
                         <div class="row justify-content-center">
                             <!-- ชีส -->
-                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsl(8, 100%, 75%)">
                                 <div class="card-body p-0 ">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -224,13 +211,13 @@
 
                                     <!--    ชื่อ topping ชีส-->
                                     <div id="name-topping">Mozzarella Cheese (+ 39฿)</div>
-                                    <div class="text-center" id="top0">0</div>
+                                    <div class="text-center text-dark" id="top0">0</div>
                                 </div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <!-- สับปะรด -->
-                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsl(8, 100%, 75%)">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -255,14 +242,14 @@
                                     </div>
                                     <!--    ชื่อ topping สับปะรด-->
                                     <div id="name-topping">Pineapple (+ 39฿)</div>
-                                    <div class="text-center" id="top1">0</div>
+                                    <div class="text-center text-dark" id="top1">0</div>
                                 </div>
                             </div>
                         </div>
                         <!-- บรรทัด 2 -->
                         <div class="row justify-content-center">
                             <!-- เบคอนแผ่น -->
-                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsl(8, 100%, 75%)">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -287,13 +274,13 @@
                                     </div>
                                     <!--    ชื่อ topping เบคอนแผ่น-->
                                     <div id="name-topping">Sliced Bacon (+ 39฿)</div>
-                                    <div class="text-center" id="top2">0</div>
+                                    <div class="text-center text-dark" id="top2">0</div>
                                 </div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <!-- แฮมแผ่น -->
-                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsl(8, 100%, 75%)">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -317,7 +304,7 @@
                                     </div>
                                     <!--    ชื่อ topping แฮมแผ่น-->
                                     <div id="name-topping">Sliced Ham (+ 39฿)</div>
-                                    <div class="text-center" id="top3">0</div>
+                                    <div class="text-center text-dark" id="top3">0</div>
                                 </div>
                             </div>
                         </div>
@@ -388,7 +375,7 @@
                     <div class="topping-wrap ">
                         <div class="row justify-content-center">
                             <!-- ชีส -->
-                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsl(8, 100%, 75%)">
                                 <div class="card-body p-0 ">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -414,13 +401,13 @@
 
                                     <!--    ชื่อ topping ชีส-->
                                     <div id="name-topping">Mozzarella Cheese (+ 39฿)</div>
-                                    <div class="text-center" id="top4">0</div>
+                                    <div class="text-center text-dark" id="top4">0</div>
                                 </div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <!-- สับปะรด -->
-                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsl(8, 100%, 75%)">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -445,14 +432,14 @@
                                     </div>
                                     <!--    ชื่อ topping สับปะรด-->
                                     <div id="name-topping">Pineapple (+ 39฿)</div>
-                                    <div class="text-center" id="top5">0</div>
+                                    <div class="text-center text-dark" id="top5">0</div>
                                 </div>
                             </div>
                         </div>
                         <!-- บรรทัด 2 -->
                         <div class="row justify-content-center">
                             <!-- เบคอนแผ่น -->
-                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsl(8, 100%, 75%)">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -477,13 +464,13 @@
                                     </div>
                                     <!--    ชื่อ topping เบคอนแผ่น-->
                                     <div id="name-topping">Sliced Bacon (+ 39฿)</div>
-                                    <div class="text-center" id="top6">0</div>
+                                    <div class="text-center text-dark" id="top6">0</div>
                                 </div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <!-- แฮมแผ่น -->
-                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsla(0, 0%, 100%, .7);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsl(8, 100%, 75%)">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -507,7 +494,7 @@
                                     </div>
                                     <!--    ชื่อ topping แฮมแผ่น-->
                                     <div id="name-topping">Sliced Ham (+ 39฿)</div>
-                                    <div class="text-center" id="top7">0</div>
+                                    <div class="text-center text-dark" id="top7">0</div>
                                 </div>
                             </div>
                         </div>
