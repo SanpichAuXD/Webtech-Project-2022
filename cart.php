@@ -27,6 +27,7 @@
                 <button type="submit" class="btn btn-danger close-btn"><i class="fa fa-close"></i></button>
             </div>
             <hr width="100%">
+
             <div id="empty" class=""><br>
             <p><i class="fa-solid fa-cart-shopping fa-10x"></i></p>
                <p>Your Cart is Empty</p>
@@ -51,7 +52,6 @@
         </div>
     </div>
     <div>
-
         <button type="submit" class="btn btn-success p-2 open-btn"><i class="fa fa-shopping-cart" style="font-size:24px"></i>
             <div id="count_cart" style="background-color: red; position:absolute; top:-10px; left:-15px; font-size:18px; border-radius:50%; width:70%;">0</div>
         </button>

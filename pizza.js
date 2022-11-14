@@ -160,7 +160,7 @@ function right(x) {
 }
 function reloading() {
     var refresh = window.localStorage.getItem('refresh');
-    console.log(refresh);
+   
     if (refresh === null) {
         window.location.reload();
         window.localStorage.setItem('refresh', "1");
@@ -208,7 +208,6 @@ function ExtractData(data) {
     }
 
 }
-console.log(pizprice)
 price = 379;
 function setPrice(set) {
 
@@ -243,7 +242,7 @@ function getPrice(piz, crust, set) {
             price = 499;
         }
     }
-    console.log(price)
+   
     if (set == 1) {
 
         price = 179;
@@ -297,7 +296,6 @@ function changeDesc(piz) {
         desc.innerHTML = "Shrimp, Crab Sticks, Ham, Pineapple and Thousand Island Sauce";
     }
     else {
-        console.log(pizprice[piz])
         desc.innerHTML = pizprice[piz][1];
     }
 }
@@ -366,7 +364,6 @@ function reset(num) {
 }
 
 function changePizza(pic, set) {
-    console.log("on")
     if (pic == 1) {
         picpiz = pic1;
         menu = menu1;
@@ -546,7 +543,7 @@ function addPizza(pizzaname, detail, pprice, imgsrc) {
     dbox.classList.add("box", "position-relative");
     drov.classList.add("row");
     dimg.classList.add("col-3");
-    img.classList.add("img-fluid");
+    img.classList.add("img-fluid")
     btn.classList.add("btn", "position-absolute", "bottom-2", "end-3", "del");
     btn.style.backgroundColor = "#dabf91";
     btn.innerHTML = "Remove";
@@ -621,7 +618,6 @@ function retrieve() {
 
 
         for (var z = 0; z < btns.length; z++) {
-
             if (btns[z].innerHTML == "Remove") {
 
                 btns[z].addEventListener("click", function () {

@@ -292,6 +292,7 @@
         <div class="text-center  ">
         <a href="value_set.php" class="btn p-2 mt-2 w-25 mb-5 btn-success d-none" id="last" onclick="count(); keepprice(0); addToCart(5);"><i class="bi bi-cart"> Add To Cart</i> </a>
     </div>
+
     </div>
 
 

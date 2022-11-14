@@ -138,7 +138,7 @@
                 <h3>Aroi Koom Set A</h3><br>
                 <!--แก้ไข---บรรยาย---->
                 <span>Set for one enjoy with small pan pizza with deluxe topping and chicken pop.</span><br>
-                <div class="float-end p-4 mt-5"><a href="value_set_1.php" id="plus" class="btn rounded pt-1 pb-1 ps-4 pe-4">179 ฿<i class="bi bi-cart-plus"></i></a></div>
+                <div class="float-end p-4 mt-5"><a href="value_set_1.php" id="plus" class="btn rounded pt-1 pb-1 ps-4 pe-4">179 ฿ </a></div>
             </div>
         </div>
     </div>
@@ -155,7 +155,7 @@
                 <h3>Aroi Koom Set B</h3><br>
                 <!--แก้ไข---บรรยาย---->
                 <span>Duo combination with small pan pizza with deluxe topping and garlic bread.</span><br>
-                <div class="float-end p-4 mt-5"><a href="value_set_2.php" id="plus" class="btn rounded pt-1 pb-1 ps-4 pe-4">179 ฿<i class="bi bi-cart-plus"></i></a></div>
+                <div class="float-end p-4 mt-5"><a href="value_set_2.php" id="plus" class="btn rounded pt-1 pb-1 ps-4 pe-4">179 ฿ </a></div>
             </div>
         </div>
     </div>
@@ -171,6 +171,7 @@
                 <h3>KOOM IMM FIN SET</h3><br>
                 <!--แก้ไข---บรรยาย---->
                 <span>Enjoy with group with medium pan pizza with classic topping, BBQ chicken wing 4 pcs., spaghetti 129.- and chicken nuggets.</span><br>
+
                 <div class="float-end p-4 mt-3"><a href="value_set_3.php" id="plus" class="btn rounded pt-1 pb-1 ps-4 pe-4">399 ฿<i class="bi bi-cart-plus"></i></a></div>
             </div>
         </div>

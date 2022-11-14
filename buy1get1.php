@@ -134,6 +134,7 @@
     </div>
     <!-- ถาด1 -->
     <!-- หน้าต่างเลือกขอบ และ หน้า -->
+
     <div class="rounded d-flex" id="pizza1">
         <div class="order-wrap p-3 w-100 ">
             <div class="row ">

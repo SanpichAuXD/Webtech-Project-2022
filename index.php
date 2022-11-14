@@ -15,6 +15,7 @@
     </style>
 </head>
 
+
 <body onload="retrieve(); count(); is_empty();">
     <?php include 'cart.php'; ?>
     <?php include 'nav.php'; ?>
@@ -68,6 +69,7 @@
             </div>
         </div>
     </section><br><br>
+
     <br><hr><br>
 
     <!-- recommend menu -->
@@ -183,6 +185,7 @@ align-items: center; ">
     </div>
     <br>
     <!-- footer -->
+
     <?php include 'footer.php'; ?>
     <script src="pizza.js"></script>
 </body>
