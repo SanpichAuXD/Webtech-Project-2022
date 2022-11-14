@@ -1,3 +1,4 @@
+
 /* @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 font-family: 'Fredoka One', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
@@ -5,7 +6,9 @@ font-family: 'Fredoka One', cursive; */
 * {
     transition: all .5s;
     font-family: 'Sriracha', cursive; 
+
 }
+
 
 /* header */
 header {
@@ -21,6 +24,9 @@ ul {
     font-size: 12px;
     position: relative;
 }
+.container-fluid{
+    flex-direction: row-reverse;
+}
 
 .nav-tabs .nav-delivery {
     font-size: 14px;
@@ -35,15 +41,9 @@ ul {
 
 li {
     margin-left: 10px;
-    margin-right: 10px;
+
 }
 
-body {
-    background-color: #271E17;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-}
 
 .line {
     width: .5px;
@@ -56,7 +56,7 @@ body {
 }
 
 #select-address {
-    background-color: #D9D9D9;
+    background-color: #912e00;
     border-radius: 10px;
     border: none;
     padding: 10px;
@@ -70,7 +70,7 @@ body {
 }
 
 #select-address::placeholder {
-    color: black;
+    color: var(--white);
     text-align: center;
 }
 
@@ -78,9 +78,6 @@ input:focus::-webkit-input-placeholder {
     opacity: 0;
 }
 
-.nav-a:hover {
-    background-color: #c7c7c7;
-}
 
 .pizza-set {
     height: 100%;
@@ -89,26 +86,26 @@ input:focus::-webkit-input-placeholder {
 }
 
 .pizza-set:hover {
-    background-color: hsl(26, 26%, 12%);
+    background-color: var(--brown);
 
 }
 .see-nav{
-    color: black;
+    color: var(--white);
 }
 .see-nav:hover{
     color: white;
 }
 #b1g1{
-    background-color: hsl(26, 26%, 12%) ;
+    background-color: var(--brown);
 }
 .see-nav-b1g1{
-    color: white;
+    color: var(--yellow);
 }
 #va-set{
-    background-color: hsl(26, 26%, 12%) ;
+    background-color: var(--brown);
 }
 .see-nav-va-set{
-    color: white;
+    color: var(--yellow);
 }
 
 .deli-take {
@@ -118,7 +115,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 .deliver {
-    background-color: #D9D9D9;
+    background-color: var(--red);
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -129,6 +126,7 @@ input:focus::-webkit-input-placeholder {
 #logo {
     width: calc(94.1px/.9);
     height: calc(85px/.9);
+    margin: auto;
 }
 
 #logo-img {
@@ -142,10 +140,9 @@ input:focus::-webkit-input-placeholder {
 }
 
 .toggle-button {
-    position: absolute;
+    position: relative;
     top: 28px;
-    bottom: 0;
-    right: 10px;
+    margin-left:20px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -157,7 +154,7 @@ input:focus::-webkit-input-placeholder {
 .toggle-button .bar {
     height: 5px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     border-radius: 500px;
 }
 
@@ -221,6 +218,10 @@ input:focus::-webkit-input-placeholder {
 @media (max-width: 400px) {
     #logo {
         display: none;
+    }
+    .nav-delivery {
+        margin-left: auto;
+        margin-right: 5px;
     }
 }
 
@@ -432,18 +433,21 @@ input:focus::-webkit-input-placeholder {
 
 
 body {
+    height: 100vh;
     font-size: clamp(14px, 2.5vw, 20px);
-    background-color: #271E17;
+    background-color: var(--brown);
     margin: 0;
     padding: 0;
     color: #fff;
-    --red: hsla(0, 100%, 66%, 0.4);
-    --brown: hsl(26, 26%, 12%);
+    --red: #912e00;
+    --brown: hsl(26, 51%, 15%);
+    --dark_brown: hsl(26, 26%, 12%);
     --grey: hsl(0, 0%, 78%);
     --black: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
     --white1: hsla(0, 0%, 100%, .7);
     --blue: hsl(240, 100%, 50%);
+    --yellow: #dabf91;
 }
 
 /* ปุ่ม-------------------------------------------------------------START*/
@@ -451,15 +455,9 @@ body {
     padding: auto;
 }
 
-/* ปุ่มแปลง TH-EN */
-#language {
-    background-color: var(--grey);
-    height: 15%;
-}
-
 /* ปุ่ม deli-take */
 #deli-take {
-    background-color: var(--grey);
+    /* background-color: var(--grey); */
     width: 350px;
 }
 
@@ -472,7 +470,7 @@ body {
 }
 
 #bg-select-drop {
-    background: var(--grey);
+    background: var(--red);
     width: 350px;
 }
 
@@ -483,7 +481,7 @@ body {
 }
 
 #nav:hover {
-    color: var(--blue);
+    color: var(--white);
 }
 
 /* ปุ่ม-------------------------------------------------------------END*/
@@ -492,11 +490,11 @@ body {
 /*       Value set       */
 
 #pic-bg {
-    background: var(--red);
+    background: #912e00;
 }
 
 #text-bg {
-    background: var(--red);
+    background: #912e00;
 }
 
 #back {
@@ -536,11 +534,12 @@ body {
 #pizza4,
 #pizza5,
 #pizza6 {
-    background: var(--red);
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 3%;
+    background: #912e00;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0.5%;
 }
+/* #912e00 */
 
 
 #choose_dropdown {
@@ -549,18 +548,29 @@ body {
     align-items: center;
 }
 
-#button_choose_pasta,
+/* #button_choose_pasta,
 #button_choose_size,
 #button_choose_face,
 #button_choose_part {
     background: hsla(0, 0%, 100%, 0.5);
     color: hsl(0, 0%, 100%);
-    margin-right: 15px;
     padding: 10px;
+} */
+
+/* botton next */
+#next1,
+#next2,
+#next3,
+#last{
+    background-color: var(--yellow);
+    color: black;
 }
+
+
 
 #topping {
     text-align: center;
+    padding-top: 10px;
 }
 
 #name-topping {
@@ -571,7 +581,7 @@ body {
 #icon-plus-circle,
 #icon-dash-circle {
     color: #000000;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #icon-dash-circle {
@@ -586,7 +596,7 @@ body {
 
 
 #pom_select_1{
-    background-color: var(--red);
+    background-color: #912e00;
     color: #ffffff;
 }
 #pom_select_2,
@@ -595,7 +605,7 @@ body {
 #pom_select_5,
 #pom_select_6 {
     background: #CBB09C;
-    color: #ffffff;
+    color: black;
 }
 
 #pom_select_1:hover,
@@ -604,12 +614,12 @@ body {
 #pom_select_4:hover,
 #pom_select_5:hover,
 #pom_select_6:hover {
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: var(--brown)  !important;
 }
 
 #pom_select {
-    width: 50%;
+    width: 70%;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -636,21 +646,15 @@ body {
     margin-right: auto;
     background: var(--grey);
 }
-
-/* @media screen and (max-width:680px) {
     #card-topping{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
+        font-size:  15px;
     }
-} */
+
 
 footer{
     width: 100%;
     text-align: center;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 #name_footer{
@@ -699,7 +703,7 @@ footer{
 }
 .popup-cart {
     position: relative;
-    background: rgba(170, 66, 66, 0.9);
+    background: var(--brown);
     backdrop-filter: blur(10px);
     width: 600px;
     max-height: 80vh;
@@ -712,7 +716,7 @@ footer{
     margin: 10px;
     padding: 20px 30px;
     box-shadow: 0 5px 25px;
-
+    overflow: hidden;
     transform: scale(0);
     transition: 0.5s ease;
     transition-property: transform;
@@ -748,15 +752,16 @@ footer{
 .popup-cart .order-wrap {
     padding: auto;
     margin-bottom: 10px;
-    max-height: 400px;
+    max-height: 220px;
     overflow-y: auto;
+
 }
 
 .popup-cart .order-wrap .box{
-    background-color: green;
+    background-color: var(--red);
     color: white;
     width: 400px;
-    border-radius: 25px;
+    border-radius: 10px;
     min-height: 90px;
     max-height: 170px;
     padding: 16px;
@@ -769,7 +774,7 @@ footer{
     width: 75px;
     height: 75px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 25%;
     position: sticky;
 }
 .popup-cart .order-wrap .box h5{
@@ -822,10 +827,36 @@ footer{
     position: fixed;
     z-index: -9999;
 }
+.left{
+    width: 70vw;
+}
 
-/* นับจำนวนการสั่งซื้อ */
-#count_cart{
-    margin-bottom: 0;
-    bottom: 50%;
-    right: 10px;
+/* recommend menu */
+#c_recommend_menu {
+    background: #912e00;
+}
+.home_c{
+    padding: 0;
+}
+
+.card-body {
+    align-self: normal;
+}
+
+#get_cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow);
+}
+
+#name_recommend_menu {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* กำหนดบรรทัด */
+    -webkit-box-orient: vertical;
+    /* การวางเนื้อหาในแนวตั้ง*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* เป็น... ถ้าจะให้เป็น--- ก็เปลี่ยนเป็นellipsis -> "---" */
 }

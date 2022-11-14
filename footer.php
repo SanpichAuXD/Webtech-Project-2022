@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
 <footer>
         <hr>
         <div class="row mb-3">
             <div class="col-12">
-                <a href="index.php" class="btn"><b id="name_footer">pizzahuh</b></a><br>
+                <a href="index.php" class="btn"><b id="name_footer">Pizza Huh 112 Company</b></a><br>
             </div>
             <div class="col-sm-6">
                 <div class="row">
@@ -43,14 +42,6 @@
                 <a style="font-size: 35px ;" href="https://github.com/zeraph-christ/Webtech-Project-2022" id="e_footer"><i class="bi bi-github m-1"></i></a>
                 <a style="font-size: 35px ;" href="https://www.instagram.com/natthawut_s_k/" id="i_footer"><i class="bi bi-instagram m-1"></i></a>
             </div>
-
-            <div class="col-sm-12">
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1C5lzXGMSx0M8cLg7swRPDA51JQKiu5k&ehbc=2E312F" zoom="15" width="70%" height="360"></iframe><br>
-            </div>
-
-
-
-
         </div>
     </footer>
 </body>
