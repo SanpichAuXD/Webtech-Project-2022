@@ -152,7 +152,7 @@
                                     $response = file_get_contents($url);
                                     $result = json_decode($response);
 
-                                    for ($i = 0; $i < count($result->menu) - 1; $i++) {
+                                    for ($i = 0; $i < count($result->menu); $i++) {
                                         echo '<option value="' . $result->menu[$i]->eng_name . '">' . $result->menu[$i]->eng_name . '</option>';
                                     }
 
