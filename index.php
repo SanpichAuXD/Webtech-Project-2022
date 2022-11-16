@@ -33,7 +33,7 @@
                 <a onclick="left('1')" class="arrow arrow-left" id="btleft1">
                     <img style="width: 100%; height: 100%;" src="img/home/left.png" alt="">
                 </a>
-                <a onclick="right('1')" class="arrow arrow-right" id="btright1">
+                <a onclick="right(1)" class="arrow arrow-right" id="btright1">
                     <img style="width: 100%; height: 100%;" src="img/home/right.png" alt="">
                 </a>
             </div>
@@ -43,7 +43,7 @@
                 <a onclick="left('2')" class="arrow arrow-left" id="btleft2">
                     <img style="width: 100%; height: 100%;" src="img/home/left.png" alt="">
                 </a>
-                <a onclick="right('2')" class="arrow arrow-right" id="btright2">
+                <a onclick="right(2)" class="arrow arrow-right" id="btright2">
                     <img style="width: 100%; height: 100%;" src="img/home/right.png" alt="">
                 </a>
             </div>
@@ -53,7 +53,7 @@
                 <a onclick="left('3')" class="arrow arrow-left" id="btleft3">
                     <img style="width: 100%; height: 100%;" src="img/home/left.png" alt="">
                 </a>
-                <a onclick="right('3')" class="arrow arrow-right" id="btright3">
+                <a onclick="right(3)" class="arrow arrow-right" id="btright3">
                     <img style="width: 100%; height: 100%;" src="img/home/right.png" alt="">
                 </a>
             </div>
@@ -63,7 +63,7 @@
                 <a onclick="left('4')" class="arrow arrow-left" id="btleft4">
                     <img style="width: 100%; height: 100%;" src="img/home/left.png" alt="">
                 </a>
-                <a onclick="right('4')" class="arrow arrow-right" id="btright4">
+                <a onclick="right(4)" class="arrow arrow-right" id="btright4">
                     <img style="width: 100%; height: 100%;" src="img/home/right.png" alt="">
                 </a>
             </div>

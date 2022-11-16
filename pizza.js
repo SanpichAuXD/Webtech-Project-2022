@@ -25,9 +25,9 @@ function left(x) {
     let i3 = document.getElementById("img3");
     let i4 = document.getElementById("img4");
     if (x == '1') {
-        c1.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: .5; z-index: 0;"
-        c2.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: .5; z-index: -1;"
-        c3.style = "left: -50%; right:0; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c1.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
+        c2.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
+        c3.style = "left: -50%; right:0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c4.style = "left: 0; right: 0; transform: scale(1, 1); opacity: 1; z-index: 1;"
 
         btl1.style.display = "none";
@@ -40,9 +40,9 @@ function left(x) {
     }
     else if (x == '2') {
         c1.style = "left: 0; right: 0; transform: scale(1, 1); opacity: 1; z-index: 1;"
-        c2.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: .5; z-index: 0;"
-        c3.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: .5; z-index: -1;"
-        c4.style = "left:-50%; right: 0; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c2.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
+        c3.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
+        c4.style = "left:-50%; right: 0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
 
         btl2.style.display = "none";
         btr2.style.display = "none";
@@ -53,10 +53,10 @@ function left(x) {
         i1.classList.add('card-hov');
     }
     else if (x == '3') {
-        c1.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c1.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c2.style = "left: 0; right: 0; transform: scale(1, 1); opacity: 1; z-index: 1;"
-        c3.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: .5; z-index: 0;"
-        c4.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: .5; z-index: -1;"
+        c3.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
+        c4.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
 
         btl3.style.display = "none";
         btr3.style.display = "none";
@@ -67,10 +67,10 @@ function left(x) {
         i2.classList.add('card-hov');
     }
     else if (x == '4') {
-        c1.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: .5; z-index: -1;"
-        c2.style = "left: -50%; right:0; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c1.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
+        c2.style = "left: -50%; right:0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c3.style = "left: 0; right: 0; transform: scale(1, 1); opacity: 1; z-index: 1;"
-        c4.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c4.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
 
         btl4.style.display = "none";
         btr4.style.display = "none";
@@ -80,7 +80,17 @@ function left(x) {
         i4.classList.remove('card-hov');
         i3.classList.add('card-hov');
     }
+    cnt_slide--;
 }
+let cnt_slide = 1;
+setInterval(function() {
+    right(cnt_slide);
+    if (cnt_slide > 4) {
+            cnt_slide = 1;
+        }
+}, 2250);
+
+
 function right(x) {
     let btl1 = document.getElementById("btleft1");
     let btl2 = document.getElementById("btleft2");
@@ -101,7 +111,7 @@ function right(x) {
     let i2 = document.getElementById("img2");
     let i3 = document.getElementById("img3");
     let i4 = document.getElementById("img4");
-    if (x == '1') {
+    if (x == 1) {
         c1.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c2.style = "left: 0; right:0; transform: scale(1, 1); opacity: 1; z-index: 1;"
         c3.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
@@ -115,7 +125,7 @@ function right(x) {
         i1.classList.remove('card-hov');
         i2.classList.add('card-hov');
     }
-    else if (x == '2') {
+    else if (x == 2) {
         c1.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
         c2.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c3.style = "left: 0; right:0; transform: scale(1, 1); opacity: 1; z-index: 1;"
@@ -129,7 +139,7 @@ function right(x) {
         i2.classList.remove('card-hov');
         i3.classList.add('card-hov');
     }
-    else if (x == '3') {
+    else if (x == 3) {
         c1.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c2.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
         c3.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
@@ -143,7 +153,7 @@ function right(x) {
         i3.classList.remove('card-hov');
         i4.classList.add('card-hov');
     }
-    else if (x == '4') {
+    else if (x == 4) {
         c1.style = "left: 0; right:0; transform: scale(1, 1); opacity: 1; z-index: 1;"
         c2.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c3.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
@@ -156,17 +166,22 @@ function right(x) {
 
         i4.classList.remove('card-hov');
         i1.classList.add('card-hov');
+
+       
     }
+     cnt_slide++;
 }
+
 function reloading() {
     var refresh = window.localStorage.getItem('refresh');
-   
+
     if (refresh === null) {
         window.location.reload();
         window.localStorage.setItem('refresh', "1");
     }
 
 }
+
 let menu1 = document.getElementById("selectpizza1");
 let menu2 = document.getElementById("selectpizza2");
 let crust1 = document.getElementById("selectcrust1");
@@ -242,7 +257,7 @@ function getPrice(piz, crust, set) {
             price = 499;
         }
     }
-   
+
     if (set == 1) {
 
         price = 179;
@@ -262,7 +277,7 @@ function getPrice(piz, crust, set) {
             price = 399 + ptopping;
         }
     }
-    else{
+    else {
         if (set == 2) {
             price = 599;
             if (crust == 5) {
