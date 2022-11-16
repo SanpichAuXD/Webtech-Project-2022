@@ -229,23 +229,30 @@
         <p class="text-center pt-5 " style="font-size: 20px;">Select Pasta</p>
         <img id="spaimg" src="./img/pasta/pasta_1.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
-        <div id="choose_dropdown">
-            <div class="dropdown ">
-                <select id="selectspa" class="text-center form-select form-select-md" style="width:82%; margin:auto;" aria-label=".form-select-md " onchange="changeSpa()">
-                    <?php
-                    $url = "pizza.json";
-                    $response = file_get_contents($url);
-                    $result = json_decode($response);
-                    for ($i = 0; $i < count($result->spaghetti); $i++) {
-                        echo '<option value="' . $i + 1 . '">' . $result->spaghetti[$i]->spa_name . '</option>';
-                    }
-                    ?>
-                </select>
+        <div id="choose_dropdown ">
+            <div class="dropdown">
+                <div class="row ">
+                    <div class="col-12  d-flex justify-content-center align-item-center ">
+                        <select id="selectspa" class="text-center form-select form-select-md " style="width:35%; margin:auto;" aria-label=".form-select-md " onchange="changeSpa()">
+                            <?php
+                            $url = "pizza.json";
+                            $response = file_get_contents($url);
+                            $result = json_decode($response);
+                            for ($i = 0; $i < count($result->spaghetti); $i++) {
+                                echo '<option value="' . $i + 1 . '">' . $result->spaghetti[$i]->spa_name . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center  col-12  ">
+                        <a class="btn btn-success  mt-2 mb-5 " style="width:35%; margin:auto;" onclick="hidNshopizza(2,4);" id="next2"> Next </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="text-center    ">
-            <a  class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(2,4)" id="next2"> Next </a>
-        </div>
+
     </div>
 
     <!-- เลือกชิคเก้นสติ๊กส์ -->

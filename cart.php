@@ -29,8 +29,8 @@
             <hr width="100%">
 
             <div id="empty" class=""><br>
-            <p><i class="fa-solid fa-cart-shopping fa-10x"></i></p>
-               <p>Your Cart is Empty</p>
+            <p><i class="fa-solid fa-cart-shopping fa-10x text-center"></i></p>
+               <p class="text-center">Your Cart is Empty</p>
             </div><br>
             <div id="not_empty" class="d-none">
                 <div class="text">

@@ -183,7 +183,11 @@ align-items: center; ">
         <img src="./img/home/soon.jpg" width="50%" style="background:#E3C696c3; border-radius: 20%;">
         <h1 style="position:absolute; color:white">coming soon</h1>
     </div>
-    <br>
+    <br><br><hr><br>
+    <div class="text-center ">
+        <h3>Pizza Huh 112 Company Address</h3><br>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1C5lzXGMSx0M8cLg7swRPDA51JQKiu5k&ehbc=2E312F" width="50%" height="460" style="border-radius: 25px ;"></iframe>
+    </div><br>
     <!-- footer -->
 
     <?php include 'footer.php'; ?>

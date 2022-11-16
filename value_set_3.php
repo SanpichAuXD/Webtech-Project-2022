@@ -16,8 +16,8 @@
 </head>
 
 <body onload=" changePizza(1,3); retrieve(); count(); is_empty();">
-<?php include 'cart.php'; ?>
-<?php include 'background.php'; ?>
+    <?php include 'cart.php'; ?>
+    <?php include 'background.php'; ?>
     <!--แทบ logo--------TH/EN--------deli-take-------selectAdd---------buy1get1-ValueSet------START---->
     <!-- navbar -->
     <?php include 'nav.php'; ?>
@@ -35,11 +35,11 @@
         <!-- เลือกพิซซ่า | เลือกไก่ป๊อป -->
         <br>
         <div class="btn-group row" role="group" id="pom_select">
-           <a onclick="hidNshopizza46(1,4)" class="col-3 btn" id="pom_select_1" role="button">Select Pizza</a>
+            <a onclick="hidNshopizza46(1,4)" class="col-3 btn" id="pom_select_1" role="button">Select Pizza</a>
             <a onclick="hidNshopizza46(2,4)" class="col-3 btn" id="pom_select_2" role="button">Select Pasta</a>
             <a onclick="hidNshopizza46(3,4)" class="col-3 btn" id="pom_select_3" role="button">Select Chicken Wings</a>
             <a onclick="hidNshopizza46(4,4)" class="col-3 btn" id="pom_select_4" role="button">Select Chicken Nuggets</a>
-            
+
         </div>
     </div>
     <!-- ถาด1 -->
@@ -55,9 +55,7 @@
                     <div class="btn-group" id="choose_dropdown">
                         <div class="row ">
                             <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center ">
-                                <select id="selectpizza1" class="text-center form-select form-select-md mb-3 ms-3 me-3"
-                                    style="width: 100%;" aria-label=".form-select-md "
-                                    onchange="reset(1); changePizza(1,3);">
+                                <select id="selectpizza1" class="text-center form-select form-select-md mb-3 ms-3 me-3" style="width: 100%;" aria-label=".form-select-md " onchange="reset(1); changePizza(1,3);">
                                     <?php
                                     $url = "pizza.json";
                                     $response = file_get_contents($url);
@@ -71,9 +69,7 @@
                                 </select>
                             </div>
                             <div class="col-12 col-sm-6 d-flex justify-content-center align-item-center">
-                                <select style="width: 100%;" id="selectcrust1"
-                                    class="text-center form-select form-select-md mb-3 me-3 ms-3"
-                                    onchange="changePizza(1,3)" style="width: 250px;" aria-label=".form-select-md ">
+                                <select style="width: 100%;" id="selectcrust1" class="text-center form-select form-select-md mb-3 me-3 ms-3" onchange="changePizza(1,3)" style="width: 250px;" aria-label=".form-select-md ">
                                     <option id="testkuy" value="0">Pan Medium</option>
                                     <option value="1">Crispy Thin Medium</option>
                                     <option value="2">Extreme Cheese Medium</option>
@@ -99,8 +95,7 @@
                     <div class="topping-wrap ">
                         <div class="row justify-content-center">
                             <!-- ชีส -->
-                            <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsl(8, 100%, 75%);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsl(8, 100%, 75%);">
                                 <div class="card-body p-0 ">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -132,8 +127,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <!-- สับปะรด -->
-                            <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsl(8, 100%, 75%);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsl(8, 100%, 75%);">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -165,8 +159,7 @@
                         <!-- บรรทัด 2 -->
                         <div class="row justify-content-center">
                             <!-- เบคอนแผ่น -->
-                            <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsl(8, 100%, 75%);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsl(8, 100%, 75%);">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -197,8 +190,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <!-- แฮมแผ่น -->
-                            <div class="card m-1" id="card-topping"
-                                style="width: 80%; background-color: hsl(8, 100%, 75%);">
+                            <div class="card m-1" id="card-topping" style="width: 80%; background-color: hsl(8, 100%, 75%);">
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-1 mt-3">
@@ -228,8 +220,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="text-center   mt-2   justify-content-center">
-                                <a  class="btn btn-success  " style="width:85%;"
-                                    onclick="hidNshopizza(1,4); keepprice(0); reset(0); changePizza(2)" id="next1">
+                                <a class="btn btn-success  " style="width:85%;" onclick="hidNshopizza(1,4); keepprice(0); reset(0); changePizza(2)" id="next1">
                                     Next </a>
                             </div>
                         </div>
@@ -242,34 +233,37 @@
 
     </div>
 
-   
+
 
     <!-- เลือกพาสต้า -->
     <div class="rounded pb-5 d-none" id="pizza2">
         <p class="text-center pt-5 " style="font-size: 20px;">Select Pasta</p>
         <img id="spaimg" src="./img/pasta/pasta_1.png" width="30%" class="mx-auto d-block">
         <!-- disabled -->
-        <div id="choose_dropdown">
+        <div id="choose_dropdown ">
             <div class="dropdown">
-            <div class="row ">
-                <div class="col-12  d-flex justify-content-center align-item-center ">
-                    <select id="selectspa" class="text-center form-select form-select-md " style="width:82%; margin:auto;" aria-label=".form-select-md " onchange="changeSpa()">
-                        <?php
-                        $url = "pizza.json";
-                        $response = file_get_contents($url);
-                        $result = json_decode($response);
-                        for ($i = 0; $i < count($result->spaghetti); $i++) {
-                            echo '<option value="' . $i + 1 . '">' . $result->spaghetti[$i]->spa_name . '</option>';
-                        }
-                        ?>
-                    </select>
+                <div class="row ">
+                    <div class="col-12  d-flex justify-content-center align-item-center ">
+                        <select id="selectspa" class="text-center form-select form-select-md " style="width:35%; margin:auto;" aria-label=".form-select-md " onchange="changeSpa()">
+                            <?php
+                            $url = "pizza.json";
+                            $response = file_get_contents($url);
+                            $result = json_decode($response);
+                            for ($i = 0; $i < count($result->spaghetti); $i++) {
+                                echo '<option value="' . $i + 1 . '">' . $result->spaghetti[$i]->spa_name . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="text-center  col-12  ">
+                        <a class="btn btn-success  mt-2 mb-5 " style="width:35%; margin:auto;" onclick="hidNshopizza(2,4);" id="next2"> Next </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="text-center    ">
-        <a  class="btn btn-success w-25  mt-2 mb-5 " onclick="hidNshopizza(2,4);" id="next2"> Next </a>
-    </div>
+
     </div>
 
     <!-- เลือกปีกไก่ -->
@@ -279,8 +273,8 @@
         <!-- disabled -->
         <button type="button" class="btn w-25 d-flex justify-content-center align-item-center" id="button_choose_part" disabled>BBQ Chicken Wings 4 pcs</button>
         <div class="text-center    ">
-        <a  class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
-    </div>
+            <a class="btn btn-success w-25  mt-2 mb-5 d-none" onclick="hidNshopizza(3,4)" id="next3"> Next </a>
+        </div>
     </div>
 
     <!-- เลือกนักเก็ต -->
@@ -290,8 +284,8 @@
         <!-- disabled -->
         <button type="button" class="btn w-25 d-flex justify-content-center align-item-center" id="button_choose_part" disabled>Chicken Nuggets 6 pcs</button>
         <div class="text-center  ">
-        <a href="value_set.php" class="btn p-2 mt-2 w-25 mb-5 btn-success d-none" id="last" onclick="count(); keepprice(0); addToCart(5);"><i class="bi bi-cart"> Add To Cart</i> </a>
-    </div>
+            <a href="value_set.php" class="btn p-2 mt-2 w-25 mb-5 btn-success d-none" id="last" onclick="count(); keepprice(0); addToCart(5);"><i class="bi bi-cart"> Add To Cart</i> </a>
+        </div>
 
     </div>
 
