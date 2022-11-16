@@ -366,7 +366,7 @@ input:focus::-webkit-input-placeholder {
 #card3,
 #card4 {
     transform: scale(.8, .8);
-    opacity: .5;
+    opacity: 1;
 }
 
 #card2 {

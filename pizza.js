@@ -25,9 +25,9 @@ function left(x) {
     let i3 = document.getElementById("img3");
     let i4 = document.getElementById("img4");
     if (x == '1') {
-        c1.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: .5; z-index: 0;"
-        c2.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: .5; z-index: -1;"
-        c3.style = "left: -50%; right:0; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c1.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
+        c2.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
+        c3.style = "left: -50%; right:0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c4.style = "left: 0; right: 0; transform: scale(1, 1); opacity: 1; z-index: 1;"
 
         btl1.style.display = "none";
@@ -40,9 +40,9 @@ function left(x) {
     }
     else if (x == '2') {
         c1.style = "left: 0; right: 0; transform: scale(1, 1); opacity: 1; z-index: 1;"
-        c2.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: .5; z-index: 0;"
-        c3.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: .5; z-index: -1;"
-        c4.style = "left:-50%; right: 0; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c2.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
+        c3.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
+        c4.style = "left:-50%; right: 0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
 
         btl2.style.display = "none";
         btr2.style.display = "none";
@@ -53,10 +53,10 @@ function left(x) {
         i1.classList.add('card-hov');
     }
     else if (x == '3') {
-        c1.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c1.style = "left: -50%; right: 0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c2.style = "left: 0; right: 0; transform: scale(1, 1); opacity: 1; z-index: 1;"
-        c3.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: .5; z-index: 0;"
-        c4.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: .5; z-index: -1;"
+        c3.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
+        c4.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
 
         btl3.style.display = "none";
         btr3.style.display = "none";
@@ -67,10 +67,10 @@ function left(x) {
         i2.classList.add('card-hov');
     }
     else if (x == '4') {
-        c1.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: .5; z-index: -1;"
-        c2.style = "left: -50%; right:0; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c1.style = "left: 0; right: 0; transform: scale(.8, .8); opacity: 1; z-index: -1;"
+        c2.style = "left: -50%; right:0; transform: scale(.8, .8); opacity: 1; z-index: 0;"
         c3.style = "left: 0; right: 0; transform: scale(1, 1); opacity: 1; z-index: 1;"
-        c4.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: .5; z-index: 0;"
+        c4.style = "left: 0; right: -50%; transform: scale(.8, .8); opacity: 1; z-index: 0;"
 
         btl4.style.display = "none";
         btr4.style.display = "none";
