@@ -44,7 +44,7 @@
     <div class="rounded d-flex" id="pizza1">
         <div class="order-wrap p-3 w-100">
             <div class="row ">
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <p class="text-center pt-2" style="font-size: 20px;">Select first pizza</p>
                     <img src="./img/cheese/Seafood_Cocktail_m.png" id="pizzapic1" width="50%" class="mx-auto d-block">
 
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <!-- ปรับแต่งพิซซ่าด้วยตัวเอง -->
-                <div class="col-4  ">
+                <div class="col-12 col-sm-4  ">
                     <p id="topping"><i>Customize Pizza</i></p>
                     <!-- บรรทัด 1 -->
                     <div class="topping-wrap ">
